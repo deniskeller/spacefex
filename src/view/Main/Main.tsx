@@ -5,6 +5,7 @@ const Main = () => {
   return (
     <>
       {/* <Header /> */}
+      <div className="" style={{ height: '1900px' }}></div>
       <h1>главная странциа</h1>
     </>
   );
