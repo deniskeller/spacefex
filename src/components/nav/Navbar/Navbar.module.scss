@@ -1,0 +1,204 @@
+.Container {
+  width: 100%;
+  position: absolute;
+  z-index: 10000;
+  padding: em(27px) em(73px);
+
+  @include iftablet {
+    padding: em(27px) em(30px);
+  }
+
+  @include ifmobile {
+    padding: em(27px) em(12px);
+  }
+
+  .Navbar {
+    width: 100%;
+    max-width: em(1774px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .NavbarNavDesktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: em(1000px);
+
+    @include iftablet {
+      max-width: em(668px);
+    }
+
+    @include ifmobile {
+      display: none;
+    }
+  }
+
+  .Drawer {
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    @include ifmobile {
+      display: flex;
+    }
+  }
+
+  .Burger {
+    width: em(38px);
+    cursor: pointer;
+    position: absolute;
+    top: em(25px);
+    right: em(12px);
+    z-index: 10000;
+
+    span {
+      display: block;
+      width: 100%;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+      border-radius: em(3px);
+      height: em(2px);
+      background: $white;
+      transition: all 0.3s;
+      position: relative;
+      &:nth-child(3) {
+        width: 65%;
+      }
+    }
+
+    span + span {
+      margin-top: em(8px);
+    }
+  }
+
+  .Active span:nth-child(1) {
+    animation: ease 0.7s top forwards;
+  }
+
+  .NotActive span:nth-child(1) {
+    animation: ease 0.7s top-2 forwards;
+  }
+
+  .Active span:nth-child(2) {
+    animation: ease 0.7s scaled forwards;
+  }
+
+  .NotActive span:nth-child(2) {
+    animation: ease 0.7s scaled-2 forwards;
+  }
+
+  .Active span:nth-child(3) {
+    width: 100%;
+    animation: ease 0.7s bottom forwards;
+  }
+
+  .NotActive span:nth-child(3) {
+    animation: ease 0.7s bottom-2 forwards;
+  }
+
+  .NavbarNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    @extend %background-cover;
+    z-index: 1000;
+    width: 0;
+    background: $dark4;
+    min-height: 100vh;
+    overflow: hidden;
+    transition: 0.6s ease padding, 0.6s ease width;
+  }
+
+  .NavbarNav_Visible {
+    width: 100vw;
+    padding: em(100px) em(106px) em(30px) em(26px);
+  }
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: em(10px);
+    transform: rotate(0);
+  }
+  100% {
+    top: em(10px);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: em(10px);
+    transform: rotate(45deg);
+  }
+  50% {
+    top: em(10px);
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: em(10px);
+    transform: rotate(0);
+  }
+  100% {
+    bottom: em(10px);
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: em(10px);
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: em(10px);
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

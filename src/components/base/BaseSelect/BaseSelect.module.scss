@@ -11,7 +11,7 @@
   line-height: 100%;
   font-size: em($size);
   font-weight: 400;
-  font-family: $font-Avenir;
+  // font-family: $font-Avenir;
   width: 100%;
   height: em(38px);
   position: relative;
@@ -90,13 +90,13 @@
     line-height: 100%;
     font-size: em($size);
     font-weight: 400;
-    font-family: $font-Avenir;
+    // font-family: $font-Avenir;
   }
 }
 
 .Label {
   display: flex;
-  font-family: $font-Avenir;
+  // font-family: $font-Avenir;
   font-size: em(16px);
   font-weight: 500;
   font-style: normal;
@@ -111,7 +111,7 @@
 }
 
 .ErrorText {
-  font-family: $font-Avenir;
+  // font-family: $font-Avenir;
   font-size: em(13px);
   line-height: 100%;
   color: #a11515;

@@ -1,0 +1,32 @@
+.Logo {
+  position: relative;
+  display: flex;
+  width: max-content;
+  z-index: 10001;
+
+  .Icon {
+    width: em(226px);
+    height: em(31px);
+    cursor: pointer;
+
+    @include iftablet {
+      width: em(167px);
+      height: em(22.9px);
+    }
+
+    @include ifmobile {
+      width: em(138.53px);
+      height: em(19px);
+    }
+  }
+}
+
+.LogoFooter {
+  .Icon {
+    svg {
+      path {
+        fill: #f7f7f7;
+      }
+    }
+  }
+}
