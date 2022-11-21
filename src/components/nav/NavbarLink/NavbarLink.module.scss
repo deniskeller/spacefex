@@ -2,7 +2,7 @@
   line-height: 100%;
   list-style: none;
   @include ifmobile {
-    margin-bottom: em(54px);
+    margin-bottom: em(40px);
   }
 
   &:last-child {
