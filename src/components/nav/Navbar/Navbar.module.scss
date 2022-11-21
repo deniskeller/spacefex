@@ -1,6 +1,5 @@
 .Container {
   width: 100%;
-  height: 100%;
   position: absolute;
   overflow-y: auto;
   z-index: 10000;
@@ -12,6 +11,7 @@
 
   @include ifmobile {
     padding: em(27px) em(12px);
+    height: 100%;
   }
 
   .Navbar {

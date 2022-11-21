@@ -1,0 +1,70 @@
+.AccordionCareerItem {
+  background: $green;
+  border-radius: em(10px);
+  margin-bottom: em(10px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include ifmobile {
+    margin-bottom: em(7px);
+  }
+
+  .AccordionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: em(28px) em(33px) em(28px) em(68px);
+    position: relative;
+    cursor: pointer;
+    @include ifmobile {
+      padding: em(15px) em(18px);
+    }
+
+    .AccordionHeaderTitle {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: em(15px);
+      line-height: 100%;
+      color: $white;
+      text-transform: uppercase;
+      @include ifmobile {
+        font-size: em(12px);
+      }
+    }
+
+    .AccordionHeaderToggle {
+      display: flex;
+    }
+    .Open {
+      width: em(16px);
+      height: em(14px);
+      @include ifmobile {
+        width: em(14px);
+        height: em(12px);
+      }
+    }
+
+    .Close {
+      width: em(14px);
+      height: em(16px);
+      @include ifmobile {
+        width: em(10px);
+        height: em(12px);
+      }
+    }
+  }
+
+  .AccordionContent {
+    overflow: hidden;
+    transition: max-height $speed cubic-bezier(1, 0, 1, 0);
+    height: auto;
+    max-height: 9999px;
+  }
+
+  .AccordionContentHidden {
+    max-height: 0;
+    transition: max-height $speed cubic-bezier(0, 1, 0, 1);
+  }
+}

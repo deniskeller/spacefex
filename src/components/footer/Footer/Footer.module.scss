@@ -1,0 +1,358 @@
+.Footer {
+  padding-top: em(76px);
+  padding-bottom: em(56px);
+
+  @include ifmobile {
+    padding-top: em(38px);
+    padding-bottom: em(27px);
+  }
+
+  &_Top {
+    display: grid;
+    grid-template-columns: em(345px) 1fr;
+    grid-gap: em(140px);
+    margin-bottom: em(80px);
+    @include ifmobile {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &_Logo {
+    display: flex;
+    flex-direction: column;
+    @include ifmobile {
+      margin-bottom: em(30px);
+    }
+    .Logo {
+      margin-bottom: em(19px);
+      @include ifmobile {
+        margin-bottom: em(12px);
+      }
+      path {
+        fill: $white;
+      }
+    }
+
+    .Copyright {
+      font-size: em(14px);
+      line-height: 120%;
+      font-style: normal;
+      font-weight: 400;
+      color: rgba(247, 247, 247, 0.5);
+      @include ifmobile {
+        font-size: em(12px);
+        text-align: center;
+      }
+    }
+  }
+
+  .Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include ifmobile {
+      gap: em(20px) 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    // &_Item:last-child {
+    //   @include ifmobile {
+    //     position: relative;
+    //     top: em(-105px);
+    //   }
+    // }
+
+    // &_Title {
+    //   margin-bottom: em(24px);
+    //   @include ifmobile {
+    //     margin-bottom: em(10px);
+    //   }
+    //   span {
+    //     font-size: em(15px);
+    //     font-style: normal;
+    //     font-weight: 900;
+    //     color: $yellow;
+    //     text-transform: uppercase;
+    //     @include ifmobile {
+    //       font-size: em(12px);
+    //     }
+    //   }
+    // }
+
+    // &_Ul {
+    //   list-style: none;
+    // }
+
+    // &_Li {
+    //   line-height: 100%;
+    //   margin-bottom: em(14px);
+    //   @include ifmobile {
+    //     margin-bottom: em(10px);
+    //   }
+
+    //   &:last-child {
+    //     margin-bottom: 0 !important;
+    //   }
+
+    //   span {
+    //     font-size: em(13px);
+    //     font-weight: 300;
+    //     line-height: 100%;
+    //     color: $white;
+    //     white-space: nowrap;
+    //     @include ifmobile {
+    //       font-size: em(12px);
+    //     }
+    //     &:hover {
+    //       color: $yellow;
+    //     }
+    //   }
+    // }
+  }
+
+  &_Bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    @include ifmobile {
+      margin-top: em(-70px);
+    }
+    .Social {
+      margin-right: em(149px);
+      @include ifmobile {
+        margin-right: 0;
+        width: 50%;
+      }
+
+      .SocialItems {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: em(145px);
+        margin-bottom: em(50px);
+        @include ifmobile {
+          max-width: em(139px);
+          margin-bottom: em(26px);
+        }
+        .SocialIcon {
+          position: relative;
+        }
+
+        .Facebook {
+          width: em(9px);
+          height: em(19px);
+          @include ifmobile {
+          }
+        }
+
+        .Instagram {
+          width: em(17px);
+          height: em(18px);
+          @include ifmobile {
+          }
+        }
+
+        .Twitter {
+          width: em(20px);
+          height: em(17px);
+          @include ifmobile {
+          }
+        }
+
+        .Linkedin {
+          width: em(18px);
+          height: em(18px);
+          @include ifmobile {
+          }
+        }
+      }
+
+      .LinkHosted {
+        font-size: em(13px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 400;
+        color: $yellow;
+        @include ifmobile {
+        }
+        a {
+          font-size: inherit;
+          line-height: 120%;
+          font-style: normal;
+          font-weight: 400;
+          color: $yellow;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .Form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      @include ifmobile {
+        order: -1;
+        margin-bottom: em(27px);
+      }
+      &_Title {
+        margin-bottom: em(15px);
+        @include ifmobile {
+        }
+        span {
+          display: block;
+          font-size: em(15px);
+          line-height: 100%;
+          font-weight: 900;
+          color: $green;
+          text-transform: uppercase;
+          @include ifmobile {
+            font-size: em(12px);
+          }
+        }
+      }
+
+      &_Actions {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        .Input {
+          width: em(294px);
+          margin-right: em(11px);
+          @include ifmobile {
+            width: em(214px);
+            margin-right: em(9px);
+          }
+          span {
+            height: em(49px);
+            @include ifmobile {
+              height: em(33px);
+            }
+          }
+        }
+
+        .Button {
+          width: em(70px);
+          height: em(49px);
+          @include ifmobile {
+            width: em(57px);
+            height: em(33px);
+          }
+
+          .Icon {
+            width: em(28px);
+          }
+        }
+      }
+
+      .SuccessAlert {
+        width: em(406px);
+        height: em(120px);
+        border: em(2px) solid $green;
+        border-radius: em(10px);
+        padding: em(20px) em(30px) em(29px);
+        position: absolute;
+        top: em(-100px);
+        animation-name: FadeIn;
+        animation-duration: 2s;
+        transition-timing-function: linear;
+        @include ifmobile {
+          width: em(280px);
+          height: em(59px);
+          padding: em(10px) em(16px);
+          position: relative;
+          top: 0;
+        }
+
+        &_Title {
+          margin-bottom: em(10px);
+          @include ifmobile {
+          }
+          span {
+            display: block;
+            font-size: em(15px);
+            line-height: 100%;
+            font-weight: 900;
+            color: $green;
+            text-transform: uppercase;
+            @include ifmobile {
+              font-size: em(12px);
+            }
+          }
+        }
+
+        &_Subtitle {
+          font-size: em(13px);
+          font-style: normal;
+          font-weight: 300;
+          color: $white;
+          @include ifmobile {
+            font-size: em(11px);
+          }
+        }
+      }
+    }
+
+    .Employees {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: auto;
+
+      @include ifmobile {
+        width: 45%;
+      }
+
+      .Mastercard {
+        width: em(44.01px);
+        height: em(32.56px);
+        margin-right: em(28px);
+        @include ifmobile {
+          width: em(25.55px);
+          height: em(19.16px);
+          margin-right: em(17px);
+        }
+      }
+
+      .Ico {
+        position: relative;
+        width: em(53px);
+        height: em(34px);
+        margin-right: em(28px);
+        @include ifmobile {
+          width: em(30px);
+          height: em(20px);
+          margin-right: em(17px);
+        }
+      }
+
+      .Pci {
+        width: em(91px);
+        height: em(29.9px);
+        @include ifmobile {
+          width: em(53.1px);
+          height: em(17.45px);
+        }
+      }
+    }
+  }
+}
+
+@include keyframe(FadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -6,16 +6,11 @@ import { ALL_ICONS } from '@constants/icons';
 
 interface Props {
   className?: string;
-  position?: string;
 }
 
-const Logo: React.FC<Props> = ({ className = '', position = 'header' }) => {
+const Logo: React.FC<Props> = ({ className = '' }) => {
   return (
-    <div
-      className={`${styles.Logo} ${className} ${
-        position == 'footer' ? styles.LogoFooter : ''
-      }`}
-    >
+    <div className={`${styles.Logo} ${className}`}>
       <Link href="/">
         <BaseIcon
           viewBox="0 0 226 31"
