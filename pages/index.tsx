@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div>
-      <h1>
+      <h1 style={{ fontWeight: 300 }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ab
         eligendi vitae dolorem velit ipsam inventore impedit ut dicta quos
         officiis quasi perferendis dolore tempora? Quaerat maxime magni cumque

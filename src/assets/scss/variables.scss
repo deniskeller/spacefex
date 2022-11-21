@@ -2,16 +2,12 @@
 $main_bg: #171719;
 
 //old
-$black: #000000;
-$green: #1b692c;
-$yellow: #e8e268;
-
-$speed: 0.3s;
-
 $navbar-height: 76px;
 $top-padding: calc($navbar-height + 105px);
 
-//Manhattan variables
+$black: #000000;
+$green: #1b692c;
+$yellow: #e8e268;
 $white: #ffffff;
 $dirty_blue: #1d2747;
 $blue30: #c3cffe;
@@ -19,4 +15,7 @@ $dark4: #060812;
 $blue: #2e3d8d;
 $grey: #948f8f;
 
-$font-Avenir: 'Avenir Next', sans-serif;
+// $font-Avenir: 'Avenir Next', sans-serif;
+$font-OpenSans: 'Open Sans', sans-serif;
+$font-Pirulen: 'Pirulen', sans-serif;
+$font-PeckhamPress: 'PeckhamPress', sans-serif;
