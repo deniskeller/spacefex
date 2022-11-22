@@ -22,8 +22,8 @@
   text-transform: uppercase;
   position: relative;
 
-  @include ifmobile {
-    // font-size: em(12px);
+  @include iftablet {
+    font-size: em(12px);
   }
 
   &::after {

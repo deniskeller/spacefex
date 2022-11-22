@@ -18,21 +18,18 @@
   position: relative;
   box-shadow: none;
   border-radius: 0;
-  color: #f8f8fa;
-  border-bottom: em(2px) solid $white;
-  @include placeholder-color(#aaafbd);
+  color: rgba(247, 247, 247, 0.7);
+  border-bottom: 1px solid $white;
+  @include placeholder-color(rgba(247, 247, 247, 0.7));
   padding: em(12px, $size) em(12px, $size);
-  transition: 0.5s ease all;
-  -moz-transition: 0.5s ease all;
-  -webkit-transition: 0.5s ease all;
-  // font-family: $font-Avenir;
+  font-family: $font-OpenSans;
+  text-transform: uppercase;
+  box-sizing: border-box;
 
-  &:hover {
-    border-color: #91a7fc;
-  }
-
+  &:hover,
   &:focus {
-    border-color: #2e3d8d;
+    border-width: em(2px);
+    border-color: rgba(247, 247, 247, 0.7);
   }
 }
 
@@ -41,7 +38,7 @@
 }
 
 .ErrorText {
-  // font-family: $font-Avenir;
+  font-family: $font-OpenSans;
   font-size: em(13px);
   line-height: 100%;
   color: #a11515;
@@ -51,7 +48,7 @@
 }
 
 .Label {
-  // font-family: $font-Avenir;
+  font-family: $font-OpenSans;
   font-size: em(16px);
   font-weight: 500;
   font-style: normal;

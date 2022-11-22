@@ -6,6 +6,10 @@
     align-items: center;
     position: relative;
 
+    @include ifmobile {
+      cursor: pointer;
+    }
+
     .AccordionHeaderTitle {
       margin-bottom: em(24px);
       @include iftablet {
@@ -13,7 +17,6 @@
       }
       @include ifmobile {
         margin-bottom: 0;
-        cursor: pointer;
       }
       span {
         font-size: em(14px);

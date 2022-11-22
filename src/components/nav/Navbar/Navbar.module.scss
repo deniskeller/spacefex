@@ -1,7 +1,6 @@
 .Container {
   width: 100%;
   position: absolute;
-  overflow-y: auto;
   z-index: 10000;
   padding: em(27px) em(73px);
 
@@ -10,6 +9,7 @@
   }
 
   @include ifmobile {
+    overflow-y: auto;
     padding: em(27px) em(12px);
   }
 
@@ -104,7 +104,7 @@
   }
 
   .NavbarNav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding: 0;
