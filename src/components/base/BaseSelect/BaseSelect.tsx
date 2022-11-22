@@ -62,13 +62,13 @@ const BaseSelect: React.FC<Props> = ({
           {selectedOption || placeholder}
         </p>
 
-        <BaseIcon
+        {/* <BaseIcon
           icon={ALL_ICONS.SELECT_ARROW}
           viewBox="0 0 8 5"
           className={`${styles.IconArrow} ${
             isOpen ? styles.IconArrowActive : null
           }`}
-        />
+        /> */}
       </div>
       {error ? <div className={styles.ErrorText}>{error}</div> : ''}
       {isOpen && (
