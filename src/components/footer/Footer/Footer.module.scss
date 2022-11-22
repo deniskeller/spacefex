@@ -77,81 +77,56 @@
   &_Bottom {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
     @include ifmobile {
     }
     .Social {
-      margin-right: em(149px);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: em(200px);
       @include ifmobile {
-        margin-right: 0;
-        width: 50%;
+        max-width: em(240px);
+        margin-bottom: em(26px);
       }
 
-      .SocialItems {
+      .SocialIcon {
+        position: relative;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        max-width: em(145px);
-        margin-bottom: em(50px);
-        @include ifmobile {
-          max-width: em(139px);
-          margin-bottom: em(26px);
-        }
-        .SocialIcon {
-          position: relative;
-        }
-
-        .Facebook {
-          width: em(9px);
-          height: em(19px);
-          @include ifmobile {
-          }
-        }
-
-        .Instagram {
-          width: em(17px);
-          height: em(18px);
-          @include ifmobile {
-          }
-        }
-
-        .Twitter {
-          width: em(20px);
-          height: em(17px);
-          @include ifmobile {
-          }
-        }
-
-        .Linkedin {
-          width: em(18px);
-          height: em(18px);
-          @include ifmobile {
+        &:hover {
+          path {
+            fill: $red;
           }
         }
       }
 
-      .LinkHosted {
-        font-size: em(13px);
-        line-height: 120%;
-        font-style: normal;
-        font-weight: 400;
-        color: $yellow;
-        @include ifmobile {
-        }
-        a {
-          font-size: inherit;
-          line-height: 120%;
-          font-style: normal;
-          font-weight: 400;
-          color: $yellow;
-          text-decoration: underline;
-          &:hover {
-            text-decoration: none;
-          }
-        }
+      .Tiktok {
+        width: em(20px);
+        height: em(20px);
+      }
+
+      .Facebook {
+        width: em(11px);
+        height: em(18px);
+      }
+
+      .Instagram {
+        width: em(19px);
+        height: em(19px);
+      }
+
+      .Twitter {
+        width: em(24px);
+        height: em(19px);
+      }
+
+      .Linkedin {
+        width: em(20px);
+        height: em(20px);
       }
     }
 
@@ -160,22 +135,26 @@
       flex-direction: column;
       position: relative;
       @include ifmobile {
-        order: -1;
-        margin-bottom: em(27px);
+        width: 100%;
+        margin-bottom: em(52px);
       }
       &_Title {
-        margin-bottom: em(15px);
+        margin-bottom: em(24px);
         @include ifmobile {
+          margin-bottom: em(15px);
         }
         span {
           display: block;
-          font-size: em(15px);
+          font-size: em(20px);
+          font-weight: 400;
           line-height: 100%;
-          font-weight: 900;
-          color: $green;
+          color: $white;
           text-transform: uppercase;
+          @include iftablet {
+            font-size: em(16px);
+          }
           @include ifmobile {
-            font-size: em(12px);
+            font-size: em(16px);
           }
         }
       }
@@ -184,52 +163,63 @@
         display: flex;
         flex-direction: row;
         width: 100%;
+        max-width: em(687px);
+        @include ifmobile {
+          flex-direction: column;
+        }
         .Input {
-          width: em(294px);
-          margin-right: em(11px);
-          @include ifmobile {
-            width: em(214px);
-            margin-right: em(9px);
+          width: em(468px);
+          margin-right: em(24px);
+          @include iftablet {
+            width: em(370px);
           }
-          span {
-            height: em(49px);
-            @include ifmobile {
-              height: em(33px);
-            }
+          @include ifmobile {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: em(25px);
           }
         }
 
         .Button {
-          width: em(70px);
-          height: em(49px);
+          width: em(195px);
+          height: em(48px);
           @include ifmobile {
-            width: em(57px);
-            height: em(33px);
-          }
-
-          .Icon {
-            width: em(28px);
+            width: 100%;
+            height: em(44px);
           }
         }
       }
 
       .SuccessAlert {
-        width: em(406px);
-        height: em(120px);
-        border: em(2px) solid $green;
-        border-radius: em(10px);
-        padding: em(20px) em(30px) em(29px);
-        position: absolute;
-        top: em(-100px);
+        width: em(687px);
+        height: em(92px);
+        border: em(1px) solid $white;
+        padding: em(23px) em(27px);
         animation-name: FadeIn;
         animation-duration: 2s;
         transition-timing-function: linear;
+        position: relative;
+        @include iftablet {
+          width: em(589px);
+          height: em(88px);
+        }
         @include ifmobile {
-          width: em(280px);
-          height: em(59px);
+          width: 100%;
+          height: em(138px);
           padding: em(10px) em(16px);
           position: relative;
           top: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &_Icon {
+          position: absolute;
+          top: em(22px);
+          right: em(22px);
+          width: em(18.28px);
+          height: em(12.7px);
         }
 
         &_Title {
@@ -238,10 +228,10 @@
           }
           span {
             display: block;
-            font-size: em(15px);
+            font-size: em(20px);
             line-height: 100%;
-            font-weight: 900;
-            color: $green;
+            font-weight: 400;
+            color: $white;
             text-transform: uppercase;
             @include ifmobile {
               font-size: em(12px);
@@ -250,56 +240,13 @@
         }
 
         &_Subtitle {
-          font-size: em(13px);
+          font-size: em(16px);
           font-style: normal;
-          font-weight: 300;
-          color: $white;
+          font-weight: 400;
+          color: rgba(247, 247, 247, 0.7);
           @include ifmobile {
             font-size: em(11px);
           }
-        }
-      }
-    }
-
-    .Employees {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-left: auto;
-
-      @include ifmobile {
-        width: 45%;
-      }
-
-      .Mastercard {
-        width: em(44.01px);
-        height: em(32.56px);
-        margin-right: em(28px);
-        @include ifmobile {
-          width: em(25.55px);
-          height: em(19.16px);
-          margin-right: em(17px);
-        }
-      }
-
-      .Ico {
-        position: relative;
-        width: em(53px);
-        height: em(34px);
-        margin-right: em(28px);
-        @include ifmobile {
-          width: em(30px);
-          height: em(20px);
-          margin-right: em(17px);
-        }
-      }
-
-      .Pci {
-        width: em(91px);
-        height: em(29.9px);
-        @include ifmobile {
-          width: em(53.1px);
-          height: em(17.45px);
         }
       }
     }

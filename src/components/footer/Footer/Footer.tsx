@@ -86,90 +86,43 @@ const Footer = () => {
             </div>
 
             <div className={styles.Footer_Bottom}>
-              <div className={styles.Social}>
-                <div className={styles.SocialItems}>
-                  <Link href="/">
-                    <div className={`${styles.SocialIcon} ${styles.Facebook}`}>
-                      <BaseIcon viewBox="0 0 9 19" icon={ALL_ICONS.FACEBOOK} />
-                    </div>
-                  </Link>
-
-                  <Link href="/">
-                    <div className={`${styles.SocialIcon} ${styles.Instagram}`}>
-                      <BaseIcon
-                        viewBox="0 0 17 18"
-                        icon={ALL_ICONS.INSTAGRAM}
-                        className={styles.Icon}
-                      />
-                    </div>
-                  </Link>
-
-                  <Link href="/">
-                    <div className={`${styles.SocialIcon} ${styles.Twitter}`}>
-                      <BaseIcon
-                        viewBox="0 0 20 17"
-                        icon={ALL_ICONS.TWITTER}
-                        className={styles.Icon}
-                      />
-                    </div>
-                  </Link>
-
-                  <Link href="/">
-                    <div className={`${styles.SocialIcon} ${styles.Linkedin}`}>
-                      <BaseIcon
-                        viewBox="0 0 18 18"
-                        icon={ALL_ICONS.LINKEDIN}
-                        className={styles.Icon}
-                      />
-                    </div>
-                  </Link>
-                </div>
-
-                <div className={styles.LinkHosted}>
-                  <span>
-                    Hosted at&nbsp;
-                    <Link href="/">Google Cloud</Link>
-                  </span>
-                </div>
-              </div>
-
               <div className={styles.Form}>
                 {!success ? (
-                  <span
+                  <div
                     className={styles.FormEmail}
                     style={{ opacity: !success ? '1' : '0' }}
                   >
                     <div className={styles.Form_Title}>
-                      <span>SUBMIT FOR UPDATES</span>
+                      <span>Subscribe to our monthly roundup</span>
                     </div>
                     <div className={styles.Form_Actions}>
                       <BaseInput
                         name="mail"
-                        placeholder="Email address"
+                        placeholder="Enter e-mail address"
                         type="mail"
                         value={value}
                         onChange={(val: string) => setValue(val)}
                         className={styles.Input}
                       />
+
                       <BaseButton
-                        type="success"
+                        title="Subscribe"
                         onClick={() => setSuccess(true)}
                         className={styles.Button}
-                      >
-                        {/* <BaseIcon
-                        viewBox="0 0 31 24"
-                        icon={ALL_ICONS.ARROW_RIGHT}
-                        className={styles.Icon}
-                      /> */}
-                      </BaseButton>
+                      />
                     </div>
-                  </span>
+                  </div>
                 ) : (
                   <>
                     <div
                       className={styles.SuccessAlert}
                       style={{ opacity: success ? '1' : '0' }}
                     >
+                      <BaseIcon
+                        icon={ALL_ICONS.SUCCESS_DONE}
+                        viewBox="0 0 21 15"
+                        className={styles.SuccessAlert_Icon}
+                      />
                       <div className={styles.SuccessAlert_Title}>
                         <span>Thank you!</span>
                       </div>
@@ -181,28 +134,46 @@ const Footer = () => {
                 )}
               </div>
 
-              <div className={styles.Employees}>
-                <div className={styles.Mastercard}>
-                  {/* <BaseIcon
-                  viewBox="0 0 45 33"
-                  icon={ALL_ICONS.MASTERCARD}
-                  className={styles.Icon}
-                /> */}
-                </div>
-                <div className={styles.Ico}>
-                  <Image
-                    src="/images/icon/ico.png"
-                    layout="fill"
-                    alt={'Employees images'}
+              <div className={styles.Social}>
+                <Link href="/">
+                  <BaseIcon
+                    viewBox="0 0 11 19"
+                    icon={ALL_ICONS.FACEBOOK}
+                    className={`${styles.SocialIcon} ${styles.Facebook}`}
                   />
-                </div>
-                <div className={styles.Pci}>
-                  {/* <BaseIcon
-                  viewBox="0 0 91 30"
-                  icon={ALL_ICONS.PCI}
-                  className={styles.Icon}
-                /> */}
-                </div>
+                </Link>
+
+                <Link href="/">
+                  <BaseIcon
+                    viewBox="0 0 20 20"
+                    icon={ALL_ICONS.LINKEDIN}
+                    className={`${styles.SocialIcon} ${styles.Linkedin}`}
+                  />
+                </Link>
+
+                <Link href="/">
+                  <BaseIcon
+                    viewBox="0 0 24 20"
+                    icon={ALL_ICONS.TWITTER}
+                    className={`${styles.SocialIcon} ${styles.Twitter}`}
+                  />
+                </Link>
+
+                <Link href="/">
+                  <BaseIcon
+                    viewBox="0 0 20 24"
+                    icon={ALL_ICONS.TIKTOK}
+                    className={`${styles.SocialIcon} ${styles.Tiktok}`}
+                  />
+                </Link>
+
+                <Link href="/">
+                  <BaseIcon
+                    viewBox="0 0 20 20"
+                    icon={ALL_ICONS.INSTAGRAM}
+                    className={`${styles.SocialIcon} ${styles.Instagram}`}
+                  />
+                </Link>
               </div>
             </div>
           </footer>

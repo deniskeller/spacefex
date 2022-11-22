@@ -1,12 +1,12 @@
 .Li {
   line-height: 100%;
   list-style: none;
-  @include ifmobile {
-    margin-bottom: em(40px);
-  }
-
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include ifmobile {
+    margin-bottom: em(40px);
   }
 }
 
@@ -22,8 +22,8 @@
   text-transform: uppercase;
   position: relative;
 
-  @include iftablet {
-    font-size: em(12px);
+  @include ifmobile {
+    // font-size: em(12px);
   }
 
   &::after {
