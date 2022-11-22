@@ -1,10 +1,19 @@
+.Wrapper {
+  flex: 0 0 auto;
+  @include ifdesktop {
+    padding: 0 em(73px);
+  }
+}
+
 .Footer {
-  padding-top: em(76px);
-  padding-bottom: em(56px);
+  padding: em(40px) 0 em(80px);
+
+  @include iftablet {
+    padding: em(40px) 0 em(60px);
+  }
 
   @include ifmobile {
-    padding-top: em(38px);
-    padding-bottom: em(27px);
+    padding: em(40px) 0 em(35px);
   }
 
   &_Top {
@@ -12,11 +21,16 @@
     grid-template-columns: em(345px) 1fr;
     grid-gap: em(140px);
     margin-bottom: em(80px);
+
+    @include iftablet {
+      grid-template-columns: em(250px) 1fr;
+      grid-gap: em(28px);
+    }
     @include ifmobile {
       display: flex;
       flex-direction: column;
       gap: 0;
-      margin-bottom: 0;
+      margin-bottom: em(33px);
     }
   }
 
@@ -24,12 +38,13 @@
     display: flex;
     flex-direction: column;
     @include ifmobile {
-      margin-bottom: em(30px);
+      margin-bottom: em(40px);
     }
     .Logo {
+      z-index: inherit;
       margin-bottom: em(19px);
       @include ifmobile {
-        margin-bottom: em(12px);
+        margin-bottom: em(15px);
       }
       path {
         fill: $white;
@@ -44,7 +59,6 @@
       color: rgba(247, 247, 247, 0.5);
       @include ifmobile {
         font-size: em(12px);
-        text-align: center;
       }
     }
   }
@@ -53,66 +67,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     @include ifmobile {
       gap: em(20px) 0;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
     }
-
-    // &_Item:last-child {
-    //   @include ifmobile {
-    //     position: relative;
-    //     top: em(-105px);
-    //   }
-    // }
-
-    // &_Title {
-    //   margin-bottom: em(24px);
-    //   @include ifmobile {
-    //     margin-bottom: em(10px);
-    //   }
-    //   span {
-    //     font-size: em(15px);
-    //     font-style: normal;
-    //     font-weight: 900;
-    //     color: $yellow;
-    //     text-transform: uppercase;
-    //     @include ifmobile {
-    //       font-size: em(12px);
-    //     }
-    //   }
-    // }
-
-    // &_Ul {
-    //   list-style: none;
-    // }
-
-    // &_Li {
-    //   line-height: 100%;
-    //   margin-bottom: em(14px);
-    //   @include ifmobile {
-    //     margin-bottom: em(10px);
-    //   }
-
-    //   &:last-child {
-    //     margin-bottom: 0 !important;
-    //   }
-
-    //   span {
-    //     font-size: em(13px);
-    //     font-weight: 300;
-    //     line-height: 100%;
-    //     color: $white;
-    //     white-space: nowrap;
-    //     @include ifmobile {
-    //       font-size: em(12px);
-    //     }
-    //     &:hover {
-    //       color: $yellow;
-    //     }
-    //   }
-    // }
   }
 
   &_Bottom {
@@ -121,7 +80,6 @@
     align-items: flex-end;
     flex-wrap: wrap;
     @include ifmobile {
-      margin-top: em(-70px);
     }
     .Social {
       margin-right: em(149px);

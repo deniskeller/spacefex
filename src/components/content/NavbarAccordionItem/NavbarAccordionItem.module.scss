@@ -1,58 +1,43 @@
 .AccordionCareerItem {
-  background: $green;
-  border-radius: em(10px);
-  margin-bottom: em(10px);
-  &:last-child {
-    margin-bottom: 0;
-  }
-  @include ifmobile {
-    margin-bottom: em(7px);
-  }
-
   .AccordionHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: em(28px) em(33px) em(28px) em(68px);
     position: relative;
-    cursor: pointer;
-    @include ifmobile {
-      padding: em(15px) em(18px);
-    }
 
     .AccordionHeaderTitle {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 700;
-      font-size: em(15px);
-      line-height: 100%;
-      color: $white;
-      text-transform: uppercase;
+      margin-bottom: em(24px);
+      @include iftablet {
+        margin-bottom: em(12px);
+      }
       @include ifmobile {
-        font-size: em(12px);
+        margin-bottom: 0;
+        cursor: pointer;
+      }
+      span {
+        font-size: em(14px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        color: $white;
+        @include ifmobile {
+          font-size: em(12px);
+        }
       }
     }
 
     .AccordionHeaderToggle {
-      display: flex;
-    }
-    .Open {
+      display: none;
       width: em(16px);
       height: em(14px);
+      transition: $speed;
       @include ifmobile {
-        width: em(14px);
-        height: em(12px);
+        display: flex;
       }
     }
-
-    .Close {
-      width: em(14px);
-      height: em(16px);
-      @include ifmobile {
-        width: em(10px);
-        height: em(12px);
-      }
+    .Open {
+      transform: rotate(-180deg);
     }
   }
 
@@ -61,10 +46,49 @@
     transition: max-height $speed cubic-bezier(1, 0, 1, 0);
     height: auto;
     max-height: 9999px;
+
+    &_Ul {
+      @include ifmobile {
+        margin-top: em(20px);
+      }
+    }
+
+    &_Li {
+      margin-bottom: em(24px);
+      @include iftablet {
+        margin-bottom: em(12px);
+      }
+
+      @include ifmobile {
+        margin-bottom: em(15px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        display: flex;
+        font-size: em(14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        color: $white;
+        @include ifmobile {
+          font-size: em(12px);
+        }
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
   }
 
   .AccordionContentHidden {
-    max-height: 0;
-    transition: max-height $speed cubic-bezier(0, 1, 0, 1);
+    @include ifmobile {
+      max-height: 0;
+      transition: max-height $speed cubic-bezier(0, 1, 0, 1);
+    }
   }
 }

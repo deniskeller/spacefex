@@ -24,9 +24,15 @@ const NavbarAccordionItem: React.FC<IProps> = ({ title, list }) => {
           className={styles.AccordionHeader}
           onClick={() => setIsVisible(!isVisible)}
         >
-          <div className={styles.AccordionHeaderTitle}>{title}</div>
+          <div className={styles.AccordionHeaderTitle}>
+            <span>{title}</span>
+          </div>
 
-          <div className={`${styles.AccordionHeaderToggle} ${styles.Open}`}>
+          <div
+            className={`${styles.AccordionHeaderToggle} ${
+              !isVisible ? styles.Open : ''
+            }`}
+          >
             <BaseIcon
               icon={ALL_ICONS.SHOW_MORE_ARROW}
               viewBox="0 0 18 9"
@@ -39,10 +45,10 @@ const NavbarAccordionItem: React.FC<IProps> = ({ title, list }) => {
             isVisible ? styles.AccordionContentHidden : ''
           }`}
         >
-          <ul className={styles.Navbar_Ul}>
+          <ul className={styles.AccordionContent_Ul}>
             {list?.map((el, i) => {
               return (
-                <li className={styles.Navbar_Li} key={i}>
+                <li className={styles.AccordionContent_Li} key={i}>
                   <Link href={el.href}>
                     <span>{el.name}</span>
                   </Link>
