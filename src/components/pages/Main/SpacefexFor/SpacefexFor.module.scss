@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: em(564px) 1fr;
   padding: em(120px) 0 0;
+  position: relative;
 
   &_Image {
     position: relative;

@@ -15,7 +15,7 @@ const Main = () => {
       <ComingUp />
       <ForHumanity />
       <div
-        className={styles.Bg}
+        className={styles.Wrapper}
         style={{ backgroundImage: 'url(/images/image/dust.jpg)' }}
       >
         <BlockchainFeatures />

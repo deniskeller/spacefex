@@ -1,7 +1,7 @@
 .Wrapper {
   position: relative;
   background-position: center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-repeat: no-repeat;
   padding: em(291px) em(73px) em(178px);
   @include iftablet {
