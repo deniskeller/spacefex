@@ -1,10 +1,12 @@
 .Wrapper {
   position: relative;
-  background-position: center;
+  background-position: top;
+  background-size: cover;
   // background-attachment: fixed;
   background-repeat: no-repeat;
   padding: em(291px) em(73px) em(178px);
   @include iftablet {
+    background-size: auto;
     padding: em(290px) 0 em(140px);
   }
   @include ifmobile {
