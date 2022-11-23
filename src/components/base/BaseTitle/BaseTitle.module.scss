@@ -1,18 +1,24 @@
 .Title {
   font-style: normal;
   line-height: 120%;
-  font-weight: 500;
 
   &_h1 {
-    font-size: em(32px);
-    text-transform: uppercase;
+    font-family: $font-PeckhamPress;
+    font-weight: 400;
+    font-size: em(46px);
+    color: $text;
     @include ifmobile {
-      font-size: em(24px);
+      font-size: em(22px);
     }
   }
+
   &_h2 {
+    font-family: $font-Pirulen;
+    font-weight: 400;
     font-size: em(24px);
-    line-height: 133%;
+    text-transform: uppercase;
+    color: $red !important;
+
     @include ifmobile {
       font-size: em(18px);
     }

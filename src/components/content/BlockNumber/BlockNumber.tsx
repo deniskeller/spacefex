@@ -13,8 +13,6 @@ const BlockNumber: React.FC<Props> = ({ number = '1', className = '' }) => {
         {number == '1' ? (
           <>
             <svg
-              width="204"
-              height="148"
               viewBox="0 0 204 148"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +27,6 @@ const BlockNumber: React.FC<Props> = ({ number = '1', className = '' }) => {
         ) : number == '2' ? (
           <>
             <svg
-              width="204"
-              height="148"
               viewBox="0 0 204 148"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,8 +41,6 @@ const BlockNumber: React.FC<Props> = ({ number = '1', className = '' }) => {
         ) : number == '3' ? (
           <>
             <svg
-              width="204"
-              height="148"
               viewBox="0 0 204 148"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -61,8 +55,6 @@ const BlockNumber: React.FC<Props> = ({ number = '1', className = '' }) => {
         ) : number == '4' ? (
           <>
             <svg
-              width="204"
-              height="148"
               viewBox="0 0 204 148"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -77,8 +69,6 @@ const BlockNumber: React.FC<Props> = ({ number = '1', className = '' }) => {
         ) : number == '5' ? (
           <>
             <svg
-              width="204"
-              height="148"
               viewBox="0 0 204 148"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -93,8 +83,6 @@ const BlockNumber: React.FC<Props> = ({ number = '1', className = '' }) => {
         ) : number == '6' ? (
           <>
             <svg
-              width="204"
-              height="148"
               viewBox="0 0 204 148"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

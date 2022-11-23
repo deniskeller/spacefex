@@ -1,0 +1,167 @@
+.Wrapper {
+  position: relative;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: em(291px) em(73px) em(178px);
+  @include iftablet {
+    padding: em(290px) 0 em(140px);
+  }
+  @include ifmobile {
+    padding: em(75px) 0 em(60px);
+  }
+}
+
+.DecorIcon {
+  position: absolute;
+  width: em(668px);
+  height: em(78px);
+  top: em(230px);
+  right: em(-27px);
+  @include iftablet {
+    top: em(153px);
+  }
+  @include ifmobile {
+    display: none;
+  }
+}
+
+.ComingUp {
+  position: relative;
+  .NumberIcon {
+    position: absolute;
+    top: em(-117px);
+    left: em(-85px);
+    @include iftablet {
+      top: em(-106px);
+      left: em(-20px);
+    }
+    @include ifmobile {
+      top: em(-30px);
+      left: em(8px);
+    }
+  }
+
+  &_Description {
+    display: grid;
+    grid-template-columns: em(467px) em(441px);
+    gap: em(20px) em(44px);
+    margin-bottom: em(114px);
+
+    @include iftablet {
+      grid-template-columns: em(442px) em(442px);
+      gap: em(20px) em(38px);
+      margin-bottom: em(75px);
+    }
+    @include ifmobile {
+      grid-template-columns: 1fr;
+      gap: em(50px) 0;
+      margin-bottom: em(100px);
+      padding: 0 em(25px);
+    }
+
+    p {
+      font-size: em(20px);
+      font-weight: 600;
+      line-height: 160%;
+      color: $text;
+      @include ifmobile {
+        font-size: em(18px);
+      }
+    }
+  }
+
+  &_Title {
+    margin-bottom: em(50px);
+    @include ifmobile {
+      padding: 0 em(25px);
+      margin-bottom: em(60px);
+    }
+    h1 {
+      font-family: $font-Pirulen;
+      font-weight: 400;
+      font-size: em(22px);
+      color: $red;
+      text-transform: uppercase;
+      text-shadow: 0px 0px 37px #dc4945;
+    }
+  }
+
+  &_Soon {
+    display: grid;
+    grid-template-columns: repeat(5, em(240px));
+    justify-content: end;
+    position: relative;
+    @include iftablet {
+      min-height: em(512px);
+    }
+
+    @include ifmobile {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    &_Item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: em(240px);
+      height: em(283px);
+      @include iftablet {
+        position: absolute;
+        &:nth-child(1) {
+          top: 0;
+          left: em(-20px);
+        }
+        &:nth-child(2) {
+          top: em(50px);
+          left: em(160px);
+        }
+        &:nth-child(3) {
+          top: em(100px);
+          left: em(340px);
+        }
+        &:nth-child(4) {
+          top: em(140px);
+          left: em(510px);
+        }
+        &:nth-child(5) {
+          top: em(190px);
+          left: em(680px);
+        }
+      }
+
+      @include ifmobile {
+        width: em(283px);
+        height: em(230px);
+      }
+
+      &_Image {
+        position: absolute;
+        width: em(283px);
+        height: em(283px);
+        animation: moving 6s infinite linear;
+        z-index: 0;
+      }
+
+      &_Title {
+        font-weight: 400;
+        font-size: em(20px);
+        line-height: 152.7%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $text;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@include keyframe(moving) {
+  100% {
+    transform: rotate(-360deg);
+  }
+}

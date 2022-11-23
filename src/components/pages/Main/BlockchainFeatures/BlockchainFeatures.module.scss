@@ -1,0 +1,50 @@
+.Wrapper {
+  padding: em(199px) em(50px) 0;
+
+  @include iftablet {
+    padding: em(199px) 0 0;
+  }
+  @include ifmobile {
+    padding: em(100px) 0 0;
+  }
+}
+
+.BlockchainFeatures {
+  position: relative;
+
+  .NumberIcon {
+    top: em(-77px);
+    left: em(-85px);
+
+    @include iftablet {
+      top: em(-89px);
+      left: em(-40px);
+    }
+    @include ifmobile {
+      top: em(-38px);
+      left: em(15px);
+    }
+  }
+  &_Title {
+    margin-bottom: em(100px);
+    @include ifmobile {
+      margin-bottom: em(50px);
+      padding-left: em(30px);
+    }
+  }
+
+  &_Items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: em(217px) em(146px);
+    justify-items: center;
+    @include iftablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: em(97px) em(97px);
+    }
+    @include ifmobile {
+      grid-template-columns: 1fr;
+      gap: em(35px) 0;
+    }
+  }
+}

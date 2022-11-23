@@ -1,9 +1,10 @@
 .Text {
-  font-size: em(16px);
+  font-size: em(18px);
   font-style: normal;
   font-weight: 400;
-  line-height: 133%;
+  line-height: 156%;
+  color: $text;
   @include ifmobile {
-    font-size: em(14px);
+    font-size: em(16px);
   }
 }

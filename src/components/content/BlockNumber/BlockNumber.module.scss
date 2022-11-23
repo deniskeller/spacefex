@@ -1,0 +1,11 @@
+.Number {
+  position: absolute;
+  display: flex;
+  width: em(202px);
+  height: em(148px);
+
+  @include ifmobile {
+    width: em(100px);
+    height: em(72px);
+  }
+}
