@@ -1,12 +1,13 @@
 //@ts-nocheck
 import { BaseContainer, BaseTitle } from '@base/index';
-import { BlockNumber } from '@content/index';
+import { BlockNumber, BlogItem } from '@content/index';
 import React, { useRef } from 'react';
 import styles from './Blogs.module.scss';
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { posts } from '@services/post';
 
 const Blogs = () => {
   var settings = {
@@ -96,21 +97,18 @@ const Blogs = () => {
             </div>
 
             <Slider {...settings} ref={slider}>
-              <div>
-                <div className={styles.Blogs_Slider_Slide}></div>
-              </div>
-              <div>
-                <div className={styles.Blogs_Slider_Slide}></div>
-              </div>
-              <div>
-                <div className={styles.Blogs_Slider_Slide}></div>
-              </div>
-              <div>
-                <div className={styles.Blogs_Slider_Slide}></div>
-              </div>
-              <div>
-                <div className={styles.Blogs_Slider_Slide}></div>
-              </div>
+              {posts?.map((post, index) => {
+                return (
+                  <BlogItem
+                    image={post.image}
+                    key={post.id}
+                    author={post.author}
+                    post_date={post.post_date}
+                    header={post.header}
+                    description={post.description}
+                  />
+                );
+              })}
             </Slider>
           </div>
         </div>

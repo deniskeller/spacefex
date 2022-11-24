@@ -1,0 +1,84 @@
+.BlogItem {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  height: em(533px);
+
+  @include ifmobile {
+    height: em(449px);
+  }
+
+  &:hover {
+    .BlogItem_Background {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(0%);
+    }
+  }
+
+  &_Background {
+    @extend %fullsize;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    z-index: 1;
+  }
+
+  &_Banner {
+    position: absolute;
+    right: 0;
+    bottom: em(39px);
+    width: 92%;
+    min-height: em(190px);
+    padding: em(20px);
+    background: rgba(31, 31, 31, 0.8);
+    z-index: 1;
+    @include ifmobile {
+      width: 100%;
+      min-height: em(180px);
+      bottom: 0;
+    }
+
+    &_Info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: em(26px);
+      @include ifmobile {
+        margin-bottom: em(11px);
+      }
+      &_Author,
+      &_Date {
+        font-weight: 400;
+        font-size: em(12px);
+        color: #bcbcbc;
+      }
+    }
+
+    &_Header {
+      margin-bottom: em(10px);
+      h1 {
+        font-family: $font-Pirulen;
+        font-weight: 400;
+        font-size: em(20px);
+        color: $white;
+        @include ifmobile {
+          font-size: em(16px);
+        }
+      }
+    }
+
+    &_Description {
+      font-weight: 400;
+      font-size: em(18px);
+      color: $white;
+      @include ifmobile {
+        font-size: em(14px);
+      }
+    }
+  }
+}
