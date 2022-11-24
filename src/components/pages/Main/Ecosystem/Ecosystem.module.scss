@@ -1,0 +1,160 @@
+.Wrapper {
+  padding: em(180px) em(50px) em(112px);
+  @include iftablet {
+    padding: em(186px) 0 em(15px);
+  }
+  @include ifmobile {
+    padding: em(132px) 0 em(97px);
+  }
+}
+
+.Ecosystem {
+  position: relative;
+
+  .NumberIcon {
+    top: em(-90px);
+    left: em(-83px);
+    @include iftablet {
+      left: em(-18px);
+    }
+    @include ifmobile {
+      top: em(-49px);
+      left: em(13px);
+    }
+  }
+
+  &_Title {
+    margin-bottom: em(67px);
+    @include iftablet {
+      margin-bottom: em(100px);
+    }
+    @include ifmobile {
+      margin-bottom: em(50px);
+    }
+  }
+
+  &_AccordionSlider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    min-height: em(590px);
+    margin-bottom: em(100px);
+
+    @include iftablet {
+      margin-bottom: em(67px);
+    }
+
+    @include ifmobile {
+      flex-wrap: wrap;
+      min-height: em(725px);
+      margin-bottom: em(30px);
+    }
+
+    & li:hover {
+      width: 50%;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(0%);
+
+      @include iftablet {
+        width: 100%;
+      }
+      @include ifmobile {
+        width: 100%;
+        height: em(338px);
+      }
+
+      .SlideTitle {
+        opacity: 0;
+      }
+      .Active {
+        opacity: 1;
+      }
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      width: calc(100% / 5);
+      height: em(590px);
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+
+      @include ifmobile {
+        width: 100%;
+        height: calc(em(725px) / 5);
+      }
+    }
+
+    .SlideTitle,
+    .Active {
+      display: flex;
+      position: absolute;
+      left: em(28px);
+      bottom: em(15px);
+      transition: all 1s;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      transform-origin: left top;
+      transform: rotate(-90deg);
+      opacity: 1;
+      @include ifmobile {
+        transform: none;
+        left: em(24px);
+        bottom: em(16px);
+      }
+
+      span {
+        font-weight: 500;
+        font-size: em(18px);
+        line-height: 100%;
+        color: $white;
+        white-space: nowrap;
+        width: max-content;
+        @include ifmobile {
+          font-size: em(16px);
+        }
+      }
+    }
+
+    .Active {
+      transform-origin: left top;
+      transform: rotate(0deg);
+      opacity: 0;
+      left: em(35px);
+      bottom: em(50px);
+      span {
+        font-size: em(24px);
+      }
+    }
+  }
+
+  &_Subtitle {
+    margin: 0 auto;
+    margin-bottom: em(28px);
+    h2 {
+      font-family: $font-Pirulen;
+      font-weight: 400;
+      font-size: em(35px);
+      text-align: center;
+      color: $text;
+      @include ifmobile {
+        font-size: em(24px);
+      }
+    }
+  }
+
+  &_Button {
+    width: em(213px);
+    height: em(52px);
+    margin: 0 auto;
+    @include ifmobile {
+      width: 100%;
+    }
+  }
+}
