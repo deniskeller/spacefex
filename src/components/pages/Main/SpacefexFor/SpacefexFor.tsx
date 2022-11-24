@@ -1,4 +1,5 @@
 import { BaseContainer, BaseText, BaseTitle } from '@base/index';
+import { BlockNumber } from '@content/index';
 import Image from 'next/image';
 import React from 'react';
 import styles from './SpacefexFor.module.scss';
@@ -10,17 +11,16 @@ const SpacefexFor = () => {
         <BaseContainer>
           <div className={styles.SpacefexFor}>
             <div className={styles.SpacefexFor_Image}>
-              <div className={styles.SpacefexFor_Image_Astro}>
-                <Image
-                  src="/images/image/astro.jpg"
-                  layout="fill"
-                  alt={'Image'}
-                  priority
-                />
-              </div>
+              <Image
+                src="/images/image/astro.png"
+                layout="fill"
+                alt={'Image'}
+              />
             </div>
 
             <div className={styles.SpacefexFor_About}>
+              <BlockNumber number="4" className={styles.NumberIcon} />
+
               <BaseTitle className={styles.SpacefexFor_About_Title}>
                 Spacefex for
               </BaseTitle>

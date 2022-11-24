@@ -20,7 +20,7 @@
     color: $red !important;
 
     @include ifmobile {
-      font-size: em(18px);
+      font-size: em(16px);
     }
   }
 }

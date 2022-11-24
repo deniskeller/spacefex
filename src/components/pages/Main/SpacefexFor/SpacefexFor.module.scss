@@ -1,10 +1,105 @@
+.Wrapper {
+  padding: em(120px) em(50px) 0;
+  @include iftablet {
+    padding: em(23px) 0 0;
+  }
+
+  @include ifmobile {
+    padding: em(50px) 0 0;
+  }
+}
+
 .SpacefexFor {
   display: grid;
   grid-template-columns: em(564px) 1fr;
-  padding: em(120px) 0 0;
-  position: relative;
+  gap: 0 em(66px);
+
+  @include iftablet {
+    grid-template-columns: 1fr;
+    gap: em(109px) 0;
+  }
+  @include ifmobile {
+    grid-template-columns: 1fr;
+    gap: em(90px) 0;
+  }
 
   &_Image {
     position: relative;
+    width: em(564px);
+    height: em(767px);
+    @include iftablet {
+      width: em(668px);
+      height: em(909px);
+      justify-self: center;
+    }
+    @include ifmobile {
+      width: em(281px);
+      height: em(383px);
+      justify-self: center;
+    }
+  }
+
+  &_About {
+    position: relative;
+    @include iftablet {
+      max-width: em(776px);
+    }
+    @include ifmobile {
+    }
+
+    .NumberIcon {
+      top: em(-84px);
+      right: em(-77px);
+      @include iftablet {
+        top: 0;
+        right: em(-162px);
+      }
+      @include ifmobile {
+        top: em(-43px);
+        right: em(12px);
+      }
+    }
+
+    &_Title {
+      margin-bottom: em(100px);
+      @include ifmobile {
+        margin-bottom: em(50px);
+      }
+    }
+
+    &_Item {
+      margin-bottom: em(52px);
+
+      @include ifmobile {
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_Title {
+        margin-bottom: em(20px);
+        padding-left: em(35px);
+        position: relative;
+        @include ifmobile {
+          padding-left: em(25px);
+          margin-bottom: em(10px);
+        }
+        &::before {
+          content: '';
+          width: em(20px);
+          height: em(20px);
+          position: absolute;
+          left: 0;
+          top: em(3px);
+          border: 1px solid $text;
+          border-radius: 50%;
+          box-sizing: border-box;
+          @include ifmobile {
+            width: em(15px);
+            height: em(15px);
+          }
+        }
+      }
+    }
   }
 }

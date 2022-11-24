@@ -65,7 +65,7 @@ const Navbar: React.FC<Props> = () => {
   return (
     <div
       className={styles.Container}
-      style={{ height: `${visible ? '100%' : ''}` }}
+      style={{ height: `${visible ? '100%' : 'auto'}` }}
     >
       <div className={styles.Navbar}>
         <Logo />
