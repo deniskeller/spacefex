@@ -1,5 +1,6 @@
 import {
   BlockchainFeatures,
+  Blogs,
   ComingUp,
   Ecosystem,
   ForHumanity,
@@ -23,6 +24,7 @@ const Main = () => {
         <SpacefexFor />
       </div>
       <Ecosystem />
+      <Blogs />
     </>
   );
 };

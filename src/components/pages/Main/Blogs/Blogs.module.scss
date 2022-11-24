@@ -1,0 +1,120 @@
+.Wrapper {
+  padding: em(193px) em(50px) em(231px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include iftablet {
+    padding: em(85px) 0 em(200px);
+  }
+  @include ifmobile {
+    padding: em(32px) 0 em(130px);
+  }
+}
+
+.Blogs {
+  position: relative;
+
+  .NumberIcon {
+    top: em(-93px);
+    right: em(-85px);
+    @include iftablet {
+      top: em(-85px);
+      right: em(69px);
+    }
+    @include ifmobile {
+      top: em(-32px);
+      right: em(37px);
+    }
+  }
+
+  &_Title {
+    margin-bottom: em(100px);
+    @include ifmobile {
+      margin-bottom: em(49px);
+    }
+  }
+
+  &_Slider {
+    position: relative;
+
+    &_Container {
+      width: 100%;
+      max-width: em(1440px);
+      margin: 0 auto;
+
+      @include iftablet {
+        padding: 0 em(50px);
+      }
+
+      @include ifmobile {
+        padding: 0;
+      }
+    }
+
+    &_Navbar {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      bottom: 50%;
+
+      @include ifmobile {
+        max-width: em(88px);
+        bottom: em(-50px);
+        left: calc(50% - em(44px));
+      }
+
+      .PrevSlide,
+      .NextSlide {
+        width: em(22px);
+        height: em(41px);
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          opacity: 0.5;
+        }
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+
+        @include ifmobile {
+          width: em(10px);
+          height: em(18px);
+        }
+      }
+      .PrevSlide {
+        left: em(-30px);
+        @include iftablet {
+          left: em(-20px);
+        }
+        @include ifmobile {
+          left: 0;
+        }
+      }
+
+      .NextSlide {
+        right: em(-30px);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        @include iftablet {
+          right: em(-20px);
+        }
+        @include ifmobile {
+          right: 0;
+        }
+      }
+    }
+
+    &_Slide {
+      background: grey;
+      height: em(533px);
+      @include ifmobile {
+        height: em(449px);
+      }
+    }
+  }
+}

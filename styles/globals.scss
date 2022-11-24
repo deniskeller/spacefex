@@ -1,1 +1,21 @@
 @import './../src/assets/scss/core.scss';
+
+/* Слайды */
+.slick-slide {
+  width: 100% !important;
+  max-width: em(710px) !important;
+  margin: 0 em(9px) !important;
+  height: em(533px) !important;
+
+  @include iftablet {
+    margin: 0 em(90px) !important;
+  }
+  @include ifmobile {
+    height: em(449px) !important;
+    margin: 0 !important;
+  }
+}
+
+.slick-slider .slick-track {
+  display: flex;
+}
