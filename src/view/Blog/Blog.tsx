@@ -19,6 +19,7 @@ const Blog = () => {
             {posts?.map((post, index) => {
               return (
                 <BlogItem
+                  id={post.id}
                   image={post.image}
                   key={post.id}
                   author={post.author}

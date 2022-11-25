@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './BlogItem.module.scss';
+import { useRouter } from 'next/router';
 
 interface IProps {
   id?: number;
@@ -12,6 +13,7 @@ interface IProps {
 }
 
 const BlogItem: React.FC<IProps> = ({
+  id = 1,
   image = 'accordion-slide1.jpg',
   author = 'author',
   post_date = '01.01.2022',
@@ -19,9 +21,17 @@ const BlogItem: React.FC<IProps> = ({
   description = 'Some text',
   className = '',
 }) => {
+  const router = useRouter();
+  const goToNews = (id: number) => {
+    router.push('/blog/' + id);
+  };
+
   return (
     <>
-      <div className={`${styles.BlogItem} ${className}`}>
+      <div
+        className={`${styles.BlogItem} ${className}`}
+        onClick={() => goToNews(id)}
+      >
         <div
           className={styles.BlogItem_Background}
           style={{ backgroundImage: `url('/images/image/${image}')` }}
