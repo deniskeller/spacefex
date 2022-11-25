@@ -4,7 +4,7 @@
   z-index: 1000;
   background: $main_bg;
   @include ifdesktop {
-    padding: 0 em(73px);
+    padding: 0 em(50px);
   }
 }
 

@@ -1,8 +1,5 @@
 .Wrapper {
-  width: 100%;
-  max-width: em(1440px);
   padding: em(156px) em(50px) em(200px);
-  margin: 0 auto;
   position: relative;
   @include iftablet {
     padding: em(148px) 0 em(200px);

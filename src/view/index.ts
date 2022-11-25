@@ -1,6 +1,7 @@
 export { default as Main } from "./Main/Main";
 export { default as Blog } from "./Blog/Blog";
 export { default as BlogSpecific } from "./BlogSpecific/BlogSpecific";
+export { default as Developers } from "./Developers/Developers";
 
 {/* 
         <BaseIcon

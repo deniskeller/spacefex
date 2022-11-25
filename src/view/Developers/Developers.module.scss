@@ -1,0 +1,198 @@
+.Wrapper {
+  padding: em(240px) em(50px);
+  position: relative;
+  @include iftablet {
+    padding: em(240px) 0;
+  }
+  @include ifmobile {
+    padding: em(166px) 0 em(100px);
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.DecorIcon {
+  position: absolute;
+  z-index: 1;
+  width: em(668px);
+  height: em(255px);
+  right: em(-33px);
+  bottom: em(237px);
+
+  @include iftablet {
+    bottom: em(270px);
+  }
+  @include ifmobile {
+    display: none;
+  }
+}
+
+.Developers {
+  &_Title {
+    margin-bottom: em(100px);
+    @include iftablet {
+      margin-bottom: em(50px);
+    }
+    @include ifmobile {
+      margin-bottom: em(50px);
+    }
+  }
+
+  .NumberIcon {
+    top: em(-79px);
+    right: em(-100px);
+    @include iftablet {
+      top: em(-111px);
+      right: em(-42px);
+    }
+    @include ifmobile {
+      top: em(-111px);
+      right: em(-49px);
+    }
+  }
+
+  &_Content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr em(575px);
+    gap: 0 em(165px);
+
+    @include iftablet {
+      grid-template-columns: 1fr;
+      gap: em(75px) 0;
+    }
+
+    @include ifmobile {
+      grid-template-columns: 1fr;
+      gap: em(50px) 0;
+    }
+
+    &_Programs {
+      .Program {
+        border: 1px solid $text;
+        padding: em(20px) em(26px);
+        position: relative;
+        margin-bottom: em(63px);
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include iftablet {
+          margin-bottom: em(41px);
+        }
+
+        @include ifmobile {
+          padding: em(17px) em(12px);
+          margin-bottom: em(24px);
+        }
+
+        &:nth-child(3) {
+          border-color: $red;
+          .Program_Icon {
+            background: $red;
+          }
+        }
+
+        &_Title {
+          margin-bottom: em(9px);
+          @include ifmobile {
+            margin-bottom: em(17px);
+          }
+          span {
+            font-weight: 400;
+            font-size: em(24px);
+            text-transform: uppercase;
+            color: $red;
+            @include ifmobile {
+              font-size: em(16px);
+            }
+          }
+        }
+
+        &_Description {
+          font-weight: 400;
+          font-size: em(18px);
+          color: $text;
+          @include ifmobile {
+            font-size: em(16px);
+          }
+        }
+
+        &_Icon {
+          position: absolute;
+          top: 0px;
+          right: em(-2px);
+          width: em(110px);
+          height: 100%;
+          background: $text;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include ifmobile {
+            width: em(48px);
+            height: em(48px);
+            right: 0;
+          }
+          .IconArrow {
+            height: em(37px);
+            transform: rotate(-90deg);
+            path {
+              fill: $black;
+            }
+            @include ifmobile {
+              height: em(29px);
+            }
+          }
+        }
+      }
+    }
+
+    &_Image {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      height: em(575px);
+      @include iftablet {
+        height: em(878px);
+      }
+      @include ifmobile {
+        height: em(277px);
+      }
+
+      &_Id {
+        position: absolute;
+        display: flex;
+        width: em(166px);
+        right: em(115px);
+        bottom: em(245px);
+        @include iftablet {
+          right: em(273px);
+          bottom: em(390px);
+        }
+        @include ifmobile {
+          right: auto;
+          top: calc(100% + em(37px));
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        span {
+          font-family: $font-Pirulen;
+          font-weight: 400;
+          font-size: em(22px);
+          color: $red;
+          text-shadow: 0px 0px 37px $red;
+        }
+      }
+    }
+  }
+}
