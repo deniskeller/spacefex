@@ -1,4 +1,5 @@
 export { default as Main } from "./Main/Main";
+export { default as Blog } from "./Blog/Blog";
 
 {/* <BaseIcon
           viewBox="0 0 670 257"

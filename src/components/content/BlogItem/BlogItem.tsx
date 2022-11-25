@@ -8,6 +8,7 @@ interface IProps {
   post_date?: string;
   header?: string;
   description?: string;
+  className?: string;
 }
 
 const BlogItem: React.FC<IProps> = ({
@@ -16,10 +17,11 @@ const BlogItem: React.FC<IProps> = ({
   post_date = '01.01.2022',
   header = 'Lorem text',
   description = 'Some text',
+  className = '',
 }) => {
   return (
     <>
-      <div className={styles.BlogItem}>
+      <div className={`${styles.BlogItem} ${className}`}>
         <div
           className={styles.BlogItem_Background}
           style={{ backgroundImage: `url('/images/image/${image}')` }}

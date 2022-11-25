@@ -2,7 +2,7 @@
   width: 100%;
   position: absolute;
   z-index: 10000;
-  padding: em(27px) em(73px);
+  padding: em(27px) em(50px);
 
   @include iftablet {
     padding: em(27px) em(30px);

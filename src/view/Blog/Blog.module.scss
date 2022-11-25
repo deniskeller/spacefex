@@ -1,0 +1,68 @@
+.Wrapper {
+  width: 100%;
+  max-width: em(1440px);
+  padding: em(240px) em(50px) em(129px);
+  margin: 0 auto;
+  position: relative;
+  @include iftablet {
+    padding: em(139px) em(50px) em(71px);
+  }
+  @include ifmobile {
+    padding: em(139px) 0 em(71px);
+    margin-bottom: em(145px);
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.Blog {
+  &_Title {
+    margin-bottom: em(100px);
+    @include iftablet {
+      margin-bottom: em(70px);
+    }
+    @include ifmobile {
+      margin-bottom: em(45px);
+      padding: 0 em(12px);
+    }
+  }
+
+  &_Posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: em(18px) em(18px);
+    margin-bottom: em(50px);
+    @include iftablet {
+      margin-bottom: em(60px);
+    }
+    @include ifmobile {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: em(60px);
+    }
+
+    &_Item {
+      @include iftablet {
+        height: em(354px);
+      }
+    }
+  }
+
+  &_Button {
+    width: em(256px);
+    height: em(52px);
+    margin: 0 auto;
+    @include ifmobile {
+      width: 100%;
+    }
+  }
+}

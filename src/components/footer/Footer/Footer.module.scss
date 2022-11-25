@@ -1,5 +1,8 @@
 .Wrapper {
   flex: 0 0 auto;
+  position: relative;
+  z-index: 1000;
+  background: $main_bg;
   @include ifdesktop {
     padding: 0 em(73px);
   }
