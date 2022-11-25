@@ -131,14 +131,14 @@
           position: absolute;
           top: 0px;
           right: em(-2px);
-          width: em(110px);
+          min-width: em(110px);
           height: 100%;
           background: $text;
           display: flex;
           align-items: center;
           justify-content: center;
           @include ifmobile {
-            width: em(48px);
+            min-width: em(48px);
             height: em(48px);
             right: 0;
           }
