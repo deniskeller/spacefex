@@ -1,21 +1,20 @@
 .Wrapper {
   width: 100%;
   max-width: em(1440px);
-  padding: em(240px) em(50px) em(129px);
+  padding: em(156px) em(50px) em(200px);
   margin: 0 auto;
   position: relative;
   @include iftablet {
-    padding: em(139px) em(50px) em(71px);
+    padding: em(148px) 0 em(200px);
   }
   @include ifmobile {
-    padding: em(139px) 0 em(71px);
-    margin-bottom: em(145px);
+    padding: em(110px) 0 em(100px);
   }
 }
 
 .Background {
   position: fixed;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   top: 0;
@@ -23,4 +22,328 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.DecorIcon {
+  position: absolute;
+  z-index: 1;
+  top: em(345px);
+  right: em(-27px);
+  width: em(668px);
+  height: em(255px);
+
+  @include iftablet {
+    top: em(289px);
+    right: em(-47px);
+    width: em(423px);
+    height: em(161px);
+  }
+  @include ifmobile {
+    display: none;
+  }
+}
+
+.BlogSpecific {
+  display: flex;
+  flex-direction: column;
+  &_Back {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin-left: em(13px);
+    margin-bottom: em(50px);
+    &:hover {
+      .BlogSpecific_Back_Title::after {
+        animation: bottomLine $speed linear forwards;
+      }
+    }
+
+    @include ifmobile {
+      margin-bottom: em(36px);
+      margin-left: em(8px);
+      order: -2;
+    }
+
+    &_Icon {
+      width: em(20px);
+      height: em(22px);
+      margin-right: em(14px);
+      @include ifmobile {
+        margin-right: em(10px);
+      }
+    }
+
+    &_Title {
+      font-weight: 400;
+      font-size: em(18px);
+      text-transform: uppercase;
+      color: $red;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: em(-7px);
+        left: 0;
+        height: em(1px);
+        background-color: $red;
+      }
+      @include ifmobile {
+        font-size: em(14px);
+      }
+    }
+  }
+
+  &_Image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: em(965px);
+    margin-bottom: em(100px);
+    @include iftablet {
+      height: em(618px);
+    }
+    @include ifmobile {
+      height: em(285px);
+      margin-bottom: em(30px);
+    }
+  }
+
+  &_Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: em(59px);
+    margin-bottom: em(60px);
+    @include ifmobile {
+      padding-bottom: 0;
+      margin-bottom: em(31px);
+      border-bottom: none;
+      order: -2;
+      flex-wrap: wrap;
+    }
+
+    &_Title {
+      max-width: em(585px);
+      @include ifmobile {
+        margin-bottom: em(5px);
+      }
+      h1 {
+        font-family: $font-Pirulen;
+        font-weight: 400;
+        font-size: em(24px);
+        color: $white;
+        @include iftablet {
+          font-size: em(20px);
+        }
+        @include ifmobile {
+          width: 100%;
+          font-size: em(18px);
+          line-height: 167%;
+        }
+      }
+    }
+
+    &_Info {
+      text-align: right;
+      @include ifmobile {
+        text-align: left;
+      }
+      &_Date,
+      &_Author {
+        span {
+          font-weight: 400;
+          font-size: em(18px);
+          color: rgba(255, 255, 255, 0.7);
+          @include iftablet {
+            font-size: em(16px);
+          }
+          @include ifmobile {
+            font-size: em(14px);
+          }
+        }
+      }
+      &_Date {
+        margin-bottom: em(8px);
+      }
+    }
+  }
+
+  &_Paragraph {
+    margin-bottom: em(48px);
+    @include iftablet {
+      margin-bottom: em(36px);
+    }
+    @include ifmobile {
+      margin-bottom: em(20px);
+    }
+    p {
+      font-size: em(18px);
+      font-weight: 400;
+      line-height: 156%;
+      color: $white;
+      @include iftablet {
+        font-size: em(16px);
+      }
+      @include ifmobile {
+        font-size: em(14px);
+        line-height: 200%;
+      }
+    }
+  }
+
+  &_Quote {
+    position: relative;
+    max-width: em(1048px);
+    margin-bottom: em(48px);
+    margin-left: em(40px);
+    padding-left: em(26px);
+    @include iftablet {
+      margin-bottom: em(48px);
+      margin-left: em(20px);
+    }
+    @include ifmobile {
+      margin-bottom: em(20px);
+      margin-left: em(10px);
+      padding-left: em(20px);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: em(3px);
+      height: 100%;
+      background: $red;
+      box-shadow: 0px 0px 37px $red, inset 0px 0px 5px $red;
+    }
+    p {
+      font-size: em(24px);
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $text;
+      @include iftablet {
+        font-size: em(20px);
+      }
+      @include ifmobile {
+        font-size: em(16px);
+      }
+    }
+  }
+
+  &_List {
+    list-style: disc;
+    padding-left: em(30px);
+    margin-bottom: em(56px);
+    @include iftablet {
+      padding-left: em(25px);
+    }
+    @include ifmobile {
+      margin-bottom: em(50px);
+    }
+
+    &_Title {
+      margin-bottom: em(24px);
+      h3 {
+        font-weight: 400;
+        font-size: em(18px);
+        color: $white;
+        @include iftablet {
+          font-size: em(16px);
+        }
+        @include ifmobile {
+          font-size: em(14px);
+        }
+      }
+    }
+
+    &_Item {
+      font-weight: 400;
+      font-size: em(18px);
+      color: $white;
+      margin-bottom: em(5px);
+      @include iftablet {
+        font-size: em(16px);
+      }
+      @include ifmobile {
+        font-size: em(14px);
+        line-height: 200%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &_Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &_Item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        .BlogSpecific_Navbar_Item_Title::after {
+          animation: bottomLine $speed linear forwards;
+        }
+      }
+
+      &_Icon {
+        width: em(20px);
+        height: em(22px);
+
+        &:nth-child(1) {
+          margin-right: em(14px);
+          @include ifmobile {
+            margin-right: em(10px);
+          }
+        }
+        &:nth-child(2) {
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          margin-left: em(14px);
+          @include ifmobile {
+            margin-left: em(10px);
+          }
+        }
+      }
+
+      &_Title {
+        font-weight: 400;
+        font-size: em(18px);
+        text-transform: uppercase;
+        color: $red;
+        position: relative;
+        @include ifmobile {
+          font-size: em(16px);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: em(-7px);
+          left: 0;
+          height: em(1px);
+          background-color: $red;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bottomLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
