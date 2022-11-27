@@ -24,9 +24,12 @@
   box-sizing: border-box;
   background: linear-gradient($white, $white), linear-gradient($white, $white),
     linear-gradient($white, $white);
-  background-size: 1px 20%, 110% 1px, 1px 20%;
+  background-size: 1px 20%, 100% 1px, 1px 20%;
   background-position: bottom left, bottom center, bottom right;
   background-repeat: no-repeat;
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  background-origin: content-box;
 
   &:hover {
     background-size: 2px 20%, 100% 2px, 2px 20%;
