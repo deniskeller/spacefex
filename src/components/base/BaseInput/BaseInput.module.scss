@@ -27,9 +27,9 @@
   background-size: 1px 20%, 100% 1px, 1px 20%;
   background-position: bottom left, bottom center, bottom right;
   background-repeat: no-repeat;
-  -webkit-background-origin: content;
-  -moz-background-origin: content;
-  background-origin: content-box;
+  background-origin: border-box;
+  -webkit-background-origin: border-box;
+  -moz-background-origin: border-box;
 
   &:hover {
     background-size: 2px 20%, 100% 2px, 2px 20%;
