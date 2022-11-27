@@ -1,0 +1,179 @@
+.Wrapper {
+  padding: em(240px) em(50px);
+  position: relative;
+  @include iftablet {
+    padding: em(240px) 0;
+  }
+  @include ifmobile {
+    padding: em(166px) 0 em(100px);
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.DecorIcon {
+  position: absolute;
+  z-index: 1;
+  width: em(668px);
+  height: em(314px);
+  bottom: em(1110px);
+  left: em(-83px);
+  @include iftablet {
+    width: em(668px);
+    height: em(314px);
+    right: em(-39px);
+    bottom: em(658px);
+    left: auto;
+  }
+  @include ifmobile {
+    display: none;
+  }
+}
+
+.Foundation {
+  position: relative;
+  max-width: em(1318px);
+  .NumberIcon {
+    top: em(-64px);
+    right: em(-126px);
+    @media only screen and (min-width: 1025px) and (max-width: 1540px) {
+      right: 0;
+    }
+    @include iftablet {
+      right: em(-11px);
+    }
+    @include ifmobile {
+      top: em(-28px);
+      right: em(28px);
+    }
+  }
+
+  &_Title {
+    margin-bottom: em(100px);
+    @include iftablet {
+      margin-bottom: em(50px);
+    }
+    @include ifmobile {
+      margin-bottom: em(50px);
+    }
+  }
+
+  &_Content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 em(142px);
+    margin-bottom: em(171px);
+
+    @include iftablet {
+      grid-template-columns: 1fr;
+      gap: em(50px) 0;
+      margin-bottom: em(177px);
+    }
+    @include ifmobile {
+      grid-template-columns: 1fr;
+      gap: em(80px) 0;
+      margin-bottom: em(109px);
+    }
+
+    &_About {
+      &_Title {
+        margin-bottom: em(30px);
+        @include iftablet {
+          margin-bottom: em(20px);
+        }
+        @include ifmobile {
+          margin-bottom: em(20px);
+        }
+      }
+    }
+
+    &_Info {
+      &_Item {
+        margin-bottom: em(52px);
+
+        @include ifmobile {
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &_Title {
+          margin-bottom: em(20px);
+          padding-left: em(35px);
+          position: relative;
+          @include ifmobile {
+            padding-left: em(25px);
+            margin-bottom: em(10px);
+          }
+          &::before {
+            content: '';
+            width: em(20px);
+            height: em(20px);
+            position: absolute;
+            left: 0;
+            top: em(2px);
+            border: 1px solid $text;
+            border-radius: 50%;
+            box-sizing: border-box;
+            @include ifmobile {
+              width: em(15px);
+              height: em(15px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_Image {
+    width: 100%;
+    height: em(960px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    @include iftablet {
+      height: em(636px);
+    }
+    @include ifmobile {
+      height: em(212px);
+    }
+
+    &_Id {
+      position: absolute;
+      bottom: em(397px);
+      left: em(-38px);
+      @include iftablet {
+        bottom: em(278px);
+        left: em(29px);
+      }
+      @include ifmobile {
+        top: em(-9px);
+        right: em(15px);
+        bottom: auto;
+        left: auto;
+      }
+      span {
+        display: flex;
+        font-family: $font-Pirulen;
+        font-weight: 400;
+        font-size: em(22px);
+        color: $red;
+        text-shadow: 0px 0px 37px $red;
+        @include ifmobile {
+          font-size: em(14px);
+        }
+      }
+    }
+  }
+}
