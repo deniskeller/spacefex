@@ -36,7 +36,7 @@ const Contacts = () => {
               <BaseInput
                 name="mail"
                 placeholder="Enter e-mail address"
-                error="Wrong email format"
+                type="mail"
                 value={value}
                 onChange={(val: string) => setValue(val)}
                 className={styles.Input}
