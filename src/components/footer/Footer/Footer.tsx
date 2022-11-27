@@ -23,7 +23,7 @@ const Links: Links[] = [
       { name: 'Blog', href: '/blog' },
       { name: 'Join us', href: '/join-us' },
       { name: 'Vacancies', href: '/vacancies' },
-      { name: 'Contacts', href: '/сontacts' },
+      { name: 'Contacts', href: '/contacts' },
       { name: 'Financial statements', href: '/financial-statements' },
     ],
   },

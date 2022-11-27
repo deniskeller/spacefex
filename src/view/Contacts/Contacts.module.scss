@@ -1,0 +1,73 @@
+.Wrapper {
+  padding: em(240px) em(50px) em(200px);
+  position: relative;
+  @include iftablet {
+    padding: em(212px) 0 em(186px);
+  }
+  @include ifmobile {
+    padding: em(166px) 0 em(100px);
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.DecorIcon {
+  position: absolute;
+  z-index: 1;
+  width: em(668px);
+  height: em(78px);
+  top: em(288px);
+  right: em(-6px);
+  @include iftablet {
+    top: em(305px);
+    right: em(-40px);
+  }
+  @include ifmobile {
+    display: none;
+  }
+}
+
+.Contacts {
+  position: relative;
+  .NumberIcon {
+    top: em(-76px);
+    left: em(-102px);
+    @media only screen and (min-width: 1025px) and (max-width: 1680px) {
+      left: em(-20px);
+    }
+    @include iftablet {
+      left: em(-20px);
+    }
+    @include ifmobile {
+      top: em(-26px);
+      left: 0;
+    }
+  }
+
+  &_Title {
+    margin-bottom: em(100px);
+    @include iftablet {
+      margin-bottom: em(50px);
+    }
+    @include ifmobile {
+      margin-bottom: em(50px);
+    }
+  }
+
+  &_Content {
+    @include iftablet {
+    }
+    @include ifmobile {
+    }
+  }
+}
