@@ -28,7 +28,7 @@
   background-position: bottom left, bottom center, bottom right;
   background-repeat: no-repeat;
   background-origin: border-box;
-  -webkit-background-origin: border-box;
+  -webkit-background-origin: inherit;
   -moz-background-origin: border-box;
 
   &:hover {
