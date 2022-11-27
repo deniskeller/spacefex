@@ -1,10 +1,17 @@
-import { BaseContainer, BaseIcon, BaseText, BaseTitle } from '@base/index';
+import {
+  BaseContainer,
+  BaseIcon,
+  BaseInput,
+  BaseText,
+  BaseTitle,
+} from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
 import { BlockNumber } from '@content/index';
 import React from 'react';
 import styles from './Contacts.module.scss';
 
 const Contacts = () => {
+  const [value, setValue] = React.useState<string>('');
   return (
     <>
       <div className={styles.Wrapper}>
@@ -25,7 +32,16 @@ const Contacts = () => {
 
             <BaseTitle className={styles.Contacts_Title}>Contacts</BaseTitle>
 
-            <div className={styles.Contacts_Content}></div>
+            <div className={styles.Contacts_Content}>
+              <BaseInput
+                name="mail"
+                placeholder="Enter e-mail address"
+                error="Wrong email format"
+                value={value}
+                onChange={(val: string) => setValue(val)}
+                className={styles.Input}
+              />
+            </div>
           </div>
         </BaseContainer>
       </div>

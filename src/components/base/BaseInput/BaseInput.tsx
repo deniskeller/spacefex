@@ -4,7 +4,6 @@ import styles from './BaseInput.module.scss';
 interface Props {
   type?: string;
   name: string;
-  label?: string;
   min?: number;
   max?: number;
   placeholder?: string;
@@ -19,7 +18,6 @@ interface Props {
 
 const BaseInput: React.FC<Props> = ({
   value,
-  label,
   type = 'text',
   error,
   name,
@@ -32,10 +30,10 @@ const BaseInput: React.FC<Props> = ({
   onChange,
   onKeyDown,
 }) => {
+  const [focus, setFocus] = React.useState<boolean>(false);
+
   return (
     <div className={`${styles.BaseInput} ${className}`}>
-      {label ? <label className={styles.Label}>{label}</label> : ''}
-
       <input
         value={value}
         type={type}
@@ -50,9 +48,17 @@ const BaseInput: React.FC<Props> = ({
           onChange(e.target.value)
         }
         onKeyDown={onKeyDown}
+        onFocus={() => setFocus(true)}
+        onBlur={() => setFocus(false)}
       />
 
-      {error ? <div className={styles.ErrorText}>{error}</div> : ''}
+      {error ? (
+        <div className={styles.ErrorText}>
+          <span>{error}</span>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 };
