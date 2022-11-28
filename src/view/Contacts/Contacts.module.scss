@@ -57,7 +57,7 @@
   &_Title {
     margin-bottom: em(100px);
     @include iftablet {
-      margin-bottom: em(50px);
+      margin-bottom: em(148px);
     }
     @include ifmobile {
       margin-bottom: em(50px);
@@ -70,8 +70,195 @@
     @include ifmobile {
     }
 
-    .Input {
-      max-width: em(400px);
+    &_Address {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 em(139px);
+      max-width: em(1315px);
+      border-bottom: 1px solid #d1d1d1;
+      padding-bottom: em(55px);
+      margin-bottom: em(28px);
+      @include ifmobile {
+        grid-template-columns: 1fr;
+        gap: em(30px) 0;
+        padding-bottom: em(40px);
+      }
+
+      &_Item {
+        @include iftablet {
+          p {
+            font-size: em(16px);
+          }
+        }
+        &_Mailto {
+          color: $red;
+        }
+      }
+    }
+
+    &_Map {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 em(20px);
+      margin-bottom: em(200px);
+      @include iftablet {
+        gap: 0 em(54px);
+        margin-bottom: em(150px);
+      }
+      @include ifmobile {
+        grid-template-columns: 1fr;
+        gap: em(20px) 0;
+        margin-bottom: em(80px);
+      }
+
+      &_Item {
+        &_Address {
+          max-width: em(340px);
+          margin-bottom: em(26px);
+          @include ifmobile {
+            margin-bottom: em(17px);
+          }
+          p {
+            font-weight: 400;
+            font-size: em(18px);
+            color: $text;
+            @include iftablet {
+              font-size: em(16px);
+            }
+            @include ifmobile {
+              font-size: em(16px);
+            }
+          }
+        }
+
+        &_Map {
+          height: em(580px);
+          background: $grey;
+          @include iftablet {
+            height: em(372px);
+          }
+          @include ifmobile {
+            height: em(273px);
+          }
+        }
+      }
+    }
+
+    &_FinancialStatements {
+      &_Title {
+        margin-bottom: em(100px);
+        @include iftablet {
+          margin-bottom: em(80px);
+        }
+        @include ifmobile {
+          margin-bottom: em(30px);
+        }
+      }
+
+      &_Description {
+        margin-bottom: em(155px);
+        @include iftablet {
+          margin-bottom: em(130px);
+        }
+        @include ifmobile {
+          margin-bottom: em(70px);
+        }
+
+        p {
+          font-style: normal;
+          font-weight: 600;
+          font-size: em(20px);
+          color: $text;
+          @include ifmobile {
+            font-size: em(16px);
+          }
+        }
+      }
+
+      .FinancialStatements {
+        &_Title {
+          margin-bottom: em(30px);
+          h2 {
+            font-family: $font-Pirulen;
+            font-weight: 400;
+            font-size: em(36px);
+            text-transform: uppercase;
+            color: $red;
+            text-shadow: 0px 0px 37px $red;
+            @include ifmobile {
+              font-size: em(26px);
+            }
+          }
+        }
+
+        &_Description {
+          margin-bottom: em(27px);
+          @include iftablet {
+            margin-bottom: em(56px);
+          }
+          @include ifmobile {
+            margin-bottom: em(50px);
+          }
+          p {
+            font-size: em(18px);
+            font-weight: 400;
+            color: $text;
+            @include ifmobile {
+              font-size: em(16px);
+            }
+          }
+        }
+
+        &_Items {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          border-top: 1px solid #d1d1d1;
+          margin-bottom: em(90px);
+          @include ifmobile {
+            grid-template-columns: 1fr;
+            margin-bottom: em(50px);
+          }
+
+          .File {
+            padding: em(60px) em(48px);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-top: 1px solid rgba(209, 209, 209, 0.2);
+            &:nth-child(1),
+            &:nth-child(2) {
+              border-top: none;
+              @include ifmobile {
+                border-top: 1px solid rgba(209, 209, 209, 0.2);
+              }
+            }
+
+            &_Icon {
+              width: em(38px);
+              height: em(51px);
+              margin-right: em(20px);
+            }
+
+            &_Name {
+              font-weight: 400;
+              font-size: em(20px);
+              line-height: 107.18%;
+              color: $text;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        &_Quote {
+          font-family: $font-Pirulen;
+          font-weight: 400;
+          font-size: em(24px);
+          color: $text;
+          @include ifmobile {
+            font-size: em(20px);
+          }
+        }
+      }
     }
   }
 }

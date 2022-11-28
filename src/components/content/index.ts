@@ -3,3 +3,4 @@ export { default as NavbarAccordionItem } from "./NavbarAccordionItem/NavbarAcco
 export { default as BlockNumber } from "./BlockNumber/BlockNumber";
 export { default as BlockchainFeaturesItem } from "./BlockchainFeaturesItem/BlockchainFeaturesItem";
 export { default as BlogItem } from "./BlogItem/BlogItem";
+export { default as MapContacts } from "./MapContacts/MapContacts";
