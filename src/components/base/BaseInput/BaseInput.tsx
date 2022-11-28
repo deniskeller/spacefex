@@ -30,8 +30,6 @@ const BaseInput: React.FC<Props> = ({
   onChange,
   onKeyDown,
 }) => {
-  const [focus, setFocus] = React.useState<boolean>(false);
-
   return (
     <div className={`${styles.BaseInput} ${className}`}>
       <input
@@ -48,8 +46,6 @@ const BaseInput: React.FC<Props> = ({
           onChange(e.target.value)
         }
         onKeyDown={onKeyDown}
-        onFocus={() => setFocus(true)}
-        onBlur={() => setFocus(false)}
       />
 
       {error ? (

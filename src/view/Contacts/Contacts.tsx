@@ -35,7 +35,7 @@ const Contacts = () => {
             <div className={styles.Contacts_Content}>
               <BaseInput
                 name="mail"
-                error="sdfsdfsdfdsf"
+                // error="sdfsdfsdfdsf"
                 placeholder="Enter e-mail address"
                 type="mail"
                 value={value}
