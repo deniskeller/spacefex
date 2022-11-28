@@ -16,21 +16,26 @@
   outline: none;
   border: none;
   position: relative;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
   color: $text;
   @include placeholder-color(rgba(247, 247, 247, 0.7));
   padding: em(12px, $size) em(16px, $size);
   font-family: $font-OpenSans;
   text-transform: uppercase;
   box-sizing: border-box;
+  z-index: 1000;
   background: linear-gradient($white, $white), linear-gradient($white, $white),
     linear-gradient($white, $white);
   background-size: 1px 20%, 100% 1px, 1px 20%;
-  // background-position: bottom left, bottom center, bottom right;
-  // background-position: 0 100%, 100% 100%, 100% 100%;
-  background-position: 0% 100%;
-  background-position-x: 100%;
-  background-position-y: 100%;
+  background-position: bottom left, bottom center, bottom right;
   background-repeat: no-repeat;
+
+  &:hover + .Overlay {
+    // background-size: 2px 20%, 100% 2px, 2px 20%;
+    border: 1px solid red;
+  }
 
   &:hover {
     background-size: 2px 20%, 100% 2px, 2px 20%;
@@ -51,6 +56,43 @@
   }
 }
 
+.Overlay {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  // &::after,
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   width: calc(100% - em(10px));
+  //   height: calc(100% - em(10px));
+  //   border: 1px solid;
+  //   transition: all $speed ease;
+  // }
+
+  // &::after {
+  //   top: 0px;
+  //   right: 0px;
+  //   border-left-color: transparent;
+  //   border-bottom-color: transparent;
+  // }
+
+  // &::before {
+  //   bottom: 0px;
+  //   left: 0px;
+  //   border-right-color: transparent;
+  //   border-top-color: transparent;
+  // }
+
+  // &:hover:after,
+  // &:hover:before {
+  //   width: 100%;
+  //   height: 100%;
+  //   border-width: 2px;
+  // }
+}
+
 .Error {
   background: linear-gradient(#ff9900, #ff9900),
     linear-gradient(#ff9900, #ff9900), linear-gradient(#ff9900, #ff9900);
@@ -68,4 +110,26 @@
     line-height: 120%;
     color: #ff9900;
   }
+}
+
+.Border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  display: flex;
+}
+
+.Input:hover + .Border {
+  border: 2px solid white;
+}
+.Input:focus + .Border {
+  border: 2px solid red;
+}
+
+.BorderError {
+  border: 2px solid orange;
 }
