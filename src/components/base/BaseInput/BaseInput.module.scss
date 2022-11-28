@@ -28,18 +28,18 @@
   z-index: 1000;
   background: linear-gradient($white, $white), linear-gradient($white, $white),
     linear-gradient($white, $white);
-  background-size: 1px em(7px), 100% 1px, 1px 7px;
+  background-size: 1px em(7px), 100% 1px, 1px em(7px);
   background-position: bottom left, bottom center, bottom right;
   background-repeat: no-repeat;
 
   &:hover {
-    background-size: 2px 7px, 100% 2px, 2px 7px;
+    background-size: 2px em(7px), 100% 2px, 2px em(7px);
   }
 
   &:focus {
     background: linear-gradient($red, $red), linear-gradient($red, $red),
       linear-gradient($red, $red);
-    background-size: 2px 7px, 100% 2px, 2px 7px;
+    background-size: 2px em(7px), 100% 2px, 2px em(7px);
     background-position: bottom left, bottom center, bottom right;
     background-repeat: no-repeat;
   }
@@ -54,7 +54,7 @@
 .Error {
   background: linear-gradient(#ff9900, #ff9900),
     linear-gradient(#ff9900, #ff9900), linear-gradient(#ff9900, #ff9900);
-  background-size: 1px 7px, 100% 1px, 1px 7px;
+  background-size: 1px em(7px), 100% 1px, 1px em(7px);
   background-position: bottom left, bottom center, bottom right;
   background-repeat: no-repeat;
 }
