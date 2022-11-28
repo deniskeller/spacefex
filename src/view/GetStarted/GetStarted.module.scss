@@ -1,0 +1,209 @@
+.Wrapper {
+  padding: em(240px) em(50px) em(242px);
+  position: relative;
+  @include iftablet {
+    padding: em(240px) 0 em(200px);
+  }
+  @include ifmobile {
+    padding: em(166px) 0 em(100px);
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.GetStarted {
+  &_Title {
+    margin-bottom: em(224px);
+    @include iftablet {
+      margin-bottom: em(100px);
+    }
+    @include ifmobile {
+      margin-bottom: em(50px);
+    }
+  }
+
+  &_Content {
+    display: grid;
+    grid-template-columns: 1fr em(593px);
+    gap: 0 em(134px);
+
+    @include iftablet {
+      grid-template-columns: 1fr;
+      gap: em(200px) 0;
+    }
+    @include ifmobile {
+      grid-template-columns: 1fr;
+      gap: em(50px) 0;
+    }
+
+    &_Image {
+      position: relative;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: em(359px);
+
+      @include iftablet {
+        width: em(718px);
+      }
+      @include ifmobile {
+        width: em(298px);
+        height: em(149px);
+        margin: 0 auto;
+      }
+
+      .DecorIcon {
+        position: absolute;
+        z-index: -1;
+        width: em(668px);
+        height: em(314px);
+        top: em(-59px);
+        left: em(-112px);
+        @include iftablet {
+          top: auto;
+          left: auto;
+          right: em(-240px);
+          bottom: em(-111px);
+        }
+        @include ifmobile {
+          display: none;
+        }
+      }
+    }
+
+    &_Form {
+      position: relative;
+      @include iftablet {
+        order: -1;
+      }
+      @include ifmobile {
+        order: -1;
+      }
+
+      .NumberIcon {
+        top: em(-104px);
+        right: em(-123px);
+        @media only screen and (min-width: 1025px) and (max-width: 1750px) {
+          right: em(-20px);
+        }
+        @include iftablet {
+          right: em(-20px);
+        }
+        @include ifmobile {
+          top: em(-26px);
+          right: 0;
+        }
+      }
+
+      &_Title {
+        margin-bottom: em(87px);
+        @include ifmobile {
+          margin-bottom: em(50px);
+        }
+        h2 {
+          font-weight: 400;
+          font-size: em(41px);
+          color: $text;
+          text-transform: uppercase;
+          @include ifmobile {
+            font-size: em(18px);
+          }
+        }
+      }
+
+      &_Actions {
+        &_Input {
+          margin-bottom: em(40px);
+          @include ifmobile {
+            margin-bottom: em(20px);
+          }
+        }
+        &_Button {
+          width: em(378px);
+          margin-top: em(70px);
+          @include ifmobile {
+            width: 100%;
+            margin-top: em(50px);
+          }
+        }
+
+        &_Success {
+          height: em(462px);
+          border: em(1px) solid $white;
+          animation-name: FadeIn;
+          animation-duration: 2s;
+          transition-timing-function: linear;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @include iftablet {
+            height: em(450px);
+          }
+          @include ifmobile {
+            height: em(281px);
+            padding: em(20px);
+          }
+
+          &_Icon {
+            width: em(51px);
+            height: em(39px);
+            margin-top: em(24px);
+            @include ifmobile {
+              margin-top: em(40px);
+            }
+          }
+
+          &_Title {
+            margin-bottom: em(24px);
+            @include ifmobile {
+              margin-bottom: em(16px);
+            }
+            span {
+              display: block;
+              font-size: em(24px);
+              line-height: 100%;
+              font-weight: 400;
+              color: $white;
+              text-transform: uppercase;
+              @include ifmobile {
+                font-size: em(20px);
+              }
+            }
+          }
+
+          &_Subtitle {
+            font-size: em(18px);
+            font-style: normal;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.7);
+            @include ifmobile {
+              font-size: em(16px);
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include keyframe(FadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
