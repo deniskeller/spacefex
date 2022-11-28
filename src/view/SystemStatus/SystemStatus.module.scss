@@ -1,0 +1,124 @@
+.Wrapper {
+  padding: em(240px) 0 em(200px);
+  position: relative;
+  @include iftablet {
+    padding: em(212px) 0 em(186px);
+  }
+  @include ifmobile {
+    padding: em(166px) 0 em(100px);
+  }
+}
+
+.Container {
+  padding: 0 em(50px);
+  position: relative;
+  @include iftablet {
+    padding: 0;
+  }
+  @include ifmobile {
+    padding: 0;
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.NumberIcon {
+  top: em(-76px);
+  left: em(-102px);
+  @media only screen and (min-width: 1025px) and (max-width: 1680px) {
+    left: em(-20px);
+  }
+  @include iftablet {
+    left: em(-20px);
+  }
+  @include ifmobile {
+    top: em(-26px);
+    left: 0;
+  }
+}
+
+.SystemStatus {
+  &_Header {
+    position: relative;
+  }
+
+  &_Title {
+    margin-bottom: em(100px);
+    @include iftablet {
+      margin-bottom: em(100px);
+    }
+    @include ifmobile {
+      margin-bottom: em(72px);
+    }
+  }
+
+  &_Iframe {
+    min-height: em(886px);
+    background: $grey;
+    margin-bottom: em(200px);
+    @include iftablet {
+      min-height: em(657px);
+      margin-bottom: em(120px);
+    }
+    @include ifmobile {
+      min-height: em(223px);
+      margin-bottom: em(60px);
+    }
+  }
+
+  &_NewPage {
+    margin-bottom: em(153px);
+    &_Page {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: em(90px);
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_Soon {
+        font-family: $font-Pirulen;
+        font-weight: 400;
+        font-size: em(22px);
+        text-align: center;
+        color: $red;
+        text-shadow: 0px 0px 37px $red;
+      }
+    }
+  }
+
+  &_Form {
+    display: grid;
+    grid-template-columns: 1fr em(585px);
+    gap: 0 em(109px);
+
+    &_Title {
+      font-weight: 400;
+      font-size: em(24px);
+      color: $text;
+      text-transform: uppercase;
+    }
+
+    &_Actions {
+      &_Input {
+        margin-bottom: em(40px);
+      }
+      &_Button {
+        width: em(205px);
+        margin-top: em(70px);
+      }
+    }
+  }
+}
