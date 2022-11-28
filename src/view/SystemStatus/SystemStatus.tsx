@@ -1,4 +1,11 @@
-import { BaseButton, BaseContainer, BaseInput, BaseTitle } from '@base/index';
+import {
+  BaseButton,
+  BaseContainer,
+  BaseIcon,
+  BaseInput,
+  BaseTitle,
+} from '@base/index';
+import { ALL_ICONS } from '@constants/icons';
 import { BlockNumber } from '@content/index';
 import React from 'react';
 import styles from './SystemStatus.module.scss';
@@ -19,6 +26,8 @@ const SystemStatus = () => {
   const setNewValue = (val: string | number | File[], key: string) => {
     setValue((prev) => ({ ...prev, [key]: val }));
   };
+
+  const [success, setSuccess] = React.useState<boolean>(false);
 
   return (
     <>
@@ -97,35 +106,71 @@ const SystemStatus = () => {
                 </div>
 
                 <div className={styles.SystemStatus_Form_Actions}>
-                  <BaseInput
-                    name="name"
-                    placeholder="Enter name"
-                    value={value.name}
-                    onChange={(val: string) => setNewValue(val, 'name')}
-                    className={styles.SystemStatus_Form_Actions_Input}
-                  />
+                  {!success ? (
+                    <>
+                      <BaseInput
+                        name="name"
+                        placeholder="Enter name"
+                        value={value.name}
+                        onChange={(val: string) => setNewValue(val, 'name')}
+                        className={styles.SystemStatus_Form_Actions_Input}
+                      />
 
-                  <BaseInput
-                    name="email"
-                    placeholder="Enter Email"
-                    value={value.email}
-                    onChange={(val: string) => setNewValue(val, 'email')}
-                    className={styles.SystemStatus_Form_Actions_Input}
-                  />
+                      <BaseInput
+                        name="email"
+                        placeholder="Enter Email"
+                        value={value.email}
+                        onChange={(val: string) => setNewValue(val, 'email')}
+                        className={styles.SystemStatus_Form_Actions_Input}
+                      />
 
-                  <BaseInput
-                    name="comments"
-                    placeholder="Enter comments"
-                    value={value.comments}
-                    onChange={(val: string) => setNewValue(val, 'comments')}
-                    className={styles.SystemStatus_Form_Actions_Input}
-                  />
+                      <BaseInput
+                        name="comments"
+                        placeholder="Enter comments"
+                        value={value.comments}
+                        onChange={(val: string) => setNewValue(val, 'comments')}
+                        className={styles.SystemStatus_Form_Actions_Input}
+                      />
 
-                  <BaseButton
-                    title="submit"
-                    type="danger"
-                    className={styles.SystemStatus_Form_Actions_Button}
-                  />
+                      <BaseButton
+                        title="submit"
+                        type="danger"
+                        className={styles.SystemStatus_Form_Actions_Button}
+                        onClick={() => setSuccess(true)}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        className={styles.SystemStatus_Form_Actions_Success}
+                        style={{ opacity: success ? '1' : '0' }}
+                      >
+                        <div
+                          className={
+                            styles.SystemStatus_Form_Actions_Success_Title
+                          }
+                        >
+                          <span>Thank you!</span>
+                        </div>
+
+                        <div
+                          className={
+                            styles.SystemStatus_Form_Actions_Success_Subtitle
+                          }
+                        >
+                          We will answer to you as soon as possible.
+                        </div>
+
+                        <BaseIcon
+                          icon={ALL_ICONS.SUCCESS_DONE}
+                          viewBox="0 0 21 15"
+                          className={
+                            styles.SystemStatus_Form_Actions_Success_Icon
+                          }
+                        />
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </BaseContainer>
