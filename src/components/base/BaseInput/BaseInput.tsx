@@ -34,28 +34,23 @@ const BaseInput: React.FC<Props> = ({
 
   return (
     <div className={`${styles.BaseInput} ${className}`}>
-      <div className={styles.Overlay}>
-        <input
-          value={value}
-          type={type}
-          className={`${styles.Input} ${error ? styles.Error : ''}`}
-          name={name}
-          min={min}
-          max={max}
-          placeholder={placeholder}
-          required={required}
-          autoComplete={autocomplete}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            onChange(e.target.value)
-          }
-          onKeyDown={onKeyDown}
-          onFocus={() => setFocus(true)}
-          onBlur={() => setFocus(false)}
-        />
-        {/* <div
-          className={`${styles.Border} ${error ? styles.BorderError : ''}`}
-        ></div> */}
-      </div>
+      <input
+        value={value}
+        type={type}
+        className={`${styles.Input} ${error ? styles.Error : ''}`}
+        name={name}
+        min={min}
+        max={max}
+        placeholder={placeholder}
+        required={required}
+        autoComplete={autocomplete}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          onChange(e.target.value)
+        }
+        onKeyDown={onKeyDown}
+        onFocus={() => setFocus(true)}
+        onBlur={() => setFocus(false)}
+      />
 
       {error ? (
         <div className={styles.ErrorText}>
