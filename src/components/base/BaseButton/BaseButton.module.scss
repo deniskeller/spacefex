@@ -6,7 +6,6 @@
   border-radius: 1px;
   @extend %button;
   background: transparent;
-  // overflow: hidden;
 
   &::after,
   &::before {

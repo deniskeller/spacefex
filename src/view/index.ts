@@ -7,3 +7,4 @@ export { default as Contacts } from "./Contacts/Contacts";
 export { default as SystemStatus } from "./SystemStatus/SystemStatus";
 export { default as GetStarted } from "./GetStarted/GetStarted";
 export { default as Usf } from "./Usf/Usf";
+export { default as Technologies } from "./Technologies/Technologies";

@@ -1,0 +1,9 @@
+.TechnologiesIframe {
+  width: 100%;
+  height: em(1189px);
+  border: em(24px) solid #f7f7f7;
+
+  @include ifmobile {
+    height: em(746px);
+  }
+}

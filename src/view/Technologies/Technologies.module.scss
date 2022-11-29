@@ -1,0 +1,22 @@
+.Wrapper {
+  position: relative;
+  padding: em(200px) 0 em(230px);
+  @include iftablet {
+    padding: em(200px) 0 em(100px);
+  }
+  @include ifmobile {
+    padding: em(160px) 0 em(100px);
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

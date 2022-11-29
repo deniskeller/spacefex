@@ -1,0 +1,128 @@
+.Wrapper {
+  position: relative;
+  padding: em(128px) em(50px) em(170px);
+  @include iftablet {
+    padding: em(92px) 0 0;
+  }
+  @include ifmobile {
+    padding: em(40px) 0 0;
+  }
+}
+
+.TechnologiesTools {
+  max-width: em(781px);
+  @media only screen and (min-width: 1025px) and (max-width: 1500px) {
+    max-width: 100%;
+  }
+  @include iftablet {
+    max-width: 100%;
+  }
+  &_Item {
+    position: relative;
+    padding-left: em(45px);
+    margin-bottom: em(63px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include ifmobile {
+      padding-left: em(30px);
+      margin-bottom: em(25px);
+    }
+
+    &_Number {
+      position: absolute;
+      top: 0;
+      left: em(-12px);
+      width: em(44px);
+      text-align: right;
+      @include ifmobile {
+        width: em(35px);
+      }
+      span {
+        font-family: $font-Pirulen;
+        font-weight: 400;
+        font-size: em(24px);
+        color: $red;
+        text-shadow: 0px 0px 37px $red;
+
+        @include ifmobile {
+          font-size: em(16px);
+        }
+      }
+    }
+
+    &_Description {
+      position: relative;
+      padding-left: em(15px);
+      @include ifmobile {
+        padding-left: em(12px);
+      }
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: em(3px);
+        height: 100%;
+        background: $red;
+        box-shadow: 0px 0px 37px $red, inset 0px 0px 5px $red;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: em(18px);
+        color: $text;
+        @include ifmobile {
+          font-size: em(16px);
+        }
+      }
+    }
+  }
+
+  &_Image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: em(1053px);
+    height: em(1580px);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+
+.Desktop {
+  display: flex;
+  @media only screen and (min-width: 1025px) and (max-width: 1500px) {
+    display: none;
+  }
+  @include iftablet {
+    display: none;
+  }
+
+  @include ifmobile {
+    display: none;
+  }
+}
+
+.Tablet {
+  position: relative;
+  margin-left: auto;
+  width: em(995px);
+  height: em(1173px);
+  background-size: cover;
+  @media only screen and (min-width: 1501px) {
+    display: none;
+  }
+  @include iftablet {
+    width: em(995px);
+    height: em(1173px);
+  }
+
+  @include ifmobile {
+    width: 100%;
+    height: em(620px);
+  }
+}
