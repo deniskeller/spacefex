@@ -39,10 +39,6 @@
       padding-top: em(38px);
     }
 
-    @include ifmobile {
-      padding-bottom: em(55px);
-    }
-
     &_Input {
       margin-bottom: em(40px);
       @include iftablet {
