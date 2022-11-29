@@ -1,0 +1,132 @@
+.Wrapper {
+  position: relative;
+  padding: 0 em(50px) em(97px);
+  @include iftablet {
+    padding: 0 0 em(100px);
+  }
+  @include ifmobile {
+    padding: 0 0 em(125px);
+  }
+}
+
+.UsfMission {
+  &_Title {
+    margin-bottom: em(100px);
+    @include ifmobile {
+      margin-bottom: em(50px);
+    }
+  }
+
+  &_Content {
+    display: grid;
+    grid-template-columns: 1fr em(586px);
+    gap: 0 em(152px);
+    @include iftablet {
+      grid-template-columns: 1fr;
+      gap: em(100px) 0;
+    }
+    @include ifmobile {
+      grid-template-columns: 1fr;
+      gap: em(55px) 0;
+    }
+
+    &_About {
+      &_Paragraph {
+        margin-bottom: em(40px);
+
+        p {
+          font-size: em(18px);
+          font-weight: 400;
+          color: $text;
+          @include ifmobile {
+            font-size: em(16px);
+          }
+        }
+      }
+
+      &_Quote {
+        position: relative;
+        max-width: em(606px);
+        padding-left: em(26px);
+        margin-left: em(96px);
+        margin-bottom: em(40px);
+
+        @include ifmobile {
+          margin-left: 0;
+        }
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: em(5px);
+          height: 100%;
+          background: $red;
+          box-shadow: 0px 0px 37px $red, inset 0px 0px 5px $red;
+        }
+        p {
+          font-size: em(24px);
+          font-weight: 400;
+          color: $text;
+          text-transform: uppercase;
+          @include ifmobile {
+            font-size: em(18px);
+          }
+        }
+      }
+
+      &_Decor {
+        position: relative;
+        height: em(78px);
+        margin: em(55px) 0 em(128px);
+
+        @include iftablet {
+          margin: em(109px) 0 em(128px);
+        }
+        @include ifmobile {
+          display: none;
+        }
+        .DecorIcon {
+          position: absolute;
+          left: em(-271px);
+          width: em(668px);
+          height: em(78px);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          @include iftablet {
+            left: auto;
+            right: em(-202px);
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    &_Image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: em(862px);
+
+      @include iftablet {
+        width: em(586px);
+        height: em(862px);
+        margin: 0 auto;
+      }
+      @include ifmobile {
+        width: em(250px);
+        height: em(368px);
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.Br {
+  display: none;
+  @include ifdesktop {
+    display: block;
+  }
+}

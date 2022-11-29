@@ -1,0 +1,60 @@
+.Wrapper {
+  padding: em(240px) em(50px) em(446px);
+  @include iftablet {
+    padding: em(240px) 0 em(311px);
+  }
+  @include ifmobile {
+    padding: em(166px) 0 em(158px);
+  }
+}
+
+.UsfHeader {
+  position: relative;
+
+  &_Title {
+    margin-bottom: em(50px);
+    @include iftablet {
+    }
+    @include ifmobile {
+    }
+  }
+
+  &_Icon {
+    width: em(1365px);
+    height: em(359px);
+    top: em(58px);
+    left: em(259px);
+
+    @media only screen and (min-width: 1025px) and (max-width: 1600px) {
+      left: 0;
+    }
+    @include iftablet {
+      width: em(862px);
+      height: em(227px);
+      top: em(78px);
+      left: em(122px);
+    }
+    @include ifmobile {
+      display: none;
+    }
+  }
+
+  &_Paragraph {
+    max-width: em(709px);
+    margin-bottom: em(46px);
+    @include ifmobile {
+      margin-bottom: em(40px);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      font-weight: 400;
+      font-size: em(24px);
+      color: $text;
+      @include ifmobile {
+        font-size: em(18px);
+      }
+    }
+  }
+}

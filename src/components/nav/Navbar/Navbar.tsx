@@ -15,7 +15,7 @@ const links: Links[] = [
     title: 'Main',
   },
   {
-    href: '/ufs',
+    href: '/usf',
     title: 'USF',
   },
   {

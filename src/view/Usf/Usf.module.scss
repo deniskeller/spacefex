@@ -1,0 +1,45 @@
+.Wrapper {
+  position: relative;
+}
+
+.BackgroundTop {
+  position: absolute;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  width: 100%;
+  height: em(1280px);
+
+  @include iftablet {
+    background-size: cover;
+  }
+
+  @include ifmobile {
+    background-size: cover;
+    height: em(847px);
+  }
+}
+
+.BackgroundBottom {
+  position: absolute;
+  bottom: em(-818px);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  width: 100%;
+  height: em(1614px);
+  @include iftablet {
+    bottom: em(-445px);
+    background-position: 80%;
+    background-size: cover;
+  }
+
+  @include ifmobile {
+    bottom: em(-481px);
+    background-position: bottom;
+    background-size: cover;
+    height: em(750px);
+  }
+}
