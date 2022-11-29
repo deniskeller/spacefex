@@ -13,6 +13,7 @@
   display: grid;
   grid-template-columns: 1fr em(577px);
   gap: 0 em(152px);
+  padding-bottom: 3px;
 
   @include iftablet {
     grid-template-columns: 1fr;
