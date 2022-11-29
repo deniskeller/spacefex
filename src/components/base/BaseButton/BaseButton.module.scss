@@ -6,7 +6,7 @@
   border-radius: 1px;
   @extend %button;
   background: transparent;
-  overflow: hidden;
+  // overflow: hidden;
 
   &::after,
   &::before {
@@ -20,15 +20,15 @@
   }
 
   &::after {
-    top: 0px;
-    right: 0px;
+    top: -2px;
+    right: -2px;
     border-left-color: transparent;
     border-bottom-color: transparent;
   }
 
   &::before {
-    bottom: 0px;
-    left: 0px;
+    bottom: -2px;
+    left: -2px;
     border-right-color: transparent;
     border-top-color: transparent;
   }
