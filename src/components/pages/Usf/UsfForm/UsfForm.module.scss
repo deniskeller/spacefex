@@ -5,7 +5,7 @@
     padding: 0 0 em(200px);
   }
   @include ifmobile {
-    padding: 0 0 em(1-0px);
+    padding: 0 0 em(10px);
   }
 }
 
@@ -52,9 +52,10 @@
     &_Button {
       width: em(238px);
       margin-top: em(70px);
+
       @include ifmobile {
         width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: em(10px);
       }
     }
 
