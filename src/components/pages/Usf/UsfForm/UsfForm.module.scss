@@ -5,7 +5,7 @@
     padding: 0 0 em(200px);
   }
   @include ifmobile {
-    padding: 0 0 em(100px);
+    padding: 0 0 em(90px);
   }
 }
 
@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 1fr em(577px);
   gap: 0 em(152px);
-  padding-bottom: 3px;
+  padding-bottom: 10px;
 
   @include iftablet {
     grid-template-columns: 1fr;
