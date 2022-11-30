@@ -201,12 +201,17 @@ const IntoFoundation = () => {
                     backgroundImage:
                       'url(/images/image/into-foundation-image.jpg)',
                   }}
-                ></div>
-                <BaseIcon
-                  viewBox="0 0 668 255"
-                  icon={ALL_ICONS.DECOR_2}
-                  className={styles.DecorIcon}
-                />
+                >
+                  <BaseIcon
+                    viewBox="0 0 668 255"
+                    icon={ALL_ICONS.DECOR_2}
+                    className={styles.DecorIcon}
+                  />
+
+                  <div className={styles.IntoFoundation_Content_Image_Id}>
+                    <span>0rh7i3i002</span>
+                  </div>
+                </div>
               </div>
             </div>
 

@@ -74,9 +74,12 @@
         display: flex;
         font-size: em(14px);
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 100%;
         color: $white;
+        @include iftablet {
+          font-size: em(12px);
+        }
         @include ifmobile {
           font-size: em(12px);
         }

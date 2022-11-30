@@ -40,6 +40,9 @@
   &_Logo {
     display: flex;
     flex-direction: column;
+    @include iftablet {
+      max-width: em(200px);
+    }
     @include ifmobile {
       margin-bottom: em(40px);
     }
@@ -58,8 +61,11 @@
       font-size: em(14px);
       line-height: 120%;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 300;
       color: rgba(247, 247, 247, 0.5);
+      @include iftablet {
+        font-size: em(12px);
+      }
       @include ifmobile {
         font-size: em(12px);
       }

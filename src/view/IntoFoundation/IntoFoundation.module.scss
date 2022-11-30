@@ -56,10 +56,20 @@
   &_About {
     max-width: em(710px);
     margin-bottom: em(58px);
+    @include iftablet {
+      max-width: em(752px);
+      margin-bottom: em(85px);
+    }
+    @include ifmobile {
+      padding-left: em(26px);
+    }
 
     &_Paragraph {
       &:nth-child(1) {
         max-width: em(588px);
+        @include iftablet {
+          max-width: em(752px);
+        }
       }
       margin-bottom: em(40px);
       &:last-child {
@@ -76,6 +86,12 @@
     grid-template-columns: em(588px) 1fr;
     gap: 0 em(203px);
     margin-bottom: em(132px);
+
+    @include iftablet {
+      grid-template-columns: em(491px) 1fr;
+      gap: 0 em(88px);
+      margin-bottom: em(88px);
+    }
     &_Form {
       position: relative;
       @include iftablet {
@@ -164,23 +180,58 @@
       // position: relative;
       .Image {
         position: absolute;
+        z-index: -1;
         top: em(255px);
         right: 0;
         width: em(889px);
         height: em(1241px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include iftablet {
+          top: em(740px);
+          width: em(395px);
+          height: em(552px);
+        }
       }
 
       .DecorIcon {
         position: absolute;
         width: em(668px);
         height: em(255px);
-        top: em(306px);
-        right: em(336px);
+        top: em(51px);
+        left: em(-115px);
+        @include iftablet {
+          width: em(318px);
+          height: em(121px);
+          top: em(-48px);
+          left: em(-13px);
+        }
+      }
+
+      &_Id {
+        position: absolute;
+        z-index: 100;
+        left: em(93px);
+        bottom: em(-15px);
+        @include iftablet {
+          left: em(48px);
+        }
+        span {
+          font-family: $font-Pirulen;
+          font-weight: 400;
+          font-size: em(22px);
+          color: $red;
+          text-shadow: 0px 0px 37px $red;
+        }
       }
     }
   }
 
   &_Feedback {
     max-width: em(710px);
+    @include iftablet {
+      max-width: em(518px);
+    }
   }
 }
