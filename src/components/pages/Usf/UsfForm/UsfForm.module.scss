@@ -13,6 +13,8 @@
   display: grid;
   grid-template-columns: 1fr em(577px);
   gap: 0 em(152px);
+  position: relative;
+  z-index: 100;
 
   @include iftablet {
     grid-template-columns: 1fr;
