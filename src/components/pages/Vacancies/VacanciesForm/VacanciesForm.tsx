@@ -54,6 +54,7 @@ const VacanciesForm = () => {
                       onChange={(val: string) => setNewValue(val, 'name')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
+
                     <BaseInput
                       name="company_name"
                       placeholder="Surname"
@@ -63,6 +64,7 @@ const VacanciesForm = () => {
                       }
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
+
                     <BaseInput
                       name="email"
                       placeholder="Position"
@@ -70,6 +72,7 @@ const VacanciesForm = () => {
                       onChange={(val: string) => setNewValue(val, 'email')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
+
                     <BaseInput
                       name="phone"
                       placeholder="email"
@@ -77,6 +80,7 @@ const VacanciesForm = () => {
                       onChange={(val: string) => setNewValue(val, 'phone')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
+
                     <BaseInput
                       name="country"
                       placeholder="Phone"
@@ -84,6 +88,7 @@ const VacanciesForm = () => {
                       onChange={(val: string) => setNewValue(val, 'country')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
+
                     <BaseInput
                       name="comments"
                       placeholder="URL to the LinkedIn profile"
@@ -91,6 +96,7 @@ const VacanciesForm = () => {
                       onChange={(val: string) => setNewValue(val, 'comments')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
+
                     <BaseInput
                       name="comments"
                       placeholder="TELL US ABOUT YOURSELF"
