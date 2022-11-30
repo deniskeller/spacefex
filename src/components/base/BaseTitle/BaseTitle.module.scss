@@ -4,7 +4,7 @@
 
   &_h1 {
     font-family: $font-PeckhamPress;
-    font-weight: 400;
+    font-weight: 300;
     font-size: em(46px);
     color: $text;
     @include ifmobile {
@@ -14,7 +14,7 @@
 
   &_h2 {
     font-family: $font-Pirulen;
-    font-weight: 400;
+    font-weight: 300;
     font-size: em(24px);
     text-transform: uppercase;
     color: $red !important;

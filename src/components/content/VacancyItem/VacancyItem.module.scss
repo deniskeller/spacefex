@@ -1,0 +1,85 @@
+.VacancyItem {
+  border: 1px solid $white;
+  &:hover {
+    border-color: $red;
+    .VacancyItem_Header_Icon {
+      background: $red;
+    }
+  }
+
+  &_Active {
+    border-color: $red;
+    .VacancyItem_Header_Icon {
+      background: $red;
+    }
+  }
+
+  &_Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: em(24px) em(40px);
+    position: relative;
+    cursor: pointer;
+    @include ifmobile {
+      padding: em(12px) em(16px);
+    }
+
+    &_Title {
+      font-size: em(24px);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $text;
+      @include ifmobile {
+        font-size: em(16px);
+      }
+    }
+
+    &_Icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: em(80px);
+      height: 100%;
+      @include ifmobile {
+        width: em(48px);
+      }
+      &_Toggle {
+        width: em(34px);
+        height: em(15px);
+        transition: all $speed ease;
+        @include ifmobile {
+          width: em(40px);
+          height: em(15px);
+        }
+      }
+      .Open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &_Content {
+    height: auto;
+    max-height: 9999px;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    overflow: hidden;
+    .Container {
+      padding: em(35px) em(40px) em(60px);
+      @include ifmobile {
+        padding: em(14px) em(16px) em(30px);
+      }
+    }
+  }
+
+  &_Content_Hidden {
+    max-height: 0;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  }
+}

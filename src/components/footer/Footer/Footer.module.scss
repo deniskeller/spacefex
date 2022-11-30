@@ -155,7 +155,7 @@
         span {
           display: block;
           font-size: em(20px);
-          font-weight: 400;
+          font-weight: 300;
           line-height: 100%;
           color: $white;
           text-transform: uppercase;
@@ -239,7 +239,7 @@
             display: block;
             font-size: em(20px);
             line-height: 100%;
-            font-weight: 400;
+            font-weight: 300;
             color: $white;
             text-transform: uppercase;
             @include ifmobile {
@@ -251,7 +251,7 @@
         &_Subtitle {
           font-size: em(16px);
           font-style: normal;
-          font-weight: 400;
+          font-weight: 300;
           color: rgba(247, 247, 247, 0.7);
           @include ifmobile {
             font-size: em(11px);

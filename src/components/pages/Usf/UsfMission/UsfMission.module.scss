@@ -36,7 +36,7 @@
 
         p {
           font-size: em(18px);
-          font-weight: 400;
+          font-weight: 300;
           color: $text;
           @include ifmobile {
             font-size: em(16px);
@@ -67,7 +67,7 @@
         }
         p {
           font-size: em(24px);
-          font-weight: 400;
+          font-weight: 300;
           color: $text;
           text-transform: uppercase;
           @include ifmobile {

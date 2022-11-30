@@ -1,0 +1,105 @@
+.Wrapper {
+  padding: em(100px) em(50px) em(90px);
+  position: relative;
+  @include iftablet {
+    padding: em(127px) 0 em(65px);
+  }
+  @include ifmobile {
+    padding: em(55px) 0 em(50px);
+  }
+}
+
+.AvaiableVacancies {
+  &_Title {
+    margin-bottom: em(100px);
+    @include iftablet {
+      margin-bottom: em(80px);
+    }
+    @include ifmobile {
+      margin-bottom: em(40px);
+    }
+  }
+
+  &_List {
+    &_Li {
+      margin-bottom: em(29px);
+      @include ifmobile {
+        margin-bottom: em(16px);
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.VacancyItem {
+  &_Row {
+    margin-bottom: em(86px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include iftablet {
+      margin-bottom: em(40px);
+    }
+    @include ifmobile {
+      margin-bottom: em(30px);
+    }
+
+    &_Name {
+      margin-bottom: em(30px);
+      @include ifmobile {
+        margin-bottom: em(20px);
+      }
+      span {
+        font-size: em(24px);
+        color: $text;
+        text-transform: uppercase;
+        @include iftablet {
+          font-size: em(20px);
+        }
+        @include ifmobile {
+          font-size: em(18px);
+        }
+      }
+    }
+
+    &_Discription {
+      padding-left: em(170px);
+      @include iftablet {
+        padding-left: em(130px);
+      }
+      @include ifmobile {
+        padding-left: 0;
+      }
+      p {
+        font-size: em(24px);
+        color: $text;
+        @include iftablet {
+          font-size: em(20px);
+        }
+        @include ifmobile {
+          font-size: em(14px);
+        }
+      }
+      &_List {
+        list-style: disc;
+        padding-left: em(37px);
+        @include ifmobile {
+          padding-left: em(20px);
+        }
+        li {
+          font-size: em(24px);
+          color: $text;
+          @include iftablet {
+            font-size: em(20px);
+          }
+          @include ifmobile {
+            font-size: em(14px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -98,7 +98,7 @@
 
       h1 {
         font-family: $font-Pirulen;
-        font-weight: 400;
+        font-weight: 300;
         font-size: em(20px);
         line-height: 100%;
         color: $text;
@@ -122,7 +122,7 @@
         span {
           font-family: $font-Pirulen;
           color: $red;
-          font-weight: 400;
+          font-weight: 300;
           font-size: em(36px);
           text-transform: uppercase;
           text-shadow: 0px 0px 37px #dc4945;
@@ -132,7 +132,7 @@
         }
       }
       &_Description {
-        font-weight: 400;
+        font-weight: 300;
         font-size: em(18px);
         color: $white;
         @include ifmobile {

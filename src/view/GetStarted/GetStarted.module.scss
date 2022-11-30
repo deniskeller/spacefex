@@ -111,7 +111,7 @@
           margin-bottom: em(50px);
         }
         h2 {
-          font-weight: 400;
+          font-weight: 300;
           font-size: em(41px);
           color: $text;
           text-transform: uppercase;
@@ -174,7 +174,7 @@
               display: block;
               font-size: em(24px);
               line-height: 100%;
-              font-weight: 400;
+              font-weight: 300;
               color: $white;
               text-transform: uppercase;
               @include ifmobile {
@@ -186,7 +186,7 @@
           &_Subtitle {
             font-size: em(18px);
             font-style: normal;
-            font-weight: 400;
+            font-weight: 300;
             color: rgba(247, 247, 247, 0.7);
             @include ifmobile {
               font-size: em(16px);

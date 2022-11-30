@@ -1,0 +1,240 @@
+.Wrapper {
+  padding: 0 em(50px) em(100px);
+  position: relative;
+  @include iftablet {
+    padding: 0 0 em(127px);
+  }
+  @include ifmobile {
+    padding: 0 0 em(55px);
+  }
+}
+
+.VacanciesHeader {
+  position: relative;
+
+  &_Title {
+    margin-bottom: em(260px);
+    @include iftablet {
+      margin-bottom: em(235px);
+    }
+    @include ifmobile {
+      padding-left: em(28px);
+      margin-bottom: em(67px);
+    }
+  }
+
+  &_Icon {
+    position: absolute;
+    top: em(-73px);
+    left: em(-100px);
+
+    @media only screen and (min-width: 1025px) and (max-width: 1700px) {
+      left: em(-20px);
+    }
+    @include iftablet {
+      left: em(-20px);
+    }
+    @include ifmobile {
+      top: em(-27px);
+      left: 0;
+      height: em(62px);
+    }
+  }
+
+  &_Content {
+    display: grid;
+    grid-template-columns: 1fr em(704px);
+    gap: 0 em(70px);
+    margin-bottom: em(429px);
+    @include iftablet {
+      grid-template-columns: 1fr em(480px);
+      margin-bottom: em(279px);
+    }
+    @include ifmobile {
+      grid-template-columns: 1fr;
+      gap: em(80px) 0;
+
+      margin-bottom: em(80px);
+    }
+
+    &_About {
+      &_Title {
+        margin-bottom: em(48px);
+        @include iftablet {
+          margin-bottom: em(15px);
+        }
+        @include ifmobile {
+          margin-bottom: em(20px);
+        }
+        h2 {
+          font-weight: 300;
+          font-size: em(24px);
+          text-transform: uppercase;
+          color: $text;
+          @include ifmobile {
+            font-size: em(20px);
+          }
+        }
+      }
+
+      &_Description {
+        margin-bottom: em(95px);
+        @include iftablet {
+          margin-bottom: em(46px);
+        }
+        @include ifmobile {
+          margin-bottom: em(44px);
+        }
+        p {
+          font-weight: 300;
+          font-size: em(18px);
+          color: $text;
+          @include ifmobile {
+            font-size: em(16px);
+          }
+        }
+      }
+
+      &_Button {
+        width: em(339px);
+        @include ifmobile {
+          width: 100%;
+        }
+      }
+    }
+
+    &_Image {
+      position: relative;
+      @include ifmobile {
+        min-height: em(440px);
+        order: -1;
+      }
+      &_CurrentImage {
+        position: absolute;
+        top: em(-318px);
+        left: 0;
+        width: em(704px);
+        height: em(860px);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include iftablet {
+          width: 100%;
+          height: em(586px);
+          top: em(-165px);
+        }
+        @include ifmobile {
+          width: em(360px);
+          height: em(440px);
+          top: 0;
+          left: em(-12px);
+        }
+      }
+
+      &_Decor1 {
+        position: absolute;
+        z-index: 1;
+        width: em(668px);
+        height: em(78px);
+        top: em(-49px);
+        right: 0;
+        @include iftablet {
+          top: em(275px);
+          right: em(-227px);
+        }
+        @include ifmobile {
+          display: none;
+        }
+      }
+
+      &_Decor2 {
+        position: absolute;
+        z-index: 0;
+        width: em(668px);
+        height: em(255px);
+        bottom: 0;
+        right: 0;
+        @include iftablet {
+          right: em(-318px);
+        }
+        @include ifmobile {
+          display: none;
+        }
+      }
+
+      &_Text {
+        position: absolute;
+        top: em(70px);
+        left: em(60px);
+        max-width: em(492px);
+        @include iftablet {
+          top: em(60px);
+          left: em(20px);
+          max-width: em(417px);
+        }
+        @include ifmobile {
+          max-width: em(320px);
+          top: em(40px);
+          left: em(20px);
+        }
+        p {
+          font-weight: 300;
+          font-size: em(18px);
+          color: $text;
+          @include iftablet {
+            font-size: em(16px);
+          }
+          @include ifmobile {
+            font-size: em(14px);
+          }
+        }
+      }
+
+      &_Id {
+        position: absolute;
+        top: em(288px);
+        right: em(-98px);
+        @media only screen and (min-width: 1025px) and (max-width: 1700px) {
+          right: em(-20px);
+        }
+        @include iftablet {
+          top: em(242px);
+          right: em(-30px);
+        }
+        @include ifmobile {
+          top: auto;
+          right: auto;
+          bottom: em(-10px);
+          left: em(20px);
+        }
+        span {
+          font-family: $font-Pirulen;
+          font-weight: 300;
+          font-size: em(22px);
+          color: $red;
+          text-shadow: 0px 0px 37px $red;
+          @include iftablet {
+            font-size: em(18px);
+          }
+          @include ifmobile {
+            font-size: em(18px);
+          }
+        }
+      }
+    }
+  }
+
+  &_Image {
+    width: 100%;
+    height: em(359px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include iftablet {
+      height: em(222px);
+    }
+    @include ifmobile {
+      height: em(81px);
+    }
+  }
+}

@@ -119,7 +119,7 @@
             margin-bottom: em(17px);
           }
           p {
-            font-weight: 400;
+            font-weight: 300;
             font-size: em(18px);
             color: $text;
             @include iftablet {
@@ -180,7 +180,7 @@
           margin-bottom: em(30px);
           h2 {
             font-family: $font-Pirulen;
-            font-weight: 400;
+            font-weight: 300;
             font-size: em(36px);
             text-transform: uppercase;
             color: $red;
@@ -201,7 +201,7 @@
           }
           p {
             font-size: em(18px);
-            font-weight: 400;
+            font-weight: 300;
             color: $text;
             @include ifmobile {
               font-size: em(16px);
@@ -240,7 +240,7 @@
             }
 
             &_Name {
-              font-weight: 400;
+              font-weight: 300;
               font-size: em(20px);
               line-height: 107.18%;
               color: $text;
@@ -251,7 +251,7 @@
 
         &_Quote {
           font-family: $font-Pirulen;
-          font-weight: 400;
+          font-weight: 300;
           font-size: em(24px);
           color: $text;
           @include ifmobile {

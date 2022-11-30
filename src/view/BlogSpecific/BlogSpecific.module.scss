@@ -72,7 +72,7 @@
     }
 
     &_Title {
-      font-weight: 400;
+      font-weight: 300;
       font-size: em(18px);
       text-transform: uppercase;
       color: $red;
@@ -130,7 +130,7 @@
       }
       h1 {
         font-family: $font-Pirulen;
-        font-weight: 400;
+        font-weight: 300;
         font-size: em(24px);
         color: $white;
         @include iftablet {
@@ -152,7 +152,7 @@
       &_Date,
       &_Author {
         span {
-          font-weight: 400;
+          font-weight: 300;
           font-size: em(18px);
           color: rgba(255, 255, 255, 0.7);
           @include iftablet {
@@ -179,7 +179,7 @@
     }
     p {
       font-size: em(18px);
-      font-weight: 400;
+      font-weight: 300;
       line-height: 156%;
       color: $white;
       @include iftablet {
@@ -220,7 +220,7 @@
     }
     p {
       font-size: em(24px);
-      font-weight: 400;
+      font-weight: 300;
       text-transform: uppercase;
       color: $text;
       @include iftablet {
@@ -246,7 +246,7 @@
     &_Title {
       margin-bottom: em(24px);
       h3 {
-        font-weight: 400;
+        font-weight: 300;
         font-size: em(18px);
         color: $white;
         @include iftablet {
@@ -259,7 +259,7 @@
     }
 
     &_Item {
-      font-weight: 400;
+      font-weight: 300;
       font-size: em(18px);
       color: $white;
       margin-bottom: em(5px);
@@ -315,7 +315,7 @@
       }
 
       &_Title {
-        font-weight: 400;
+        font-weight: 300;
         font-size: em(18px);
         text-transform: uppercase;
         color: $red;

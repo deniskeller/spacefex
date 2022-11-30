@@ -53,7 +53,7 @@
       }
       &_Author,
       &_Date {
-        font-weight: 400;
+        font-weight: 300;
         font-size: em(12px);
         color: #bcbcbc;
       }
@@ -63,7 +63,7 @@
       margin-bottom: em(10px);
       h1 {
         font-family: $font-Pirulen;
-        font-weight: 400;
+        font-weight: 300;
         font-size: em(20px);
         color: $white;
         @include ifmobile {
@@ -73,7 +73,7 @@
     }
 
     &_Description {
-      font-weight: 400;
+      font-weight: 300;
       font-size: em(18px);
       color: $white;
       @include ifmobile {
