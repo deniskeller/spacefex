@@ -191,6 +191,18 @@ const BlockNumber: React.FC<Props> = ({ number = '1', className = '' }) => {
               stroke-opacity="0.1"
             />
           </svg>
+        ) : number == 'if' ? (
+          <svg
+            viewBox="0 0 161 149"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.929688 147.227V147.727H1.42969H41.0754H41.5754V147.227V1.22656V0.726562H41.0754H1.42969H0.929688V1.22656V147.227ZM111.579 147.727H112.079V147.227V92.9017H155.319H155.819V92.4017V60.745V60.245H155.319H112.079V33.3832H159.014H159.514V32.8832V1.22656V0.726562H159.014H72.732H72.232V1.22656V147.227V147.727H72.732H111.579Z"
+              stroke="#F7F7F7"
+              stroke-opacity="0.1"
+            />
+          </svg>
         ) : null}
       </div>
     </>

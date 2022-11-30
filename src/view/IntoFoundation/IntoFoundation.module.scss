@@ -1,0 +1,186 @@
+.Wrapper {
+  padding: em(240px) em(50px) em(242px);
+  position: relative;
+  @include iftablet {
+    padding: em(240px) 0 em(200px);
+  }
+  @include ifmobile {
+    padding: em(166px) 0 em(100px);
+  }
+}
+
+.Background {
+  position: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.Container {
+  position: relative;
+}
+
+.NumberIcon {
+  top: em(-67px);
+  left: em(-92px);
+  @media only screen and (min-width: 1025px) and (max-width: 1650px) {
+    left: 0;
+  }
+  @include iftablet {
+    top: em(-67px);
+    left: em(-20px);
+  }
+  @include ifmobile {
+    height: em(93px);
+    top: em(-27px);
+    left: 0;
+  }
+}
+
+.IntoFoundation {
+  &_Title {
+    margin-bottom: em(100px);
+    @include iftablet {
+      margin-bottom: em(60px);
+    }
+    @include ifmobile {
+      padding-left: em(26px);
+    }
+  }
+
+  &_About {
+    max-width: em(710px);
+    margin-bottom: em(58px);
+
+    &_Paragraph {
+      &:nth-child(1) {
+        max-width: em(588px);
+      }
+      margin-bottom: em(40px);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        color: $red;
+      }
+    }
+  }
+
+  &_Content {
+    display: grid;
+    grid-template-columns: em(588px) 1fr;
+    gap: 0 em(203px);
+    margin-bottom: em(132px);
+    &_Form {
+      position: relative;
+      @include iftablet {
+        order: -1;
+      }
+      @include ifmobile {
+        order: -1;
+      }
+
+      &_Actions {
+        &_Input {
+          margin-bottom: em(25px);
+          @include ifmobile {
+            margin-bottom: em(20px);
+          }
+        }
+        &_Button {
+          width: em(166px);
+          margin-top: em(43px);
+          @include ifmobile {
+            width: 100%;
+          }
+        }
+
+        &_Success {
+          height: em(462px);
+          border: em(1px) solid $white;
+          animation-name: FadeIn;
+          animation-duration: 2s;
+          transition-timing-function: linear;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @include iftablet {
+            height: em(450px);
+          }
+          @include ifmobile {
+            height: em(281px);
+            padding: em(20px);
+          }
+
+          &_Icon {
+            width: em(51px);
+            height: em(39px);
+            margin-top: em(24px);
+            @include ifmobile {
+              margin-top: em(40px);
+            }
+          }
+
+          &_Title {
+            margin-bottom: em(24px);
+            @include ifmobile {
+              margin-bottom: em(16px);
+            }
+            span {
+              display: block;
+              font-size: em(24px);
+              line-height: 100%;
+              font-weight: 400;
+              color: $white;
+              text-transform: uppercase;
+              @include ifmobile {
+                font-size: em(20px);
+              }
+            }
+          }
+
+          &_Subtitle {
+            font-size: em(18px);
+            font-style: normal;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.7);
+            @include ifmobile {
+              font-size: em(16px);
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    &_Image {
+      // position: relative;
+      .Image {
+        position: absolute;
+        top: em(255px);
+        right: 0;
+        width: em(889px);
+        height: em(1241px);
+      }
+
+      .DecorIcon {
+        position: absolute;
+        width: em(668px);
+        height: em(255px);
+        top: em(306px);
+        right: em(336px);
+      }
+    }
+  }
+
+  &_Feedback {
+    max-width: em(710px);
+  }
+}
