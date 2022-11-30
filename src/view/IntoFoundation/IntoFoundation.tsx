@@ -16,6 +16,9 @@ interface IValueForm {
   name: string;
   company_name: string;
   email: string;
+  phone: string;
+  country: string;
+  comments: string;
 }
 
 const IntoFoundation = () => {
@@ -23,6 +26,9 @@ const IntoFoundation = () => {
     name: '',
     company_name: '',
     email: '',
+    phone: '',
+    country: '',
+    comments: '',
   });
 
   const setNewValue = (val: string | number | File[], key: string) => {
@@ -88,7 +94,17 @@ const IntoFoundation = () => {
                     <>
                       <BaseInput
                         name="name"
-                        placeholder="Company name"
+                        placeholder="Enter Eame"
+                        value={value.name}
+                        onChange={(val: string) => setNewValue(val, 'name')}
+                        className={
+                          styles.IntoFoundation_Content_Form_Actions_Input
+                        }
+                      />
+
+                      <BaseInput
+                        name="company_name"
+                        placeholder="Enter Company Name"
                         value={value.company_name}
                         onChange={(val: string) =>
                           setNewValue(val, 'company_name')
@@ -109,40 +125,30 @@ const IntoFoundation = () => {
                       />
 
                       <BaseInput
-                        name="email"
-                        placeholder="Enter Email"
-                        value={value.email}
-                        onChange={(val: string) => setNewValue(val, 'email')}
+                        name="phone"
+                        placeholder="Enter Phone"
+                        value={value.phone}
+                        onChange={(val: string) => setNewValue(val, 'phone')}
                         className={
                           styles.IntoFoundation_Content_Form_Actions_Input
                         }
                       />
 
                       <BaseInput
-                        name="email"
-                        placeholder="Enter Email"
-                        value={value.email}
-                        onChange={(val: string) => setNewValue(val, 'email')}
+                        name="country"
+                        placeholder="Select Country"
+                        value={value.country}
+                        onChange={(val: string) => setNewValue(val, 'country')}
                         className={
                           styles.IntoFoundation_Content_Form_Actions_Input
                         }
                       />
 
                       <BaseInput
-                        name="email"
-                        placeholder="Enter Email"
-                        value={value.email}
-                        onChange={(val: string) => setNewValue(val, 'email')}
-                        className={
-                          styles.IntoFoundation_Content_Form_Actions_Input
-                        }
-                      />
-
-                      <BaseInput
-                        name="email"
-                        placeholder="Enter Email"
-                        value={value.email}
-                        onChange={(val: string) => setNewValue(val, 'email')}
+                        name="comments"
+                        placeholder="Leave A Comment"
+                        value={value.comments}
+                        onChange={(val: string) => setNewValue(val, 'comments')}
                         className={
                           styles.IntoFoundation_Content_Form_Actions_Input
                         }
