@@ -13,12 +13,14 @@ import React from 'react';
 import styles from './IntoFoundation.module.scss';
 
 interface IValueForm {
+  name: string;
   company_name: string;
   email: string;
 }
 
 const IntoFoundation = () => {
   const [value, setValue] = React.useState<IValueForm>({
+    name: '',
     company_name: '',
     email: '',
   });
