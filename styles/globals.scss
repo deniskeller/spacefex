@@ -185,6 +185,7 @@
 }
 
 .react-tel-input .country-list .search-box {
+  width: 100% !important;
   border: none !important;
   border-radius: 0 !important;
   margin-left: em(9px) !important;
@@ -198,4 +199,16 @@
 
 .react-tel-input .country-list .flag {
   margin-right: em(12px) !important;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  height: em(15px);
+  width: em(15px);
+  background: url('/images/icon/search-remove.svg') no-repeat 50% 50%;
+  background-size: contain;
+  cursor: pointer;
 }

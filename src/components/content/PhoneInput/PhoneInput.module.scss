@@ -5,26 +5,17 @@
   flex-direction: column;
 }
 
-.Label {
-  // font-family: $font-Avenir;
-  font-style: normal;
-  font-weight: 500;
-  font-size: em(16px);
-  line-height: 100%;
-  color: $white;
-  margin-bottom: em(9px);
-}
-
 .Error {
-  border-bottom: 2px solid #a11515;
+  border-bottom: 2px solid $red;
 }
 
 .ErrorText {
-  font-size: em(13px);
-  line-height: 100%;
-  color: #a11515;
-  display: block;
-  // font-family: $font-Avenir;
-  margin-top: em(10px);
-  font-weight: 400;
+  margin-top: em(8px);
+  span {
+    display: flex;
+    font-weight: 300;
+    font-size: em(12px);
+    line-height: 120%;
+    color: #ff9900;
+  }
 }
