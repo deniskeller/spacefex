@@ -215,7 +215,7 @@ input[type='search']::-webkit-search-results-decoration {
   background-repeat: no-repeat !important;
   cursor: pointer;
   position: absolute !important;
-  right: 0 !important;
+  right: em(16px) !important;
 }
 
 .react-tel-input .form-control.phone-input-error {
