@@ -4,7 +4,6 @@ import styles from './BaseTextarea.module.scss';
 interface Props {
   type?: string;
   name?: string;
-  label?: string;
   placeholder?: string;
   required?: boolean;
   className?: string;
@@ -16,7 +15,6 @@ interface Props {
 
 const BaseTextarea: React.FC<Props> = ({
   value,
-  label,
   error,
   name,
   required,
@@ -27,7 +25,6 @@ const BaseTextarea: React.FC<Props> = ({
 }) => {
   return (
     <div className={`${styles.BaseTextarea} ${className}`}>
-      {label ? <label className={styles.Label}>{label}</label> : ''}
 
       <textarea
         value={value}
@@ -41,7 +38,7 @@ const BaseTextarea: React.FC<Props> = ({
         className={`${styles.Textarea} ${error ? styles.Error : ''}`}
       />
 
-      {error ? <div className={styles.ErrorText}>{error}</div> : null}
+      {error ? <div className={styles.ErrorText}><span>{error}</span></div> : null}
     </div>
   );
 };

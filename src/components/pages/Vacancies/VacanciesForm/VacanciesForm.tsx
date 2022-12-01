@@ -100,16 +100,6 @@ const VacanciesForm = () => {
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
-                    {/* <BaseInput
-                      name="about_yourself"
-                      placeholder="TELL US ABOUT YOURSELF"
-                      value={value.about_yourself}
-                      onChange={(val: string) =>
-                        setNewValue(val, 'about_yourself')
-                      }
-                      className={styles.VacanciesForm_Content_Form_Input}
-                    /> */}
-
                     <BaseTextarea
                       name="about_yourself"
                       placeholder="TELL US ABOUT YOURSELF"
