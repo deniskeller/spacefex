@@ -172,8 +172,8 @@
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  width: 20px !important;
-  height: 20px !important;
+  width: 18px !important;
+  height: 18px !important;
   display: inline-flex !important;
   font-size: 0 !important;
 }
@@ -190,7 +190,7 @@
   border: none !important;
   border-radius: 0 !important;
   margin-left: em(9px) !important;
-  padding: 3px 0 5px !important;
+  padding: em(3px) 0 em(5px) !important;
   outline: none !important;
   font-weight: 300 !important;
   font-size: em(16px) !important;
@@ -215,7 +215,13 @@ input[type='search']::-webkit-search-results-decoration {
   background-repeat: no-repeat !important;
   cursor: pointer;
   position: absolute !important;
-  right: em(16px) !important;
+  right: 0;
+  @include iftablet {
+    right: em(16px) !important;
+  }
+  @include ifmobile {
+    right: em(16px) !important;
+  }
 }
 
 .react-tel-input .form-control.phone-input-error {
