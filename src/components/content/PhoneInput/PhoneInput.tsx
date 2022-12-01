@@ -27,9 +27,16 @@ const PhoneInput2: React.FC<Props> = ({
         onChange={onChange}
         enableSearch
         searchPlaceholder="Enter"
+        inputClass={error ? 'phone-input-error' : ''}
       />
 
-      {error ? <div className={styles.ErrorText}>{error}</div> : ''}
+      {error ? (
+        <div className={styles.ErrorText}>
+          <span>{error}</span>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 };

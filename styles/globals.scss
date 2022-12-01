@@ -30,27 +30,35 @@
 }
 
 ///стили для InputPhone
-
 .react-tel-input .form-control {
-  font-family: $font-OpenSans !important;
-  font-size: em(16px) !important;
-  font-style: normal !important;
+  font-size: em(18px) !important;
   font-weight: 300 !important;
-  width: 100% !important;
-  color: $text !important;
+  line-height: 120% !important;
   border-radius: 0 !important;
+  letter-spacing: inherit !important;
   -webkit-border-radius: 0 !important;
   -webkit-appearance: none !important;
-  background: none !important;
   outline: none !important;
   border: none !important;
+  width: 100% !important;
+  height: em(42px) !important;
   box-sizing: border-box !important;
-
+  position: relative !important;
+  color: $text !important;
+  @include placeholder-color(rgba(247, 247, 247, 0.7) !important);
+  padding: 0 em(16px) 0 em(57px) !important;
+  font-family: $font-OpenSans !important;
+  text-transform: uppercase !important;
   background: linear-gradient($white, $white), linear-gradient($white, $white),
     linear-gradient($white, $white) !important;
   background-size: 1px em(7px), 100% 1px, 1px em(7px) !important;
   background-position: bottom left, bottom center, bottom right !important;
   background-repeat: no-repeat !important;
+
+  @include ifmobile {
+    font-size: em(16px) !important;
+    height: em(34px) !important;
+  }
 
   &:hover {
     background-size: 2px em(7px), 100% 2px, 2px em(7px) !important;
@@ -74,22 +82,6 @@
   z-index: 10000 !important;
 }
 
-.react-tel-input .form-control {
-  // $size: 18px !important;
-  // font-size: em($size) !important;
-  font-weight: 300 !important;
-  line-height: 120% !important;
-  width: 100% !important;
-  height: em(48px) !important;
-  box-sizing: border-box !important;
-  position: relative !important;
-  color: $text !important;
-  @include placeholder-color(rgba(247, 247, 247, 0.7) !important);
-  padding: em(12px) em(16px) em(12px) em(57px) !important;
-  font-family: $font-OpenSans !important;
-  text-transform: uppercase !important;
-}
-
 .react-tel-input .country-list {
   width: 100% !important;
   margin: 0 !important;
@@ -102,8 +94,8 @@
   }
   &::-webkit-scrollbar-track {
     position: absolute !important;
-    right: 10px !important;
-    margin-left: -10px !important;
+    right: em(10px) !important;
+    margin-left: em(-10px) !important;
   }
   &::-webkit-scrollbar-thumb {
     background: rgba(247, 247, 247, 0.5) !important;
@@ -164,7 +156,16 @@
 }
 
 .react-tel-input .country-list .country {
+  display: flex !important;
+  align-items: center !important;
   padding: em(12px) em(20px) !important;
+}
+
+.react-tel-input .country-list .country-name {
+  font-size: em(16px) !important;
+  @include ifmobile {
+    font-size: em(14px) !important;
+  }
 }
 
 .react-tel-input .country-list .search-emoji {
@@ -191,7 +192,7 @@
   margin-left: em(9px) !important;
   padding: 3px 0 5px !important;
   outline: none !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   font-size: em(16px) !important;
   background: none !important;
   color: rgba(247, 247, 247, 0.5) !important;
@@ -211,4 +212,12 @@ input[type='search']::-webkit-search-results-decoration {
   background: url('/images/icon/search-remove.svg') no-repeat 50% 50%;
   background-size: contain;
   cursor: pointer;
+}
+
+.react-tel-input .form-control.phone-input-error {
+  background: linear-gradient(#ff9900, #ff9900),
+    linear-gradient(#ff9900, #ff9900), linear-gradient(#ff9900, #ff9900) !important;
+  background-size: 1px em(7px), 100% 1px, 1px em(7px) !important;
+  background-position: bottom left, bottom center, bottom right !important;
+  background-repeat: no-repeat !important;
 }

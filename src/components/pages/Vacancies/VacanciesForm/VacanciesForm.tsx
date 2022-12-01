@@ -12,21 +12,25 @@ import styles from './VacanciesForm.module.scss';
 
 interface IValueForm {
   name: string;
-  company_name: string;
+  surname: string;
+  position: string;
   email: string;
   phone: string;
-  country: string;
-  comments: string;
+  linkedin: string;
+  about_yourself: string;
+  file: string;
 }
 
 const VacanciesForm = () => {
   const [value, setValue] = React.useState<IValueForm>({
     name: '',
-    company_name: '',
+    surname: '',
+    position: '',
     email: '',
     phone: '',
-    country: '',
-    comments: '',
+    linkedin: '',
+    about_yourself: '',
+    file: '',
   });
 
   const setNewValue = (val: string | number | File[], key: string) => {
@@ -57,38 +61,28 @@ const VacanciesForm = () => {
                     />
 
                     <BaseInput
-                      name="company_name"
+                      name="surname"
                       placeholder="Surname"
-                      value={value.company_name}
-                      onChange={(val: string) =>
-                        setNewValue(val, 'company_name')
-                      }
+                      value={value.surname}
+                      onChange={(val: string) => setNewValue(val, 'surname')}
+                      className={styles.VacanciesForm_Content_Form_Input}
+                    />
+
+                    <BaseInput
+                      name="position"
+                      placeholder="Position"
+                      value={value.position}
+                      onChange={(val: string) => setNewValue(val, 'position')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
                     <BaseInput
                       name="email"
-                      placeholder="Position"
+                      placeholder="Email"
                       value={value.email}
                       onChange={(val: string) => setNewValue(val, 'email')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
-
-                    <BaseInput
-                      name="phone"
-                      placeholder="email"
-                      value={value.phone}
-                      onChange={(val: string) => setNewValue(val, 'phone')}
-                      className={styles.VacanciesForm_Content_Form_Input}
-                    />
-
-                    {/* <BaseInput
-                      name="country"
-                      placeholder="Phone"
-                      value={value.country}
-                      onChange={(val: string) => setNewValue(val, 'country')}
-                      className={styles.VacanciesForm_Content_Form_Input}
-                    /> */}
 
                     <PhoneInput
                       placeholder="Phone"
@@ -98,18 +92,20 @@ const VacanciesForm = () => {
                     />
 
                     <BaseInput
-                      name="comments"
+                      name="linkedin"
                       placeholder="URL to the LinkedIn profile"
-                      value={value.comments}
-                      onChange={(val: string) => setNewValue(val, 'comments')}
+                      value={value.linkedin}
+                      onChange={(val: string) => setNewValue(val, 'linkedin')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
                     <BaseInput
-                      name="comments"
+                      name="about_yourself"
                       placeholder="TELL US ABOUT YOURSELF"
-                      value={value.comments}
-                      onChange={(val: string) => setNewValue(val, 'comments')}
+                      value={value.about_yourself}
+                      onChange={(val: string) =>
+                        setNewValue(val, 'about_yourself')
+                      }
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 

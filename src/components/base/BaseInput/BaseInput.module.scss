@@ -53,10 +53,10 @@
 
 .Error {
   background: linear-gradient(#ff9900, #ff9900),
-    linear-gradient(#ff9900, #ff9900), linear-gradient(#ff9900, #ff9900);
-  background-size: 1px em(7px), 100% 1px, 1px em(7px);
-  background-position: bottom left, bottom center, bottom right;
-  background-repeat: no-repeat;
+    linear-gradient(#ff9900, #ff9900), linear-gradient(#ff9900, #ff9900) !important;
+  background-size: 1px em(7px), 100% 1px, 1px em(7px) !important;
+  background-position: bottom left, bottom center, bottom right !important;
+  background-repeat: no-repeat !important;
 }
 
 .ErrorText {
