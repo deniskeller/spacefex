@@ -6,6 +6,7 @@ import {
   BaseTitle,
 } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
+import { PhoneInput } from '@content/index';
 import React from 'react';
 import styles from './VacanciesForm.module.scss';
 
@@ -81,11 +82,18 @@ const VacanciesForm = () => {
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
-                    <BaseInput
+                    {/* <BaseInput
                       name="country"
                       placeholder="Phone"
                       value={value.country}
                       onChange={(val: string) => setNewValue(val, 'country')}
+                      className={styles.VacanciesForm_Content_Form_Input}
+                    /> */}
+
+                    <PhoneInput
+                      placeholder="Phone"
+                      value={value.phone}
+                      onChange={(val: string) => setNewValue(val, 'phone')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 

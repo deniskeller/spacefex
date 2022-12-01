@@ -18,13 +18,13 @@
   background: none;
   outline: none;
   border: none;
+  box-sizing: border-box;
   position: relative;
   color: $text;
   @include placeholder-color(rgba(247, 247, 247, 0.7));
   padding: em(12px, $size) em(16px, $size);
   font-family: $font-OpenSans;
   text-transform: uppercase;
-  box-sizing: border-box;
   z-index: 1000;
   background: linear-gradient($white, $white), linear-gradient($white, $white),
     linear-gradient($white, $white);

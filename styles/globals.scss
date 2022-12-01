@@ -28,3 +28,174 @@
     opacity: 1;
   }
 }
+
+///стили для InputPhone
+
+.react-tel-input .form-control {
+  font-family: $font-OpenSans !important;
+  font-size: em(16px) !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  width: 100% !important;
+  color: $text !important;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -webkit-appearance: none !important;
+  background: none !important;
+  outline: none !important;
+  border: none !important;
+  box-sizing: border-box !important;
+
+  background: linear-gradient($white, $white), linear-gradient($white, $white),
+    linear-gradient($white, $white) !important;
+  background-size: 1px em(7px), 100% 1px, 1px em(7px) !important;
+  background-position: bottom left, bottom center, bottom right !important;
+  background-repeat: no-repeat !important;
+
+  &:hover {
+    background-size: 2px em(7px), 100% 2px, 2px em(7px) !important;
+  }
+
+  &:focus {
+    background: linear-gradient($red, $red), linear-gradient($red, $red),
+      linear-gradient($red, $red) !important;
+    background-size: 2px em(7px), 100% 2px, 2px em(7px) !important;
+    background-position: bottom left, bottom center, bottom right !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+.react-tel-input {
+  font-family: $font-OpenSans !important;
+  font-weight: 300 !important;
+  font-size: em(16px) !important;
+  line-height: 100% !important;
+  color: $text !important;
+  z-index: 10000 !important;
+}
+
+.react-tel-input .form-control {
+  // $size: 18px !important;
+  // font-size: em($size) !important;
+  font-weight: 300 !important;
+  line-height: 120% !important;
+  width: 100% !important;
+  height: em(48px) !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  color: $text !important;
+  @include placeholder-color(rgba(247, 247, 247, 0.7) !important);
+  padding: em(12px) em(16px) em(12px) em(57px) !important;
+  font-family: $font-OpenSans !important;
+  text-transform: uppercase !important;
+}
+
+.react-tel-input .country-list {
+  width: 100% !important;
+  margin: 3px 0 10px -1px !important;
+  background: #222226 !important;
+  box-shadow: inset 0px 20px 30px rgba(0, 0, 0, 0.25) !important;
+  min-height: em(244px) !important;
+  border-radius: 0 !important;
+  &::-webkit-scrollbar {
+    width: em(3px) !important;
+  }
+  &::-webkit-scrollbar-track {
+    position: absolute !important;
+    right: 10px !important;
+    margin-left: -10px !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(247, 247, 247, 0.5) !important;
+    border-radius: 100px !important;
+  }
+}
+
+.react-tel-input .country-list .search {
+  background: #222226 !important;
+}
+
+.react-tel-input .flag-dropdown {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.react-tel-input .flag-dropdown.open {
+  width: 100% !important;
+}
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: none !important;
+}
+
+.react-tel-input .selected-flag {
+  padding: 0 0 0 em(16px) !important;
+}
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background: none !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  background: #dc4945 !important;
+}
+
+.react-tel-input .country-list .country .dial-code {
+  font-family: $font-OpenSans !important;
+  font-weight: 300 !important;
+  font-size: em(16px) !important;
+  line-height: 100% !important;
+  color: rgba(247, 247, 247, 0.5) !important;
+  z-index: 10000 !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background: none !important;
+  background-image: url('/images/icon/select-active-icon.png') !important;
+  background-position: 98% 40% !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+  .country-name {
+    color: $red !important;
+  }
+  .dial-code {
+    color: rgba(220, 73, 69, 0.5) !important;
+  }
+}
+
+.react-tel-input .country-list .country {
+  padding: em(12px) em(20px) !important;
+}
+
+.react-tel-input .country-list .search-emoji {
+  background-image: url('/images/icon/search-icon.png') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-flex !important;
+  font-size: 0 !important;
+}
+
+.react-tel-input .country-list .search {
+  display: flex;
+  align-items: center;
+  padding: em(12px) em(18px) !important;
+}
+
+.react-tel-input .country-list .search-box {
+  border: none !important;
+  border-radius: 0 !important;
+  margin-left: em(9px) !important;
+  padding: 3px 0 5px !important;
+  outline: none !important;
+  font-weight: 400 !important;
+  font-size: em(16px) !important;
+  background: none !important;
+  color: rgba(247, 247, 247, 0.5) !important;
+}
+
+.react-tel-input .country-list .flag {
+  margin-right: em(12px) !important;
+}
