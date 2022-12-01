@@ -209,8 +209,10 @@ input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
   height: em(15px);
   width: em(15px);
-  background: url('/images/icon/search-remove.svg') no-repeat 50% 50%;
+  background: url('/images/icon/search-remove.svg');
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
