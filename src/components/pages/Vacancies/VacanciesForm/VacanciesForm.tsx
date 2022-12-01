@@ -3,6 +3,7 @@ import {
   BaseContainer,
   BaseIcon,
   BaseInput,
+  BaseTextarea,
   BaseTitle,
 } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
@@ -99,7 +100,17 @@ const VacanciesForm = () => {
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
-                    <BaseInput
+                    {/* <BaseInput
+                      name="about_yourself"
+                      placeholder="TELL US ABOUT YOURSELF"
+                      value={value.about_yourself}
+                      onChange={(val: string) =>
+                        setNewValue(val, 'about_yourself')
+                      }
+                      className={styles.VacanciesForm_Content_Form_Input}
+                    /> */}
+
+                    <BaseTextarea
                       name="about_yourself"
                       placeholder="TELL US ABOUT YOURSELF"
                       value={value.about_yourself}
