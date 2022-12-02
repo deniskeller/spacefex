@@ -7,6 +7,7 @@ export enum OthersIcons {
   FILE = 'FILE',
   FILE_UPLOAD = 'FILE_UPLOAD',
   FILE_UPLOAD_CLOSE = 'FILE_UPLOAD_CLOSE',
+  SELECT_ACTIVE = 'SELECT_ACTIVE',
 }
 
 export const othersIcons = {
@@ -779,14 +780,23 @@ export const othersIcons = {
   ),
   [OthersIcons.FILE_UPLOAD_CLOSE]: (
     <>
-      <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M9.93938 10.5001L0.292969 20.1465L1.00008 20.8536L10.6465 11.2072L20.293 20.8537L21.0001 20.1466L11.3536 10.5001L21.0001 0.853591L20.293 0.146484L10.6465 9.79297L1.00008 0.14656L0.292969 0.853667L9.93938 10.5001Z"
-          fill="#848485"
-        />
-      </svg>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M9.93938 10.5001L0.292969 20.1465L1.00008 20.8536L10.6465 11.2072L20.293 20.8537L21.0001 20.1466L11.3536 10.5001L21.0001 0.853591L20.293 0.146484L10.6465 9.79297L1.00008 0.14656L0.292969 0.853667L9.93938 10.5001Z"
+        fill="#848485"
+      />
+    </>
+  ),
+  [OthersIcons.SELECT_ACTIVE]: (
+    <>
+      <path
+        d="M1.83398 7L7.58398 12.75L17.1673 1.25"
+        stroke="#DC4945"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </>
   ),
 };

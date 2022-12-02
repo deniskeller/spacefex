@@ -91,11 +91,6 @@
   &::-webkit-scrollbar {
     width: em(3px) !important;
   }
-  &::-webkit-scrollbar-track {
-    position: absolute !important;
-    right: em(10px) !important;
-    margin-left: em(-10px) !important;
-  }
   &::-webkit-scrollbar-thumb {
     background: rgba(247, 247, 247, 0.5) !important;
     border-radius: 100px !important;
@@ -157,7 +152,8 @@
 .react-tel-input .country-list .country {
   display: flex !important;
   align-items: center !important;
-  padding: em(12px) em(20px) !important;
+  padding: em(17px) em(20px) !important;
+  border-bottom: 1px solid #2c2c2c !important;
 }
 
 .react-tel-input .country-list .country-name {

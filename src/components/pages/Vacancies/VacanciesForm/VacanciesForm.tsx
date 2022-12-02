@@ -77,14 +77,6 @@ const VacanciesForm = () => {
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
-                    {/* <BaseInput
-                      name="position"
-                      placeholder="Position"
-                      value={value.position}
-                      onChange={(val: string) => setNewValue(val, 'position')}
-                      className={styles.VacanciesForm_Content_Form_Input}
-                    /> */}
-
                     <BaseSelect
                       placeholder="Position"
                       options={position}

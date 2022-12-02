@@ -5,7 +5,6 @@ import { BaseIcon } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
 
 interface Props {
-  label?: string;
   placeholder?: string;
   type?: string;
   className?: string;
@@ -20,7 +19,6 @@ interface ISelectItem {
 }
 
 const BaseSelect: React.FC<Props> = ({
-  label,
   placeholder,
   className,
   type = 'default',
@@ -50,41 +48,50 @@ const BaseSelect: React.FC<Props> = ({
       } ${className} ${error ? styles.SelectError : ''} `}
       ref={selectContainerRef}
     >
-      {label ? <label className={styles.Label}>{label}</label> : ''}
-
       <div
         className={`${styles.SelectHeader}  ${
           isOpen ? styles.SelectHeaderFocus : ''
         } ${error ? styles.Error : ''}`}
         onClick={toggling}
       >
-        <p className={`${selectedOption ? styles.NotEmpty : ''}`}>
+        <p className={`${selectedOption ? styles.NotEmpty : styles.Empty}`}>
           {selectedOption || placeholder}
         </p>
 
-        {/* <BaseIcon
-          icon={ALL_ICONS.SELECT_ARROW}
-          viewBox="0 0 8 5"
+        <BaseIcon
+          icon={ALL_ICONS.SHOW_MORE_ARROW}
+          viewBox="0 0 18 9"
           className={`${styles.IconArrow} ${
             isOpen ? styles.IconArrowActive : null
           }`}
-        /> */}
+        />
       </div>
-      {error ? <div className={styles.ErrorText}>{error}</div> : ''}
+      {error ? (
+        <div className={styles.ErrorText}>
+          <span>{error}</span>
+        </div>
+      ) : (
+        ''
+      )}
       {isOpen && (
         <ul className={styles.SelectList}>
           {options.map((option: ISelectItem) => (
             <li
-              className={styles.ListItem}
+              className={`${styles.ListItem} ${
+                selectedOption === option.name ? styles.Active : ''
+              }`}
               onClick={onOptionClicked(option.name)}
               key={Math.random()}
-              style={{
-                background: `${
-                  selectedOption === option.name ? 'red' : 'none'
-                }`,
-              }}
             >
-              <span className={styles.ListItemTitle}>{option.name}</span>
+              <span className={styles.ListItem_Title}>{option.name}</span>
+
+              {selectedOption === option.name ? (
+                <BaseIcon
+                  icon={ALL_ICONS.SELECT_ACTIVE}
+                  viewBox="0 0 19 14"
+                  className={styles.ListItem_Icon}
+                />
+              ) : null}
             </li>
           ))}
         </ul>
