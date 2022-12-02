@@ -43,7 +43,7 @@
     }
     @include ifmobile {
       grid-template-columns: 1fr;
-      gap: em(35px) 0;
+      gap: em(80px) 0;
     }
   }
 }

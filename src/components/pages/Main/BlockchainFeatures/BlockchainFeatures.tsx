@@ -17,11 +17,17 @@ const BlockchainFeatures = () => {
 
             <div className={styles.BlockchainFeatures_Items}>
               <BlockchainFeaturesItem title="Stability" />
-              <BlockchainFeaturesItem title="Eco Friendly" />
-              <BlockchainFeaturesItem title="Security" />
-              <BlockchainFeaturesItem title="Low Cost" />
-              <BlockchainFeaturesItem title="Global" />
-              <BlockchainFeaturesItem title="Developer Tools" />
+              <BlockchainFeaturesItem
+                title="Eco Friendly"
+                animation_delay=".1s"
+              />
+              <BlockchainFeaturesItem title="Security" animation_delay=".2s" />
+              <BlockchainFeaturesItem title="Low Cost" animation_delay=".3s" />
+              <BlockchainFeaturesItem title="Global" animation_delay=".4s" />
+              <BlockchainFeaturesItem
+                title="Developer Tools"
+                animation_delay=".5s"
+              />
             </div>
           </div>
         </BaseContainer>

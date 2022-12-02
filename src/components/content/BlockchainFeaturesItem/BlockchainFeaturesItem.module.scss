@@ -30,27 +30,54 @@
   }
 
   &_Description {
-    font-weight: 300;
-    font-size: em(18px);
-    line-height: 156%;
-    text-align: center;
-    color: $text;
+    p {
+      font-weight: 300;
+      font-size: em(18px);
+      line-height: 156%;
+      text-align: center;
+      color: $text;
+      overflow: hidden;
+      transition: height $speed ease-in-out;
+    }
     cursor: pointer;
-    overflow: hidden;
-    transition: height $speed ease-in-out;
     position: relative;
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 60%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #fff0;
-    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
 
     @include ifmobile {
       font-size: em(16px);
+    }
+
+    &_Hidden {
+      background: linear-gradient(
+        to bottom,
+        rgb(255, 255, 255) 60%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #fff0;
+      text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .Hidden {
+      height: em(80px);
+    }
+    .Visible {
+      height: 100%;
+    }
+  }
+
+  &_IconShowMore {
+    position: absolute;
+    bottom: em(-30px);
+    right: calc(50% - em(7px));
+    width: em(16px);
+    height: em(31px);
+    transform: rotate(-90deg);
+    opacity: 0.1;
+    transition: opacity 1s ease-in-out;
+
+    &_Hidden {
+      opacity: 0;
     }
   }
 }
