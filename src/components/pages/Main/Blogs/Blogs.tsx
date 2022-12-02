@@ -7,13 +7,13 @@ import styles from './Blogs.module.scss';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { posts } from '@services/post';
+import { posts } from '@services/index';
 import { ALL_ICONS } from '@constants/icons';
 
 const Blogs = () => {
   var settings = {
     arrows: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,

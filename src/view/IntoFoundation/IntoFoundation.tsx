@@ -3,11 +3,14 @@ import {
   BaseContainer,
   BaseIcon,
   BaseInput,
+  BaseSelect,
   BaseText,
+  BaseTextarea,
   BaseTitle,
 } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
-import { BlockNumber } from '@content/index';
+import { BlockNumber, PhoneInput } from '@content/index';
+import { countries } from '@services/index';
 import Link from 'next/link';
 import React from 'react';
 import styles from './IntoFoundation.module.scss';
@@ -94,7 +97,7 @@ const IntoFoundation = () => {
                     <>
                       <BaseInput
                         name="name"
-                        placeholder="Enter Eame"
+                        placeholder="Enter Name"
                         value={value.name}
                         onChange={(val: string) => setNewValue(val, 'name')}
                         className={
@@ -124,8 +127,7 @@ const IntoFoundation = () => {
                         }
                       />
 
-                      <BaseInput
-                        name="phone"
+                      <PhoneInput
                         placeholder="Enter Phone"
                         value={value.phone}
                         onChange={(val: string) => setNewValue(val, 'phone')}
@@ -134,17 +136,16 @@ const IntoFoundation = () => {
                         }
                       />
 
-                      <BaseInput
-                        name="country"
+                      <BaseSelect
                         placeholder="Select Country"
-                        value={value.country}
+                        options={countries}
                         onChange={(val: string) => setNewValue(val, 'country')}
                         className={
                           styles.IntoFoundation_Content_Form_Actions_Input
                         }
                       />
 
-                      <BaseInput
+                      <BaseTextarea
                         name="comments"
                         placeholder="Leave A Comment"
                         value={value.comments}

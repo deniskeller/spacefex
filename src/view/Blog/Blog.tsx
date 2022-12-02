@@ -1,6 +1,6 @@
 import { BaseButton, BaseContainer, BaseTitle } from '@base/index';
 import { BlogItem } from '@content/index';
-import { posts } from '@services/post';
+import { posts } from '@services/index';
 import React from 'react';
 import styles from './Blog.module.scss';
 
