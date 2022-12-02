@@ -1,5 +1,5 @@
 .Wrapper {
-  padding: em(120px) em(50px) 0;
+  padding: em(166px) em(50px) 0;
   @include iftablet {
     padding: em(23px) 0 0;
   }
@@ -48,8 +48,11 @@
     }
 
     .NumberIcon {
-      top: em(-84px);
-      right: em(-77px);
+      top: em(-77px);
+      right: em(-84px);
+      @media only screen and (min-width: 1025px) and (max-width: 1700px) {
+        right: 0;
+      }
       @include iftablet {
         top: 0;
         right: em(-162px);

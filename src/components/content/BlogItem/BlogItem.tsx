@@ -26,6 +26,15 @@ const BlogItem: React.FC<IProps> = ({
     router.push('/blog/' + id);
   };
 
+  //обрезание строки
+  const computedName = (str: string) => {
+    if (str.length > 15) {
+      const newStr = str.substring(0, 15);
+      return newStr + '...';
+    }
+    return str;
+  };
+
   return (
     <>
       <div
@@ -44,7 +53,7 @@ const BlogItem: React.FC<IProps> = ({
           </div>
 
           <div className={styles.BlogItem_Banner_Header}>
-            <h1>{header}</h1>
+            <h1>{computedName(header)}</h1>
           </div>
 
           <div className={styles.BlogItem_Banner_Description}>
