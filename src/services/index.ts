@@ -4,8 +4,8 @@ export const posts = [
 		image: 'accordion-slide1.jpg',
 		author: 'Robin Jones',
 		post_date: '18.03.2022',
-		header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim massa lectus tortor nunc, quisque mauris.  ',
+		header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit fgdfgd fgdfg dfg dfgdfgfdgdf gdfgdfgdf df gfd gfdg dfg dfg dfg dfg dfg',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim massa lectus tortor nunc, quisque mauris. sdfsdfsdfds fsd fsdf sdf sdf sdfsd fsdf sdf dsf sdfsdf sdfsdfdsfsdfds dsf dsf  ',
 	},
 	{
 		id: 2,
