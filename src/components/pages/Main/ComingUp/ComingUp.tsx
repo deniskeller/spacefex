@@ -11,7 +11,7 @@ const ComingUp = () => {
     <>
       <div
         className={styles.Wrapper}
-        style={{ backgroundImage: 'url(/images/image/dust.jpg)' }}
+        // style={{ backgroundImage: 'url(/images/image/dust.jpg)' }}
       >
         <BaseIcon
           viewBox="0 0 642 80"

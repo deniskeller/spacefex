@@ -14,12 +14,13 @@ const Main = () => {
   return (
     <>
       <Header />
-      <ComingUp />
-      <ForHumanity />
-      <div
-        className={styles.Wrapper}
-        style={{ backgroundImage: 'url(/images/image/dust.jpg)' }}
-      >
+      <div className={styles.Wrapper}>
+        <div
+          className={styles.Background}
+          style={{ backgroundImage: 'url(/images/image/dust.jpg)' }}
+        ></div>
+        <ComingUp />
+        <ForHumanity />
         <BlockchainFeatures />
         <SpacefexFor />
       </div>
