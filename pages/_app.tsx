@@ -2,10 +2,11 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTransition, animated } from 'react-spring';
+import 'animate.css/animate.min.css';
+import '../styles/globals.scss';
+
 // import { Provider } from 'react-redux';
 // import { setupStore } from '@store/store';
-// import 'animate.css/animate.min.css';
-import '../styles/globals.scss';
 
 // const store = setupStore();
 

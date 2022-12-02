@@ -227,3 +227,67 @@ input[type='search']::-webkit-search-results-decoration {
   background-position: bottom left, bottom center, bottom right !important;
   background-repeat: no-repeat !important;
 }
+
+//animation
+
+:root {
+  --animate-delay: 0.1s !important;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+// .paragraph_animated {
+//   font-size: em(16px);
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 133%;
+//   color: $white;
+//   @include ifmobile {
+//     font-size: em(14px);
+//   }
+// }
+
+// .paragraph_animated span {
+//   animation: letter-glow 0.7s 0s ease both;
+//   @include nth-ani-delay(500, 0.005s);
+// }
+
+// @keyframes letter-glow {
+//   0% {
+//     opacity: 0;
+//     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+//   }
+//   66% {
+//     opacity: 1;
+//     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+//   }
+//   77% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0.7;
+//     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+//   }
+// }

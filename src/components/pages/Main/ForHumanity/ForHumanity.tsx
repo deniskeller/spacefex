@@ -1,7 +1,8 @@
-import { BaseContainer, BaseText, BaseTitle } from '@base/index';
+import { BaseText, BaseTitle } from '@base/index';
 import { BlockNumber } from '@content/index';
 import React from 'react';
 import styles from './ForHumanity.module.scss';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const ForHumanity = () => {
   return (
@@ -35,30 +36,63 @@ const ForHumanity = () => {
                 </div>
 
                 <div className={styles.ForHumanity_Score_Item}>
-                  <div className={styles.ForHumanity_Score_Item_Value}>
-                    <span>1bln</span>
-                  </div>
-                  <div className={styles.ForHumanity_Score_Item_Description}>
-                    space accounts
-                  </div>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeInLeft"
+                    animateOnce
+                  >
+                    <div className={styles.ForHumanity_Score_Item_Value}>
+                      <span>1bln</span>
+                    </div>
+                  </AnimationOnScroll>
+
+                  <AnimationOnScroll
+                    animateIn="animate__fadeInLeft"
+                    animateOnce
+                  >
+                    <div className={styles.ForHumanity_Score_Item_Description}>
+                      space accounts
+                    </div>
+                  </AnimationOnScroll>
                 </div>
 
                 <div className={styles.ForHumanity_Score_Item}>
-                  <div className={styles.ForHumanity_Score_Item_Value}>
-                    <span>3bln</span>
-                  </div>
-                  <div className={styles.ForHumanity_Score_Item_Description}>
-                    space transactions
-                  </div>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeInLeft animate__delay-1s"
+                    animateOnce
+                  >
+                    <div className={styles.ForHumanity_Score_Item_Value}>
+                      <span>3bln</span>
+                    </div>
+                  </AnimationOnScroll>
+
+                  <AnimationOnScroll
+                    animateIn="animate__fadeInLeft animate__delay-1s"
+                    animateOnce
+                  >
+                    <div className={styles.ForHumanity_Score_Item_Description}>
+                      space transactions
+                    </div>
+                  </AnimationOnScroll>
                 </div>
 
                 <div className={styles.ForHumanity_Score_Item}>
-                  <div className={styles.ForHumanity_Score_Item_Value}>
-                    <span>1K</span>
-                  </div>
-                  <div className={styles.ForHumanity_Score_Item_Description}>
-                    satellite networks
-                  </div>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeInLeft animate__delay-2s"
+                    animateOnce
+                  >
+                    <div className={styles.ForHumanity_Score_Item_Value}>
+                      <span>1K</span>
+                    </div>
+                  </AnimationOnScroll>
+
+                  <AnimationOnScroll
+                    animateIn="animate__fadeInLeft animate__delay-2s"
+                    animateOnce
+                  >
+                    <div className={styles.ForHumanity_Score_Item_Description}>
+                      satellite networks
+                    </div>
+                  </AnimationOnScroll>
                 </div>
               </div>
             </div>
@@ -67,21 +101,32 @@ const ForHumanity = () => {
 
         <div className={styles.Container}>
           <div className={styles.ForHumanity_About}>
-            <div className={styles.ForHumanity_About_Text}>
-              <p>
-                The power of the USF helps people who need it the most to live
-                free and without any infringement. We would like to unite the
-                world as we are one.
-              </p>
-            </div>
-            <div className={styles.ForHumanity_About_Text}>
-              <p>
-                The USF philosophy is that the world is one, and there are no
-                differences between the nations, people and countries. We want
-                to show that there is a whole space to explore and live in peace
-                and harmony.
-              </p>
-            </div>
+            <AnimationOnScroll
+              animateIn="animate__fadeInLeft animate__delay-1s"
+              animateOnce
+            >
+              <div className={styles.ForHumanity_About_Text}>
+                <p>
+                  The power of the USF helps people who need it the most to live
+                  free and without any infringement. We would like to unite the
+                  world as we are one.
+                </p>
+              </div>
+            </AnimationOnScroll>
+
+            <AnimationOnScroll
+              animateIn="animate__fadeInLeft animate__delay-1s"
+              animateOnce
+            >
+              <div className={styles.ForHumanity_About_Text}>
+                <p>
+                  The USF philosophy is that the world is one, and there are no
+                  differences between the nations, people and countries. We want
+                  to show that there is a whole space to explore and live in
+                  peace and harmony.
+                </p>
+              </div>
+            </AnimationOnScroll>
           </div>
         </div>
       </div>

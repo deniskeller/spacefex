@@ -4,6 +4,7 @@ import { BlockNumber } from '@content/index';
 import Image from 'next/image';
 import React from 'react';
 import styles from './ComingUp.module.scss';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const ComingUp = () => {
   return (
@@ -23,18 +24,22 @@ const ComingUp = () => {
             <BlockNumber className={styles.NumberIcon} />
 
             <div className={styles.ComingUp_Description}>
-              <p>
-                Welcome to the space centre of the new financial world. USF -
-                the United Space Finance is a network for the whole of humanity
-                that is building blockchain solutions that create financial
-                access for everyone, everywhere beyond the earth.
-              </p>
-              <p>
-                Our mission is for space to be like Neil Armstrong, the first
-                community of people who have launched on the earth orbit the
-                financial infrastructure that would allow humanity to enter into
-                the new space age.
-              </p>
+              <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce>
+                <p>
+                  Welcome to the space centre of the new financial world. USF -
+                  the United Space Finance is a network for the whole of
+                  humanity that is building blockchain solutions that create
+                  financial access for everyone, everywhere beyond the earth.
+                </p>
+              </AnimationOnScroll>
+              <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce>
+                <p>
+                  Our mission is for space to be like Neil Armstrong, the first
+                  community of people who have launched on the earth orbit the
+                  financial infrastructure that would allow humanity to enter
+                  into the new space age.
+                </p>
+              </AnimationOnScroll>
             </div>
 
             <div className={styles.ComingUp_Title}>
