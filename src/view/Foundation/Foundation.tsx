@@ -56,66 +56,94 @@ const Foundation = () => {
 
               <div className={styles.Foundation_Content_Info}>
                 <div className={styles.Foundation_Content_Info_Item}>
-                  <BaseTitle
-                    type="h2"
-                    className={styles.Foundation_Content_Info_Item_Title}
-                  >
-                    What we're building?
-                  </BaseTitle>
-                  <BaseText
-                    className={styles.Foundation_Content_Info_Item_Description}
-                  >
-                    We’re building a new stack for digital assets. Though
-                    Spacefex is open source and decentralised, SDF leads the
-                    development of the network. The Foundation supports both the
-                    codebase and the people building on it.
-                  </BaseText>
+                  <div className="Header_animated_1 animate__animated animate__fadeInDown animate__delay-1s">
+                    <BaseTitle
+                      type="h2"
+                      className={styles.Foundation_Content_Info_Item_Title}
+                    >
+                      What we're building?
+                    </BaseTitle>
+                  </div>
+
+                  <div className="Header_animated_1 animate__animated animate__fadeInDown animate__delay-1s">
+                    <BaseText
+                      className={
+                        styles.Foundation_Content_Info_Item_Description
+                      }
+                    >
+                      We’re building a new stack for digital assets. Though
+                      Spacefex is open source and decentralised, SDF leads the
+                      development of the network. The Foundation supports both
+                      the codebase and the people building on it.
+                    </BaseText>
+                  </div>
                 </div>
 
                 <div className={styles.Foundation_Content_Info_Item}>
-                  <BaseTitle
-                    type="h2"
-                    className={styles.Foundation_Content_Info_Item_Title}
-                  >
-                    Platform
-                  </BaseTitle>
-                  <BaseText
-                    className={styles.Foundation_Content_Info_Item_Description}
-                  >
-                    A suite of tools and services for building financial
-                    services using the Spacefex system.
-                  </BaseText>
+                  <div className="Header_animated_2 animate__animated animate__fadeInDown animate__delay-2s">
+                    <BaseTitle
+                      type="h2"
+                      className={styles.Foundation_Content_Info_Item_Title}
+                    >
+                      Platform
+                    </BaseTitle>
+                  </div>
+
+                  <div className="Header_animated_2 animate__animated animate__fadeInDown animate__delay-2s">
+                    <BaseText
+                      className={
+                        styles.Foundation_Content_Info_Item_Description
+                      }
+                    >
+                      A suite of tools and services for building financial
+                      services using the Spacefex system.
+                    </BaseText>
+                  </div>
                 </div>
 
                 <div className={styles.Foundation_Content_Info_Item}>
-                  <BaseTitle
-                    type="h2"
-                    className={styles.Foundation_Content_Info_Item_Title}
-                  >
-                    Ecosystem
-                  </BaseTitle>
-                  <BaseText
-                    className={styles.Foundation_Content_Info_Item_Description}
-                  >
-                    The space finance ecosystem uses modern technologies and
-                    communication channels with green energy.
-                  </BaseText>
+                  <div className="Header_animated_3 animate__animated animate__fadeInDown animate__delay-3s">
+                    <BaseTitle
+                      type="h2"
+                      className={styles.Foundation_Content_Info_Item_Title}
+                    >
+                      Ecosystem
+                    </BaseTitle>
+                  </div>
+
+                  <div className="Header_animated_3 animate__animated animate__fadeInDown animate__delay-3s">
+                    <BaseText
+                      className={
+                        styles.Foundation_Content_Info_Item_Description
+                      }
+                    >
+                      The space finance ecosystem uses modern technologies and
+                      communication channels with green energy.
+                    </BaseText>
+                  </div>
                 </div>
 
                 <div className={styles.Foundation_Content_Info_Item}>
-                  <BaseTitle
-                    type="h2"
-                    className={styles.Foundation_Content_Info_Item_Title}
-                  >
-                    Infrastructure
-                  </BaseTitle>
-                  <BaseText
-                    className={styles.Foundation_Content_Info_Item_Description}
-                  >
-                    Sattelites network and the SDK to launch your satellite and
-                    join the Spacefex onboard. The open-source backend for
-                    storing and moving money.
-                  </BaseText>
+                  <div className="Header_animated_4 animate__animated animate__fadeInDown animate__delay-4s">
+                    <BaseTitle
+                      type="h2"
+                      className={styles.Foundation_Content_Info_Item_Title}
+                    >
+                      Infrastructure
+                    </BaseTitle>
+                  </div>
+
+                  <div className="Header_animated_4 animate__animated animate__fadeInDown animate__delay-4s">
+                    <BaseText
+                      className={
+                        styles.Foundation_Content_Info_Item_Description
+                      }
+                    >
+                      Sattelites network and the SDK to launch your satellite
+                      and join the Spacefex onboard. The open-source backend for
+                      storing and moving money.
+                    </BaseText>
+                  </div>
                 </div>
               </div>
             </div>
