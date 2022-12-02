@@ -19,14 +19,14 @@ const BlockchainFeatures = () => {
               <BlockchainFeaturesItem title="Stability" />
               <BlockchainFeaturesItem
                 title="Eco Friendly"
-                animation_delay=".1s"
+                animation_delay=".2s"
               />
-              <BlockchainFeaturesItem title="Security" animation_delay=".2s" />
-              <BlockchainFeaturesItem title="Low Cost" animation_delay=".3s" />
-              <BlockchainFeaturesItem title="Global" animation_delay=".4s" />
+              <BlockchainFeaturesItem title="Security" animation_delay=".4s" />
+              <BlockchainFeaturesItem title="Low Cost" animation_delay=".6s" />
+              <BlockchainFeaturesItem title="Global" animation_delay=".8s" />
               <BlockchainFeaturesItem
                 title="Developer Tools"
-                animation_delay=".5s"
+                animation_delay="1s"
               />
             </div>
           </div>

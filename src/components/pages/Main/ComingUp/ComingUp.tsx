@@ -9,10 +9,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 const ComingUp = () => {
   return (
     <>
-      <div
-        className={styles.Wrapper}
-        // style={{ backgroundImage: 'url(/images/image/dust.jpg)' }}
-      >
+      <div className={styles.Wrapper}>
         <BaseIcon
           viewBox="0 0 642 80"
           icon={ALL_ICONS.DECOR_1}
