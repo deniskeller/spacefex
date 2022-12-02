@@ -30,26 +30,28 @@ const Foundation = () => {
 
             <div className={styles.Foundation_Content}>
               <div className={styles.Foundation_Content_About}>
-                <BaseTitle
-                  type="h2"
-                  className={styles.Foundation_Content_About_Title}
-                >
-                  Spacefex Development Foundation
-                </BaseTitle>
+                <div className="Header_animated animate__animated animate__fadeIn">
+                  <BaseTitle
+                    type="h2"
+                    className={styles.Foundation_Content_About_Title}
+                  >
+                    Spacefex Development Foundation
+                  </BaseTitle>
 
-                <BaseText
-                  className={styles.Foundation_Content_About_Description}
-                >
-                  The Spacefex Development Foundation (SDF) is a non-profit
-                  organisation founded in 2022 to support the development and
-                  growth of the open-source Spacefex network. SDF and Spacefex
-                  (Canadian licensed Money Service Business company) seek to
-                  unlock the world’s economic potential by making money more
-                  fluid, markets more open, and people more empowered. The
-                  Foundation helps maintain Spacefex’s codebase, supports the
-                  technical and business communities around Stellar, and is a
-                  speaking partner to regulators and institutions.
-                </BaseText>
+                  <BaseText
+                    className={styles.Foundation_Content_About_Description}
+                  >
+                    The Spacefex Development Foundation (SDF) is a non-profit
+                    organisation founded in 2022 to support the development and
+                    growth of the open-source Spacefex network. SDF and Spacefex
+                    (Canadian licensed Money Service Business company) seek to
+                    unlock the world’s economic potential by making money more
+                    fluid, markets more open, and people more empowered. The
+                    Foundation helps maintain Spacefex’s codebase, supports the
+                    technical and business communities around Stellar, and is a
+                    speaking partner to regulators and institutions.
+                  </BaseText>
+                </div>
               </div>
 
               <div className={styles.Foundation_Content_Info}>

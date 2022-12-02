@@ -13,17 +13,21 @@ const UsfHeader = () => {
 
             <BaseTitle className={styles.UsfHeader_Title}>USF</BaseTitle>
 
-            <div className={styles.UsfHeader_Paragraph}>
-              <p>
-                is the abbreviation for United Space Finance, which means the
-                united international finance in space.
-              </p>
+            <div className="Header_animated animate__animated animate__fadeInLeft">
+              <div className={styles.UsfHeader_Paragraph}>
+                <p>
+                  is the abbreviation for United Space Finance, which means the
+                  united international finance in space.
+                </p>
+              </div>
             </div>
-            <div className={styles.UsfHeader_Paragraph}>
-              <p>
-                The first world space currency was launched by the foundation of
-                people who wanted to change the world.
-              </p>
+            <div className="Header_animated animate__animated animate__fadeInLeft">
+              <div className={styles.UsfHeader_Paragraph}>
+                <p>
+                  The first world space currency was launched by the foundation
+                  of people who wanted to change the world.
+                </p>
+              </div>
             </div>
           </div>
         </BaseContainer>

@@ -2,6 +2,7 @@
 import { BaseContainer, BaseIcon, BaseTitle } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import styles from './UsfMission.module.scss';
 
 const UsfMission = () => {
@@ -24,12 +25,14 @@ const UsfMission = () => {
                   </p>
                 </div>
 
-                <div className={styles.UsfMission_Content_About_Quote}>
-                  <p>
-                    Any human has the right to live financially free and decide
-                    how to act with his finance.
-                  </p>
-                </div>
+                <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
+                  <div className={styles.UsfMission_Content_About_Quote}>
+                    <p>
+                      Any human has the right to live financially free and
+                      decide how to act with his finance.
+                    </p>
+                  </div>
+                </AnimationOnScroll>
 
                 <div className={styles.UsfMission_Content_About_Paragraph}>
                   <p>

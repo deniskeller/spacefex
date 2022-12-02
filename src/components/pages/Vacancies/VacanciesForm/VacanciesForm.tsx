@@ -10,6 +10,7 @@ import {
 import { ALL_ICONS } from '@constants/icons';
 import { FileInput, PhoneInput } from '@content/index';
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import styles from './VacanciesForm.module.scss';
 
 const position = [
@@ -166,13 +167,18 @@ const VacanciesForm = () => {
               </div>
 
               <div className={styles.VacanciesForm_Content_Header}>
-                <div className={styles.VacanciesForm_Content_Header_Title}>
-                  <h2>Welcome to the Spacefex foundation</h2>
-                </div>
-                <div className={styles.VacanciesForm_Content_Header_Subtitle}>
-                  If you want to join us, please feel free to leave your request
-                  here by filling out the form.
-                </div>
+                <AnimationOnScroll
+                  animateIn="animate__fadeIn animate__delay-1s"
+                  animateOnce
+                >
+                  <div className={styles.VacanciesForm_Content_Header_Title}>
+                    <h2>Welcome to the Spacefex foundation</h2>
+                  </div>
+                  <div className={styles.VacanciesForm_Content_Header_Subtitle}>
+                    If you want to join us, please feel free to leave your
+                    request here by filling out the form.
+                  </div>
+                </AnimationOnScroll>
               </div>
             </div>
           </div>

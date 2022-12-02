@@ -37,9 +37,11 @@ const GetStarted = () => {
 
         <div className={styles.GetStarted}>
           <BaseContainer>
-            <BaseTitle className={styles.GetStarted_Title}>
-              Welcome to space finance!
-            </BaseTitle>
+            <div className="Header_animated animate__animated animate__fadeInLeft">
+              <BaseTitle className={styles.GetStarted_Title}>
+                Welcome to space finance!
+              </BaseTitle>
+            </div>
 
             <div className={styles.GetStarted_Content}>
               <div

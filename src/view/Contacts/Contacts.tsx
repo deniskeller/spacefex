@@ -2,6 +2,7 @@ import { BaseContainer, BaseIcon, BaseText, BaseTitle } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
 import { BlockNumber, MapContacts } from '@content/index';
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import styles from './Contacts.module.scss';
 
 const financial_statements = [
@@ -44,41 +45,46 @@ const Contacts = () => {
 
             <div className={styles.Contacts_Content}>
               <div className={styles.Contacts_Content_Address}>
-                <BaseText className={styles.Contacts_Content_Address_Item}>
-                  We are based in two countries currently (everyone started from
-                  somewhere, right?)
-                  <br />
-                  Feel free to contact us by email and send us the request
-                  below.
-                  <br />
-                  <br />
-                  <a
-                    href="mailto:info@spacefex.com"
-                    className={styles.Contacts_Content_Address_Item_Mailto}
-                  >
-                    info@spacefex.com
-                  </a>
-                  &nbsp; — for Spacefex Foundation
-                  <br />
-                  <a
-                    href="mailto:info@usf.spacefex.com"
-                    className={styles.Contacts_Content_Address_Item_Mailto}
-                  >
-                    info@usf.spacefex.com
-                  </a>
-                  &nbsp; — for USF cryptocurrency
-                </BaseText>
-                <BaseText className={styles.Contacts_Content_Address_Item}>
-                  Spacefex Technologies Limited
-                  <br />
-                  Incorporation number BC1344906
-                  <br />
-                  1095 MCKENZIE AVE SUITE 300 VICTORIA BC V8P GIIN <br />
-                  VFKVUQ.99999.SL.124 MSB License issued by the Fintrac Canadian
-                  Financial Market Regulator
-                  <br />
-                  17 State Street Suite 4000, New York, Manhattan, NY 10004
-                </BaseText>
+                <div className="Header_animated animate__animated animate__fadeIn">
+                  <BaseText className={styles.Contacts_Content_Address_Item}>
+                    We are based in two countries currently (everyone started
+                    from somewhere, right?)
+                    <br />
+                    Feel free to contact us by email and send us the request
+                    below.
+                    <br />
+                    <br />
+                    <a
+                      href="mailto:info@spacefex.com"
+                      className={styles.Contacts_Content_Address_Item_Mailto}
+                    >
+                      info@spacefex.com
+                    </a>
+                    &nbsp; — for Spacefex Foundation
+                    <br />
+                    <a
+                      href="mailto:info@usf.spacefex.com"
+                      className={styles.Contacts_Content_Address_Item_Mailto}
+                    >
+                      info@usf.spacefex.com
+                    </a>
+                    &nbsp; — for USF cryptocurrency
+                  </BaseText>
+                </div>
+
+                <div className="Header_animated animate__animated animate__fadeIn">
+                  <BaseText className={styles.Contacts_Content_Address_Item}>
+                    Spacefex Technologies Limited
+                    <br />
+                    Incorporation number BC1344906
+                    <br />
+                    1095 MCKENZIE AVE SUITE 300 VICTORIA BC V8P GIIN <br />
+                    VFKVUQ.99999.SL.124 MSB License issued by the Fintrac
+                    Canadian Financial Market Regulator
+                    <br />
+                    17 State Street Suite 4000, New York, Manhattan, NY 10004
+                  </BaseText>
+                </div>
               </div>
 
               <div className={styles.Contacts_Content_Map}>
@@ -132,9 +138,15 @@ const Contacts = () => {
                 </div>
 
                 <div className={styles.FinancialStatements}>
-                  <div className={styles.FinancialStatements_Title}>
-                    <h2>Coming in 2023</h2>
-                  </div>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeInLeft"
+                    animateOnce
+                  >
+                    <div className={styles.FinancialStatements_Title}>
+                      <h2>Coming in 2023</h2>
+                    </div>
+                  </AnimationOnScroll>
+
                   <div className={styles.FinancialStatements_Description}>
                     <p>Annual Report of Spacefex</p>
                   </div>

@@ -9,6 +9,7 @@ import {
 import { ALL_ICONS } from '@constants/icons';
 import { BlockNumber } from '@content/index';
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import styles from './SystemStatus.module.scss';
 
 interface IValueForm {
@@ -59,45 +60,88 @@ const SystemStatus = () => {
             <BaseContainer>
               <div className={styles.SystemStatus_NewPage}>
                 <div className={styles.SystemStatus_NewPage_Page}>
-                  <BaseTitle className={styles.SystemStatus_NewPage_Page_Title}>
-                    Community
-                  </BaseTitle>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn animate__delay-2s"
+                    animateOnce
+                  >
+                    <BaseTitle
+                      className={styles.SystemStatus_NewPage_Page_Title}
+                    >
+                      Community
+                    </BaseTitle>
+                  </AnimationOnScroll>
 
-                  <div className={styles.SystemStatus_NewPage_Page_Soon}>
-                    Coming
-                    <br />
-                    Soon
-                  </div>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn animate__delay-3s"
+                    animateOnce
+                  >
+                    <div className={styles.SystemStatus_NewPage_Page_Soon}>
+                      Coming
+                      <br />
+                      Soon
+                    </div>
+                  </AnimationOnScroll>
                 </div>
 
                 <div className={styles.SystemStatus_NewPage_Page}>
-                  <BaseTitle className={styles.SystemStatus_NewPage_Page_Title}>
-                    Developers API
-                  </BaseTitle>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn animate__delay-2s"
+                    animateOnce
+                  >
+                    <BaseTitle
+                      className={styles.SystemStatus_NewPage_Page_Title}
+                    >
+                      Developers API
+                    </BaseTitle>
+                  </AnimationOnScroll>
 
-                  <div className={styles.SystemStatus_NewPage_Page_Soon}>
-                    Coming
-                    <br />
-                    Soon
-                  </div>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn animate__delay-3s"
+                    animateOnce
+                  >
+                    <div className={styles.SystemStatus_NewPage_Page_Soon}>
+                      Coming
+                      <br />
+                      Soon
+                    </div>
+                  </AnimationOnScroll>
                 </div>
 
                 <div className={styles.SystemStatus_NewPage_Page}>
-                  <BaseTitle className={styles.SystemStatus_NewPage_Page_Title}>
-                    Reader User Guide
-                  </BaseTitle>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn animate__delay-2s"
+                    animateOnce
+                  >
+                    <BaseTitle
+                      className={styles.SystemStatus_NewPage_Page_Title}
+                    >
+                      Reader User Guide
+                    </BaseTitle>
+                  </AnimationOnScroll>
 
-                  <div className={styles.SystemStatus_NewPage_Page_Soon}>
-                    Coming
-                    <br />
-                    Soon
-                  </div>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn animate__delay-3s"
+                    animateOnce
+                  >
+                    <div className={styles.SystemStatus_NewPage_Page_Soon}>
+                      Coming
+                      <br />
+                      Soon
+                    </div>
+                  </AnimationOnScroll>
                 </div>
 
                 <div className={styles.SystemStatus_NewPage_Page}>
-                  <BaseTitle className={styles.SystemStatus_NewPage_Page_Title}>
-                    General help
-                  </BaseTitle>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn animate__delay-2s"
+                    animateOnce
+                  >
+                    <BaseTitle
+                      className={styles.SystemStatus_NewPage_Page_Title}
+                    >
+                      General help
+                    </BaseTitle>
+                  </AnimationOnScroll>
                 </div>
               </div>
 

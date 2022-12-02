@@ -14,7 +14,9 @@ const Blog = () => {
         ></div>
         <div className={styles.Blog}>
           <BaseContainer>
-            <BaseTitle className={styles.Blog_Title}>blog page</BaseTitle>
+            <div className="Header_animated animate__animated animate__fadeInLeft">
+              <BaseTitle className={styles.Blog_Title}>blog</BaseTitle>
+            </div>
 
             <div className={styles.Blog_Posts}>
               {posts?.map((post, index) => {

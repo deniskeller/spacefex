@@ -31,18 +31,20 @@ const VacanciesHeader = () => {
 
             <div className={styles.VacanciesHeader_Content}>
               <div className={styles.VacanciesHeader_Content_About}>
-                <div className={styles.VacanciesHeader_Content_About_Title}>
-                  <h2>Working at the Spacefex Development Foundation</h2>
-                </div>
+                <div className="Header_animated animate__animated animate__fadeInLeft">
+                  <div className={styles.VacanciesHeader_Content_About_Title}>
+                    <h2>Working at the Spacefex Development Foundation</h2>
+                  </div>
 
-                <div
-                  className={styles.VacanciesHeader_Content_About_Description}
-                >
-                  <p>
-                    Our team is awesome. Our work is fulfilling. Our snacks are
-                    relatively fresh. We'd love to talk to you if you can
-                    contribute to our mission.
-                  </p>
+                  <div
+                    className={styles.VacanciesHeader_Content_About_Description}
+                  >
+                    <p>
+                      Our team is awesome. Our work is fulfilling. Our snacks
+                      are relatively fresh. We'd love to talk to you if you can
+                      contribute to our mission.
+                    </p>
+                  </div>
                 </div>
 
                 <BaseButton

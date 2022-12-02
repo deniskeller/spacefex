@@ -22,9 +22,11 @@ const Developers = () => {
 
         <BaseContainer>
           <div className={styles.Developers}>
-            <BaseTitle className={styles.Developers_Title}>
-              Developers
-            </BaseTitle>
+            <div className="Header_animated animate__animated animate__fadeInLeft">
+              <BaseTitle className={styles.Developers_Title}>
+                Developers
+              </BaseTitle>
+            </div>
 
             <div className={styles.Developers_Content}>
               <BlockNumber number="d1" className={styles.NumberIcon} />

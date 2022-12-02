@@ -258,6 +258,13 @@ input[type='search']::-webkit-search-results-decoration {
   }
 }
 
+.Header_animated {
+  position: inherit;
+  z-index: 1000;
+  --animate-delay: 0.5s !important;
+  animation-delay: calc(var(--animate-delay) * 1) !important;
+}
+
 // .paragraph_animated {
 //   font-size: em(16px);
 //   font-style: normal;

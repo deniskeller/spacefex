@@ -1,6 +1,7 @@
 import { BaseButton, BaseContainer, BaseIcon, BaseInput } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import styles from './UsfForm.module.scss';
 
 interface IValueForm {
@@ -25,9 +26,11 @@ const UsfForm = () => {
       <div className={styles.Wrapper}>
         <BaseContainer>
           <div className={styles.UsfForm}>
-            <div className={styles.UsfForm_Title}>
-              Apply now <br /> to get notified about the launch
-            </div>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
+              <div className={styles.UsfForm_Title}>
+                Apply now <br /> to get notified about the launch
+              </div>
+            </AnimationOnScroll>
 
             <div className={styles.UsfForm_Form}>
               {!success ? (

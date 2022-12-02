@@ -58,38 +58,39 @@ const IntoFoundation = () => {
             </div>
 
             <div className={styles.IntoFoundation_About}>
-              <div className={styles.IntoFoundation_About_Paragraph}>
-                <BaseText>
-                  If you like what we are doing, we would be grateful for your
-                  support. Your name would be on a list of official
-                  contributors, or if you wish to stay confidential, we will
-                  thank you privately for your support and trust.
-                </BaseText>
-              </div>
+              <div className="Header_animated animate__animated animate__fadeInLeft">
+                <div className={styles.IntoFoundation_About_Paragraph}>
+                  <BaseText>
+                    If you like what we are doing, we would be grateful for your
+                    support. Your name would be on a list of official
+                    contributors, or if you wish to stay confidential, we will
+                    thank you privately for your support and trust.
+                  </BaseText>
+                </div>
 
-              <div className={styles.IntoFoundation_About_Paragraph}>
-                <BaseText>
-                  <Link href="http://www.link.com" target="_blank">
-                    www.link.com
-                  </Link>
-                </BaseText>
-              </div>
+                <div className={styles.IntoFoundation_About_Paragraph}>
+                  <BaseText>
+                    <Link href="http://www.link.com" target="_blank">
+                      www.link.com
+                    </Link>
+                  </BaseText>
+                </div>
 
-              <div className={styles.IntoFoundation_About_Paragraph}>
-                <BaseText>
-                  We accept only USDT and USDC for contributions.
-                </BaseText>
-              </div>
+                <div className={styles.IntoFoundation_About_Paragraph}>
+                  <BaseText>
+                    We accept only USDT and USDC for contributions.
+                  </BaseText>
+                </div>
 
-              <div className={styles.IntoFoundation_About_Paragraph}>
-                <BaseText>
-                  If you wish to become the official investor, please fill out
-                  the form below, and we will contact you asap to learn more
-                  about how we can build the space world together:
-                </BaseText>
+                <div className={styles.IntoFoundation_About_Paragraph}>
+                  <BaseText>
+                    If you wish to become the official investor, please fill out
+                    the form below, and we will contact you asap to learn more
+                    about how we can build the space world together:
+                  </BaseText>
+                </div>
               </div>
             </div>
-
             <div className={styles.IntoFoundation_Content}>
               <div className={styles.IntoFoundation_Content_Form}>
                 <div className={styles.IntoFoundation_Content_Form_Actions}>
