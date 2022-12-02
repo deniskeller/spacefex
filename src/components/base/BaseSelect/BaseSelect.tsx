@@ -78,6 +78,11 @@ const BaseSelect: React.FC<Props> = ({
               className={styles.ListItem}
               onClick={onOptionClicked(option.name)}
               key={Math.random()}
+              style={{
+                background: `${
+                  selectedOption === option.name ? 'red' : 'none'
+                }`,
+              }}
             >
               <span className={styles.ListItemTitle}>{option.name}</span>
             </li>

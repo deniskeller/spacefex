@@ -1,0 +1,124 @@
+.FileInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &_Clear {
+    display: flex;
+    justify-content: center;
+    padding: em(24px) em(32px) em(24px) em(16px);
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      .FileInput_Clear_Border {
+        border: 2px dashed #cccccc;
+      }
+      .FileInput_Clear_Content_Header_Title span {
+        opacity: 0.9;
+      }
+      .FileInput_Clear_Content_Icon {
+        path {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    &.Error {
+      .FileInput_Clear_Border {
+        border: 1px dashed #ff9900;
+      }
+    }
+
+    &_Border {
+      @extend %fullsize;
+      border: 1px dashed #cccccc;
+    }
+
+    &.Active {
+      .FileInput_Clear_Border {
+        border: 2px dashed $red;
+      }
+    }
+
+    &_Content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      &_Header {
+        &_Title {
+          margin-bottom: em(8px);
+          span {
+            display: flex;
+            line-height: 100%;
+            font-size: em(18px);
+            text-transform: uppercase;
+            color: $text;
+            opacity: 0.5;
+            @include ifmobile {
+              font-size: em(16px);
+            }
+          }
+        }
+        &_Subtitle {
+          font-size: em(14px);
+          color: $text;
+          opacity: 0.3;
+          line-height: 100%;
+          @include ifmobile {
+            font-size: em(12px);
+          }
+        }
+      }
+
+      &_Icon {
+        width: em(26px);
+        height: em(28px);
+      }
+    }
+  }
+
+  &_Upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: em(24px) em(32px) em(24px) em(16px);
+    border: 1px solid #cccccc;
+
+    &_Title {
+      font-size: em(18px);
+      text-transform: uppercase;
+      color: $text;
+    }
+
+    &_Close {
+      width: em(21px);
+      height: em(21px);
+      cursor: pointer;
+      &:hover {
+        path {
+          fill: $text;
+        }
+      }
+    }
+  }
+}
+
+.ErrorText {
+  margin-top: em(8px);
+  span {
+    display: flex;
+    font-weight: 300;
+    font-size: em(12px);
+    line-height: 120%;
+    color: #ff9900;
+  }
+}
+
+.mb20 {
+  margin-bottom: em(10px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -3,13 +3,21 @@ import {
   BaseContainer,
   BaseIcon,
   BaseInput,
+  BaseSelect,
   BaseTextarea,
   BaseTitle,
 } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
-import { PhoneInput } from '@content/index';
+import { FileInput, PhoneInput } from '@content/index';
 import React from 'react';
 import styles from './VacanciesForm.module.scss';
+
+const position = [
+  { code: 'Copywriter', name: 'Copywriter' },
+  { code: 'IT project manager', name: 'IT project manager' },
+  { code: 'IOS developer', name: 'IOS developer' },
+  { code: 'Marketing director', name: 'Marketing director' },
+];
 
 interface IValueForm {
   name: string;
@@ -19,7 +27,7 @@ interface IValueForm {
   phone: string;
   linkedin: string;
   about_yourself: string;
-  file: string;
+  files: File[];
 }
 
 const VacanciesForm = () => {
@@ -31,7 +39,7 @@ const VacanciesForm = () => {
     phone: '',
     linkedin: '',
     about_yourself: '',
-    file: '',
+    files: [],
   });
 
   const setNewValue = (val: string | number | File[], key: string) => {
@@ -69,10 +77,17 @@ const VacanciesForm = () => {
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
-                    <BaseInput
+                    {/* <BaseInput
                       name="position"
                       placeholder="Position"
                       value={value.position}
+                      onChange={(val: string) => setNewValue(val, 'position')}
+                      className={styles.VacanciesForm_Content_Form_Input}
+                    /> */}
+
+                    <BaseSelect
+                      placeholder="Position"
+                      options={position}
                       onChange={(val: string) => setNewValue(val, 'position')}
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
@@ -110,9 +125,12 @@ const VacanciesForm = () => {
                       className={styles.VacanciesForm_Content_Form_Input}
                     />
 
-                    <div
+                    <FileInput
+                      files={value.files}
+                      onChange={(val: any[]) => setNewValue(val, 'files')}
                       className={styles.VacanciesForm_Content_Form_InputFile}
-                    ></div>
+                      isMultiple
+                    />
 
                     <BaseButton
                       title="Submit"

@@ -3,6 +3,7 @@ import {
   BaseContainer,
   BaseIcon,
   BaseInput,
+  BaseTextarea,
   BaseTitle,
 } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
@@ -124,7 +125,7 @@ const SystemStatus = () => {
                         className={styles.SystemStatus_Form_Actions_Input}
                       />
 
-                      <BaseInput
+                      <BaseTextarea
                         name="comments"
                         placeholder="Enter comments"
                         value={value.comments}
