@@ -30,46 +30,35 @@
   }
 
   &_Description {
-    transition: height 0.6s ease-in-out;
-    height: 100%;
+    cursor: pointer;
+    position: relative;
     p {
       font-weight: 300;
       font-size: em(18px);
       line-height: 156%;
       text-align: center;
       color: $text;
+      height: auto;
+      max-height: 9999px;
+      transition: all 0.6s cubic-bezier(1, 0, 1, 0);
       overflow: hidden;
-      transition: height 0.6s ease-in-out;
-    }
-    cursor: pointer;
-    position: relative;
-
-    @include ifmobile {
-      font-size: em(16px);
+      @include ifmobile {
+        font-size: em(16px);
+      }
     }
 
-    &_Hidden {
+    .Hidden {
       background: linear-gradient(
-        to bottom,
-        rgb(255, 255, 255) 60%,
-        rgba(255, 255, 255, 0) 100%
+        180deg,
+        #f7f7f7 0%,
+        rgba(247, 247, 247, 0) 65.38%
       );
       background-clip: border-box;
       -webkit-background-clip: text;
       -webkit-text-fill-color: #fff0;
       text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
-      height: em(80px);
-    }
-
-    &_Visible {
-      height: 100%;
-    }
-
-    .Hidden {
-      height: em(80px);
-    }
-    .Visible {
-      height: 100%;
+      max-height: em(80px);
+      transition: all 0.6s cubic-bezier(0, 1, 0, 1);
     }
   }
 
