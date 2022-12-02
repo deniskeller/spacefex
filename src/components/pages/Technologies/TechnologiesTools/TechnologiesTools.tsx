@@ -12,19 +12,13 @@ const TechnologiesTools = () => {
           <div className={styles.Technologies}>
             <ul className={styles.TechnologiesTools}>
               <li className={styles.TechnologiesTools_Item}>
-                <AnimationOnScroll
-                  animateIn="animate__fadeIn animate__delay-1s"
-                  animateOnce
-                >
+                <AnimationOnScroll animateIn="animate__fadeIn" animateOnce>
                   <div className={styles.TechnologiesTools_Item_Number}>
                     <span>01</span>
                   </div>
                 </AnimationOnScroll>
 
-                <AnimationOnScroll
-                  animateIn="animate__fadeInRight animate__delay-2s"
-                  animateOnce
-                >
+                <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce>
                   <div className={styles.TechnologiesTools_Item_Description}>
                     <p>
                       Spacefex uses the entire stack of technologies combining
@@ -47,7 +41,7 @@ const TechnologiesTools = () => {
                 </AnimationOnScroll>
 
                 <AnimationOnScroll
-                  animateIn="animate__fadeInRight animate__delay-2s"
+                  animateIn="animate__fadeInRight animate__delay-1s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Description}>
@@ -62,7 +56,7 @@ const TechnologiesTools = () => {
 
               <li className={styles.TechnologiesTools_Item}>
                 <AnimationOnScroll
-                  animateIn="animate__fadeIn animate__delay-1s"
+                  animateIn="animate__fadeIn animate__delay-2s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Number}>
@@ -87,7 +81,7 @@ const TechnologiesTools = () => {
 
               <li className={styles.TechnologiesTools_Item}>
                 <AnimationOnScroll
-                  animateIn="animate__fadeIn animate__delay-1s"
+                  animateIn="animate__fadeIn animate__delay-3s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Number}>
@@ -96,7 +90,7 @@ const TechnologiesTools = () => {
                 </AnimationOnScroll>
 
                 <AnimationOnScroll
-                  animateIn="animate__fadeInRight animate__delay-2s"
+                  animateIn="animate__fadeInRight animate__delay-3s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Description}>
@@ -117,7 +111,7 @@ const TechnologiesTools = () => {
 
               <li className={styles.TechnologiesTools_Item}>
                 <AnimationOnScroll
-                  animateIn="animate__fadeIn animate__delay-1s"
+                  animateIn="animate__fadeIn animate__delay-4s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Number}>
@@ -126,7 +120,7 @@ const TechnologiesTools = () => {
                 </AnimationOnScroll>
 
                 <AnimationOnScroll
-                  animateIn="animate__fadeInRight animate__delay-2s"
+                  animateIn="animate__fadeInRight animate__delay-4s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Description}>
@@ -143,7 +137,7 @@ const TechnologiesTools = () => {
 
               <li className={styles.TechnologiesTools_Item}>
                 <AnimationOnScroll
-                  animateIn="animate__fadeIn animate__delay-1s"
+                  animateIn="animate__fadeIn animate__delay-5s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Number}>
@@ -152,7 +146,7 @@ const TechnologiesTools = () => {
                 </AnimationOnScroll>
 
                 <AnimationOnScroll
-                  animateIn="animate__fadeInRight animate__delay-2s"
+                  animateIn="animate__fadeInRight animate__delay-5s"
                   animateOnce
                 >
                   <div className={styles.TechnologiesTools_Item_Description}>
