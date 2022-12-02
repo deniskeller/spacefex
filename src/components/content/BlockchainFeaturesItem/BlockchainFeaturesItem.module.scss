@@ -57,14 +57,14 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: #fff0;
       text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
-      max-height: em(80px);
+      max-height: em(70px);
       transition: all 0.6s cubic-bezier(0, 1, 0, 1);
     }
   }
 
   &_IconShowMore {
     position: absolute;
-    bottom: em(-30px);
+    bottom: em(-38px);
     right: calc(50% - em(7px));
     width: em(16px);
     height: em(31px);
