@@ -21,7 +21,7 @@ const Links: Links[] = [
     title: 'Community',
     list: [
       { name: 'Blog', href: '/blog' },
-      { name: 'Join us', href: '/join-us' },
+      { name: 'Join us', href: '/get-started' },
       { name: 'Vacancies', href: '/vacancies' },
       { name: 'Contacts', href: '/contacts' },
       { name: 'Financial statements', href: '/financial-statements' },
