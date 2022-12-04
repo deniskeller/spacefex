@@ -126,6 +126,20 @@ const ComingUp = () => {
                   Developing the <br /> community <br /> network
                 </div>
               </div>
+
+              {/* <div className={styles.ComingUp_Soon_Item2}>
+                <div className={styles.ComingUp_Soon_Item2_Image}>
+                  <Image
+                    src="/images/image/satellite@2x.png"
+                    layout="fill"
+                    alt={'Image'}
+                    priority
+                  />
+                </div>
+                <div className={styles.ComingUp_Soon_Item2_Title}>
+                  Launch of the <br /> first software <br /> version
+                </div>
+              </div> */}
             </div>
           </div>
         </BaseContainer>
