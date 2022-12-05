@@ -75,8 +75,8 @@ export const SatelliteOrbita = ({
           style={{ animationDuration: `${duration}s` }}
           x="0"
           y="0"
-          width="100"
-          height="100"
+          width="100%"
+          height="100%"
         >
           <div
             className={styles.satellite__gradient}
