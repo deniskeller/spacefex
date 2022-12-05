@@ -6,3 +6,4 @@ export { default as BlogItem } from "./BlogItem/BlogItem";
 export { default as MapContacts } from "./MapContacts/MapContacts";
 export { default as PhoneInput } from "./PhoneInput/PhoneInput";
 export { default as FileInput } from "./FileInput/FileInput";
+export { default as ComingUpSoonItem } from "./ComingUpSoonItem/ComingUpSoonItem";

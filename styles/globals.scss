@@ -290,3 +290,89 @@ input[type='search']::-webkit-search-results-decoration {
   --animate-delay: 0.2s !important;
   animation-delay: calc(var(--animate-delay) * 4) !important;
 }
+
+//анимация космоса
+.satellite {
+  width: em(280px);
+  height: em(280px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: em(55px);
+  text-align: center;
+}
+
+.satellite__text {
+  position: relative;
+  z-index: 2;
+  font-size: em(20px);
+  text-transform: uppercase;
+  color: white;
+}
+
+.satellite__satellite {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  animation: satellite-rate 7.5s infinite linear;
+}
+
+.satellite__wrap-offset {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+}
+
+.satellite__wrap-offset svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+  /* width: 16px; */
+}
+
+.satellite__orbita {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.satellite__gradient {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 255, 255, 0.1) 0deg,
+    #ffffff 360deg
+  );
+}
+
+.satellite__back {
+  transform-origin: 50px 50px;
+  animation: satellite-rate 7.5s infinite linear;
+}
+
+@keyframes satellite-rate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

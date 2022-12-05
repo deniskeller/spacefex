@@ -1,6 +1,6 @@
 import { BaseContainer, BaseIcon } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
-import { BlockNumber } from '@content/index';
+import { BlockNumber, ComingUpSoonItem } from '@content/index';
 import Image from 'next/image';
 import React from 'react';
 import styles from './ComingUp.module.scss';
@@ -44,7 +44,47 @@ const ComingUp = () => {
             </div>
 
             <div className={styles.ComingUp_Soon}>
-              <div className={styles.ComingUp_Soon_Item}>
+              <ComingUpSoonItem
+                duration="8"
+                offsetDegree="0"
+                dash={{ width: 6, gap: 6, size: 1 }}
+                satellite={{ width: 24 }}
+                text="Launch of the first software version"
+              />
+
+              <ComingUpSoonItem
+                duration="8"
+                offsetDegree="90"
+                dash={{ width: 6, gap: 6, size: 1 }}
+                satellite={{ width: 24 }}
+                text="Launch of the first satellite "
+              />
+
+              <ComingUpSoonItem
+                duration="8"
+                offsetDegree="30"
+                dash={{ width: 6, gap: 6, size: 1 }}
+                satellite={{ width: 24 }}
+                text="The official first launch of the blockchain network"
+              />
+
+              <ComingUpSoonItem
+                duration="8"
+                offsetDegree="150"
+                dash={{ width: 6, gap: 6, size: 1 }}
+                satellite={{ width: 24 }}
+                text="Launch of the USF"
+              />
+
+              <ComingUpSoonItem
+                duration="8"
+                offsetDegree="220"
+                dash={{ width: 6, gap: 6, size: 1 }}
+                satellite={{ width: 24 }}
+                text="Developing the community network"
+              />
+
+              {/* <div className={styles.ComingUp_Soon_Item}>
                 <div className={styles.ComingUp_Soon_Item_Image}>
                   <Image
                     src="/images/image/satellite@2x.png"
@@ -124,20 +164,6 @@ const ComingUp = () => {
                 </div>
                 <div className={styles.ComingUp_Soon_Item_Title}>
                   Developing the <br /> community <br /> network
-                </div>
-              </div>
-
-              {/* <div className={styles.ComingUp_Soon_Item2}>
-                <div className={styles.ComingUp_Soon_Item2_Image}>
-                  <Image
-                    src="/images/image/satellite@2x.png"
-                    layout="fill"
-                    alt={'Image'}
-                    priority
-                  />
-                </div>
-                <div className={styles.ComingUp_Soon_Item2_Title}>
-                  Launch of the <br /> first software <br /> version
                 </div>
               </div> */}
             </div>
