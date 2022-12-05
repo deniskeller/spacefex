@@ -1,21 +1,21 @@
 .satellite {
-  width: 300px;
-  height: 300px;
-
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 30px;
+  padding: em(30px);
+  text-align: center;
 }
 
 .satellite__text {
   position: relative;
   z-index: 2;
-
-  font-size: 25px;
-  color: white;
+  font-weight: 300;
+  font-size: em(20px);
+  line-height: 152.7%;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text;
 }
 
 .satellite__satellite {
@@ -29,16 +29,15 @@
   animation: satellite-rate 7.5s infinite linear;
 }
 
-.satellite__wrap-offset {
+.satellite__wrap_offset {
   position: absolute;
   width: 100%;
   height: 100%;
-
   left: 0;
   top: 0;
 }
 
-.satellite__wrap-offset svg {
+.satellite__wrap_offset svg {
   position: absolute;
   top: 50%;
   left: 0;

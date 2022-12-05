@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React, { useRef, useLayoutEffect, useState } from 'react';
-import './ComingUpSoonItem.module.scss';
+import styles from './ComingUpSoonItem.module.scss';
 
 const ComingUpSoonItem = ({
   dash: dashRaw = { width: 6, gap: 6, size: 1 },
@@ -8,6 +8,7 @@ const ComingUpSoonItem = ({
   duration,
   offsetDegree,
   text,
+  className = '',
 }) => {
   const ref = useRef(null);
   const [height, setHeight] = useState(0);
@@ -30,8 +31,8 @@ const ComingUpSoonItem = ({
   }, []);
 
   return (
-    <div className="satellite" ref={ref}>
-      <div className="satellite__text">{text}</div>
+    <div className={`${styles.satellite} ${className}`} ref={ref}>
+      <div className={styles.satellite__text}>{text}</div>
 
       <SatelliteSatellite {...{ duration, offsetDegree, satellite }} />
       <SatelliteOrbita {...{ duration, offsetDegree, dash }} />
@@ -48,7 +49,7 @@ export const SatelliteOrbita = ({
 }) => {
   return (
     <svg
-      className="satellite__orbita"
+      className={styles.satellite__orbita}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
@@ -70,7 +71,7 @@ export const SatelliteOrbita = ({
 
       <g mask="url(#satellite-mask)" width="100%" height="100%">
         <foreignObject
-          className="satellite__back"
+          className={styles.satellite__back}
           style={{ animationDuration: `${duration}s` }}
           x="0"
           y="0"
@@ -78,7 +79,7 @@ export const SatelliteOrbita = ({
           height="100"
         >
           <div
-            className="satellite__gradient"
+            className={styles.satellite__gradient}
             style={{
               transform: `rotate(${+offsetDegree}deg)`,
             }}
@@ -97,11 +98,11 @@ export const SatelliteSatellite = ({
 }) => {
   return (
     <div
-      className="satellite__satellite"
+      className={styles.satellite__satellite}
       style={{ animationDuration: `${duration}s` }}
     >
       <div
-        className="satellite__wrap-offset"
+        className={styles.satellite__wrap_offset}
         style={{
           transform: `rotate(${+offsetDegree + 92}deg)`,
         }}

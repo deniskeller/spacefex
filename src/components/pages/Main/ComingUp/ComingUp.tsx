@@ -50,6 +50,7 @@ const ComingUp = () => {
                 dash={{ width: 6, gap: 6, size: 1 }}
                 satellite={{ width: 24 }}
                 text="Launch of the first software version"
+                className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
@@ -57,7 +58,8 @@ const ComingUp = () => {
                 offsetDegree="90"
                 dash={{ width: 6, gap: 6, size: 1 }}
                 satellite={{ width: 24 }}
-                text="Launch of the first satellite "
+                text="Launch of the first satellite"
+                className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
@@ -66,6 +68,7 @@ const ComingUp = () => {
                 dash={{ width: 6, gap: 6, size: 1 }}
                 satellite={{ width: 24 }}
                 text="The official first launch of the blockchain network"
+                className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
@@ -74,6 +77,7 @@ const ComingUp = () => {
                 dash={{ width: 6, gap: 6, size: 1 }}
                 satellite={{ width: 24 }}
                 text="Launch of the USF"
+                className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
@@ -82,6 +86,7 @@ const ComingUp = () => {
                 dash={{ width: 6, gap: 6, size: 1 }}
                 satellite={{ width: 24 }}
                 text="Developing the community network"
+                className={styles.ComingUp_Soon_Item}
               />
 
               {/* <div className={styles.ComingUp_Soon_Item}>
