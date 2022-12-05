@@ -104,12 +104,13 @@
       flex-direction: column;
       align-items: center;
     }
+
     &_Item {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: em(240px);
+      width: em(283px);
       height: em(283px);
       @include iftablet {
         position: absolute;
@@ -136,34 +137,8 @@
       }
 
       @include ifmobile {
-        width: em(283px);
-        height: em(230px);
-      }
-
-      &_Image {
-        position: absolute;
-        width: em(283px);
-        height: em(283px);
-        animation: moving 6s infinite linear;
-        z-index: 0;
-      }
-
-      &_Title {
-        font-weight: 300;
-        font-size: em(20px);
-        line-height: 152.7%;
-        text-align: center;
-        text-transform: uppercase;
-        color: $text;
-        position: absolute;
-        z-index: 1;
+        margin-top: em(-35px);
       }
     }
-  }
-}
-
-@include keyframe(moving) {
-  100% {
-    transform: rotate(360deg);
   }
 }
