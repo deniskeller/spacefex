@@ -2,6 +2,7 @@
 import { BaseContainer, BaseIcon, BaseTitle } from '@base/index';
 import { ALL_ICONS } from '@constants/icons';
 import { BlockNumber } from '@content/index';
+import Link from 'next/link';
 import React from 'react';
 import styles from './Developers.module.scss';
 
@@ -32,69 +33,77 @@ const Developers = () => {
               <BlockNumber number="d1" className={styles.NumberIcon} />
 
               <div className={styles.Developers_Content_Programs}>
-                <div className={styles.Program}>
-                  <div className={styles.Program_Title}>
-                    <span>Developer's resources</span>
+                <Link href="/coming-soon">
+                  <div className={styles.Program}>
+                    <div className={styles.Program_Title}>
+                      <span>Developer's resources</span>
+                    </div>
+                    <div className={styles.Program_Description}>
+                      create the space for future payments
+                    </div>
+                    <div className={styles.Program_Icon}>
+                      <BaseIcon
+                        viewBox="0 0 38 73"
+                        icon={ALL_ICONS.LOW_COST}
+                        className={styles.IconArrow}
+                      />
+                    </div>
                   </div>
-                  <div className={styles.Program_Description}>
-                    create the space for future payments
-                  </div>
-                  <div className={styles.Program_Icon}>
-                    <BaseIcon
-                      viewBox="0 0 38 73"
-                      icon={ALL_ICONS.LOW_COST}
-                      className={styles.IconArrow}
-                    />
-                  </div>
-                </div>
+                </Link>
 
-                <div className={styles.Program}>
-                  <div className={styles.Program_Title}>
-                    <span>Documentation</span>
+                <Link href="/coming-soon">
+                  <div className={styles.Program}>
+                    <div className={styles.Program_Title}>
+                      <span>Documentation</span>
+                    </div>
+                    <div className={styles.Program_Description}>
+                      start building on Spacefex today
+                    </div>
+                    <div className={styles.Program_Icon}>
+                      <BaseIcon
+                        viewBox="0 0 38 73"
+                        icon={ALL_ICONS.LOW_COST}
+                        className={styles.IconArrow}
+                      />
+                    </div>
                   </div>
-                  <div className={styles.Program_Description}>
-                    start building on Spacefex today
-                  </div>
-                  <div className={styles.Program_Icon}>
-                    <BaseIcon
-                      viewBox="0 0 38 73"
-                      icon={ALL_ICONS.LOW_COST}
-                      className={styles.IconArrow}
-                    />
-                  </div>
-                </div>
+                </Link>
 
-                <div className={styles.Program}>
-                  <div className={styles.Program_Title}>
-                    <span>API reference</span>
+                <Link href="/coming-soon">
+                  <div className={styles.Program}>
+                    <div className={styles.Program_Title}>
+                      <span>API reference</span>
+                    </div>
+                    <div className={styles.Program_Description}>
+                      interact with the network using the API
+                    </div>
+                    <div className={styles.Program_Icon}>
+                      <BaseIcon
+                        viewBox="0 0 38 73"
+                        icon={ALL_ICONS.LOW_COST}
+                        className={styles.IconArrow}
+                      />
+                    </div>
                   </div>
-                  <div className={styles.Program_Description}>
-                    interact with the network using the API
-                  </div>
-                  <div className={styles.Program_Icon}>
-                    <BaseIcon
-                      viewBox="0 0 38 73"
-                      icon={ALL_ICONS.LOW_COST}
-                      className={styles.IconArrow}
-                    />
-                  </div>
-                </div>
+                </Link>
 
-                <div className={styles.Program}>
-                  <div className={styles.Program_Title}>
-                    <span>Developers Google Group</span>
+                <Link href="/coming-soon">
+                  <div className={styles.Program}>
+                    <div className={styles.Program_Title}>
+                      <span>Developers Google Group</span>
+                    </div>
+                    <div className={styles.Program_Description}>
+                      lorem ipsum dolor sit amet
+                    </div>
+                    <div className={styles.Program_Icon}>
+                      <BaseIcon
+                        viewBox="0 0 38 73"
+                        icon={ALL_ICONS.LOW_COST}
+                        className={styles.IconArrow}
+                      />
+                    </div>
                   </div>
-                  <div className={styles.Program_Description}>
-                    lorem ipsum dolor sit amet
-                  </div>
-                  <div className={styles.Program_Icon}>
-                    <BaseIcon
-                      viewBox="0 0 38 73"
-                      icon={ALL_ICONS.LOW_COST}
-                      className={styles.IconArrow}
-                    />
-                  </div>
-                </div>
+                </Link>
               </div>
 
               <div

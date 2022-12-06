@@ -81,11 +81,24 @@
     }
 
     &_Programs {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: em(63px) 0;
+      a {
+        line-height: inherit;
+      }
+      @include iftablet {
+        gap: em(41px) 0;
+      }
+
+      @include ifmobile {
+        gap: em(24px) 0;
+      }
+
       .Program {
         border: 1px solid $text;
         padding: em(20px) em(26px);
         position: relative;
-        margin-bottom: em(63px);
         cursor: pointer;
         &:hover {
           border-color: $red;
@@ -93,16 +106,9 @@
             background: $red;
           }
         }
-        &:last-child {
-          margin-bottom: 0;
-        }
-        @include iftablet {
-          margin-bottom: em(41px);
-        }
 
         @include ifmobile {
           padding: em(17px) em(12px);
-          margin-bottom: em(24px);
         }
 
         &_Title {
