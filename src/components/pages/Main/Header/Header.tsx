@@ -6,7 +6,8 @@ const Header = () => {
     <>
       <div
         className={styles.Header}
-        style={{ backgroundImage: 'url(/images/image/cover.jpg)' }}
+        style={{ backgroundImage: 'url(/images/image/cover.webp)' }}
+        // style={{ backgroundImage: 'url(/images/image/cover.jpg)' }}
       ></div>
     </>
   );
