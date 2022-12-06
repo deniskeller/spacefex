@@ -14,7 +14,7 @@ interface Props {
 const BlockchainFeaturesItem: React.FC<Props> = ({
   title = '',
   description = '',
-  animation_delay = '',
+  animation_delay = '0',
 }) => {
   const [height, setHeight] = useState(false);
   const onClick = () => {

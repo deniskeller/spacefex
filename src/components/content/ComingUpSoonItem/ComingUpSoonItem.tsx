@@ -5,8 +5,8 @@ import styles from './ComingUpSoonItem.module.scss';
 const ComingUpSoonItem = ({
   dash: dashRaw = { width: 6, gap: 6, size: 1 },
   satellite = { width: 16 },
-  duration,
-  offsetDegree,
+  duration = '0',
+  offsetDegree = '0',
   text,
   className = '',
 }) => {
@@ -44,8 +44,8 @@ export default ComingUpSoonItem;
 
 export const SatelliteOrbita = ({
   dash: { width, gap, size },
-  offsetDegree,
-  duration,
+  offsetDegree = '0',
+  duration = '0',
 }) => {
   return (
     <svg
@@ -92,8 +92,8 @@ export const SatelliteOrbita = ({
 };
 
 export const SatelliteSatellite = ({
-  duration,
-  offsetDegree,
+  duration = '8',
+  offsetDegree = '0',
   satellite: { width },
 }) => {
   return (
