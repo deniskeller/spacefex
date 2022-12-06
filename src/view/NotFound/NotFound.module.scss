@@ -41,7 +41,7 @@
   }
 
   &_Title {
-    margin-bottom: em(45px);
+    margin-bottom: em(30px);
     div {
       font-size: em(34px);
       font-style: normal;
@@ -56,13 +56,13 @@
   }
 
   &_Subtitle {
-    margin-bottom: em(60px);
+    margin-bottom: em(40px);
 
     @include ifmobile {
       max-width: em(260px);
     }
     div {
-      font-size: em(25px);
+      font-size: em(18px);
       font-weight: 400;
       line-height: 100%;
       color: $text;
