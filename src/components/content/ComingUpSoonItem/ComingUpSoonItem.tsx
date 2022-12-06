@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 //@ts-nocheck
 import React, { useRef, useLayoutEffect, useState } from 'react';
 import styles from './ComingUpSoonItem.module.scss';

@@ -1,0 +1,90 @@
+.Wrapper {
+  background: $main_bg;
+}
+
+.NotFound {
+  @extend %center;
+  flex-direction: column;
+  padding-top: em(100px);
+  padding-bottom: em(80px);
+  min-height: 100vh;
+
+  &_Card {
+    @extend %center;
+    width: em(399px);
+    height: em(229px);
+    border: em(2px) solid $red;
+    border-radius: em(10px);
+    margin-bottom: em(50px);
+
+    @include iftablet {
+      width: em(355px);
+      height: em(229px);
+    }
+    @include ifmobile {
+      width: em(280px);
+      height: em(155px);
+      margin-bottom: em(39px);
+    }
+    h1 {
+      font-family: $font-Pirulen;
+      font-style: normal;
+      font-weight: 400;
+      font-size: em(120px);
+      line-height: 100%;
+      text-transform: uppercase;
+      color: $red;
+      @include ifmobile {
+        font-size: em(90px);
+      }
+    }
+  }
+
+  &_Title {
+    margin-bottom: em(45px);
+    div {
+      font-size: em(34px);
+      font-style: normal;
+      font-weight: 900;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: $text;
+      @include ifmobile {
+        font-size: em(20px);
+      }
+    }
+  }
+
+  &_Subtitle {
+    margin-bottom: em(60px);
+
+    @include ifmobile {
+      max-width: em(260px);
+    }
+    div {
+      font-size: em(25px);
+      font-weight: 400;
+      line-height: 100%;
+      color: $text;
+      text-align: center;
+      @include ifmobile {
+        font-size: em(16px);
+        line-height: 150%;
+      }
+    }
+  }
+
+  &_Action {
+    position: relative;
+    width: 100%;
+
+    .Button {
+      width: em(205px);
+      height: em(52px);
+      margin: 0 auto;
+      @include ifmobile {
+        width: 100%;
+      }
+    }
+  }
+}

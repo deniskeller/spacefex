@@ -1,0 +1,35 @@
+.Wrapper {
+  background: $main_bg;
+}
+
+.ComingSoon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: em(100px) 0;
+
+  &_Title {
+    margin-bottom: em(80px);
+    h1 {
+      font-family: $font-Pirulen;
+      font-style: normal;
+      font-weight: 400;
+      font-size: em(54px);
+      line-height: 100%;
+      text-transform: uppercase;
+      color: $red;
+      text-align: center;
+    }
+  }
+
+  &_Button {
+    width: em(205px);
+    height: em(52px);
+    margin: 0 auto;
+    @include ifmobile {
+      width: 100%;
+    }
+  }
+}

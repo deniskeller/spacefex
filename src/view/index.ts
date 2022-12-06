@@ -10,3 +10,5 @@ export { default as Usf } from "./Usf/Usf";
 export { default as Technologies } from "./Technologies/Technologies";
 export { default as IntoFoundation } from "./IntoFoundation/IntoFoundation";
 export { default as Vacancies } from "./Vacancies/Vacancies";
+export { default as NotFound } from "./NotFound/NotFound";
+export { default as ComingSoon } from "./ComingSoon/ComingSoon";
