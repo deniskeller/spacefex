@@ -86,6 +86,13 @@
         padding: em(20px) em(26px);
         position: relative;
         margin-bottom: em(63px);
+        cursor: pointer;
+        &:hover {
+          border-color: $red;
+          .Program_Icon {
+            background: $red;
+          }
+        }
         &:last-child {
           margin-bottom: 0;
         }
@@ -98,12 +105,12 @@
           margin-bottom: em(24px);
         }
 
-        &:nth-child(3) {
-          border-color: $red;
-          .Program_Icon {
-            background: $red;
-          }
-        }
+        // &:nth-child(3) {
+        //   border-color: $red;
+        //   .Program_Icon {
+        //     background: $red;
+        //   }
+        // }
 
         &_Title {
           margin-bottom: em(9px);
