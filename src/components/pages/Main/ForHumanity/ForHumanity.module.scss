@@ -42,8 +42,8 @@
   }
 
   @include ifmobile {
-    right: em(30px);
-    bottom: calc(50% - em(70px));
+    right: em(20px);
+    bottom: calc(50% - em(90px));
     width: em(140px);
     height: em(140px);
   }

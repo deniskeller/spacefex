@@ -17,9 +17,9 @@ const ForHumanity = () => {
           <div className={styles.Moon}>
             <Image
               src="/images/image/moon.png"
-              layout="fill"
               alt={'Image'}
-              priority
+              fill
+              sizes="(max-width: 456px)"
             />
           </div>
           <div className={styles.ForHumanity_Container}>
