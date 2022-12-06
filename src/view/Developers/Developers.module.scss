@@ -105,13 +105,6 @@
           margin-bottom: em(24px);
         }
 
-        // &:nth-child(3) {
-        //   border-color: $red;
-        //   .Program_Icon {
-        //     background: $red;
-        //   }
-        // }
-
         &_Title {
           margin-bottom: em(9px);
           @include ifmobile {
