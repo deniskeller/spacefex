@@ -119,28 +119,31 @@
         position: absolute;
         &:nth-child(1) {
           top: 0;
-          left: em(-20px);
+          left: em(-40px);
         }
         &:nth-child(2) {
-          top: em(50px);
-          left: em(160px);
+          top: em(70px);
+          left: em(140px);
         }
         &:nth-child(3) {
-          top: em(100px);
-          left: em(340px);
+          top: em(120px);
+          left: em(320px);
         }
         &:nth-child(4) {
-          top: em(140px);
-          left: em(510px);
+          top: em(160px);
+          left: em(490px);
         }
         &:nth-child(5) {
-          top: em(190px);
-          left: em(680px);
+          top: em(210px);
+          left: em(660px);
         }
       }
 
       @include ifmobile {
-        margin-top: em(-35px);
+        margin-top: em(-60px);
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
   }
