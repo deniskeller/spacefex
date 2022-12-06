@@ -45,132 +45,34 @@ const ComingUp = () => {
 
             <div className={styles.ComingUp_Soon}>
               <ComingUpSoonItem
-                duration="8"
                 offsetDegree="0"
-                dash={{ width: 6, gap: 6, size: 1 }}
-                satellite={{ width: 24 }}
                 text="Launch of the first software version"
                 className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
-                duration="8"
                 offsetDegree="90"
-                dash={{ width: 6, gap: 6, size: 1 }}
-                satellite={{ width: 24 }}
                 text="Launch of the first satellite"
                 className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
-                duration="8"
                 offsetDegree="30"
-                dash={{ width: 6, gap: 6, size: 1 }}
-                satellite={{ width: 24 }}
                 text="The official first launch of the blockchain network"
                 className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
-                duration="8"
                 offsetDegree="150"
-                dash={{ width: 6, gap: 6, size: 1 }}
-                satellite={{ width: 24 }}
                 text="Launch of the USF"
                 className={styles.ComingUp_Soon_Item}
               />
 
               <ComingUpSoonItem
-                duration="8"
                 offsetDegree="220"
-                dash={{ width: 6, gap: 6, size: 1 }}
-                satellite={{ width: 24 }}
                 text="Developing the community network"
                 className={styles.ComingUp_Soon_Item}
               />
-
-              {/* <div className={styles.ComingUp_Soon_Item}>
-                <div className={styles.ComingUp_Soon_Item_Image}>
-                  <Image
-                    src="/images/image/satellite@2x.png"
-                    layout="fill"
-                    alt={'Image'}
-                    priority
-                  />
-                </div>
-                <div className={styles.ComingUp_Soon_Item_Title}>
-                  Launch of the <br /> first software <br /> version
-                </div>
-              </div>
-
-              <div className={styles.ComingUp_Soon_Item}>
-                <div
-                  className={styles.ComingUp_Soon_Item_Image}
-                  style={{ animationDelay: '.4s' }}
-                >
-                  <Image
-                    src="/images/image/satellite@2x.png"
-                    layout="fill"
-                    alt={'Image'}
-                    priority
-                  />
-                </div>
-                <div className={styles.ComingUp_Soon_Item_Title}>
-                  Launch of the <br /> first satellite
-                </div>
-              </div>
-
-              <div className={styles.ComingUp_Soon_Item}>
-                <div
-                  className={styles.ComingUp_Soon_Item_Image}
-                  style={{ animationDelay: '.2s' }}
-                >
-                  <Image
-                    src="/images/image/satellite@2x.png"
-                    layout="fill"
-                    alt={'Image'}
-                    priority
-                  />
-                </div>
-                <div className={styles.ComingUp_Soon_Item_Title}>
-                  The official <br /> first launch of <br /> the blockchain
-                  <br /> network
-                </div>
-              </div>
-
-              <div className={styles.ComingUp_Soon_Item}>
-                <div
-                  className={styles.ComingUp_Soon_Item_Image}
-                  style={{ animationDelay: '.8s' }}
-                >
-                  <Image
-                    src="/images/image/satellite@2x.png"
-                    layout="fill"
-                    alt={'Image'}
-                    priority
-                  />
-                </div>
-                <div className={styles.ComingUp_Soon_Item_Title}>
-                  Launch <br /> of the USF
-                </div>
-              </div>
-
-              <div className={styles.ComingUp_Soon_Item}>
-                <div
-                  className={styles.ComingUp_Soon_Item_Image}
-                  style={{ animationDelay: '.4s' }}
-                >
-                  <Image
-                    src="/images/image/satellite@2x.png"
-                    layout="fill"
-                    alt={'Image'}
-                    priority
-                  />
-                </div>
-                <div className={styles.ComingUp_Soon_Item_Title}>
-                  Developing the <br /> community <br /> network
-                </div>
-              </div> */}
             </div>
           </div>
         </BaseContainer>
