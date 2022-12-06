@@ -3,6 +3,7 @@ import { BlockNumber } from '@content/index';
 import React from 'react';
 import styles from './ForHumanity.module.scss';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Image from 'next/image';
 
 const ForHumanity = () => {
   return (
@@ -11,8 +12,16 @@ const ForHumanity = () => {
         <BlockNumber number="2" className={styles.NumberIcon} />
         <div
           className={styles.Wrapper_Bg}
-          style={{ backgroundImage: 'url(/images/image/moon.jpg)' }}
+          style={{ backgroundImage: 'url(/images/image/space.jpg)' }}
         >
+          <div className={styles.Moon}>
+            <Image
+              src="/images/image/moon.png"
+              layout="fill"
+              alt={'Image'}
+              priority
+            />
+          </div>
           <div className={styles.ForHumanity_Container}>
             <div className={styles.ForHumanity}>
               <BaseTitle className={styles.ForHumanity_Title}>

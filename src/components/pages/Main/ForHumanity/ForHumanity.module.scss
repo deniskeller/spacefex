@@ -28,6 +28,28 @@
   }
 }
 
+.Moon {
+  position: absolute;
+  right: calc(50% - em(227px));
+  bottom: em(180px);
+  width: em(456px);
+  height: em(456px);
+
+  @include iftablet {
+    right: em(30px);
+    bottom: em(50px);
+    width: em(405px);
+    height: em(405px);
+  }
+
+  @include ifmobile {
+    right: em(30px);
+    bottom: calc(50% - em(70px));
+    width: em(140px);
+    height: em(140px);
+  }
+}
+
 .Container {
   width: 100%;
   max-width: em(1440px);
