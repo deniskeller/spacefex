@@ -16,6 +16,9 @@
     top: em(-77px);
     left: em(-85px);
 
+    @media only screen and (min-width: 1025px) and (max-width: 1700px) {
+      left: em(-40px);
+    }
     @include iftablet {
       top: em(-89px);
       left: em(-40px);

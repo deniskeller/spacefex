@@ -17,6 +17,9 @@
   .NumberIcon {
     top: em(-93px);
     right: em(-85px);
+    @media only screen and (min-width: 1025px) and (max-width: 1700px) {
+      right: em(69px);
+    }
     @include iftablet {
       top: em(-85px);
       right: em(69px);

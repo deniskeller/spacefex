@@ -14,8 +14,9 @@ const SpacefexFor = () => {
             <div className={styles.SpacefexFor_Image}>
               <Image
                 src="/images/image/astro.png"
-                layout="fill"
+                fill
                 alt={'Image'}
+                sizes="(max-width: 564px)"
               />
             </div>
 
