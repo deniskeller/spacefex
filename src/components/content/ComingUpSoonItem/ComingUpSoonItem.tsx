@@ -62,7 +62,7 @@ const ComingUpSoonItem = ({
               />
               <stop
                 id="elMhfonJHrt7-fill-1"
-                offset="11.9792%"
+                offset="80%"
                 stopColor="rgba(255,255,255,0.195312)"
               />
               <stop
@@ -94,8 +94,10 @@ const ComingUpSoonItem = ({
               attributeName="transform"
               attributeType="XML"
               type="rotate"
-              from="0 155.5 155.5"
-              to="360 155.5 155.5"
+              // from="0 155.5 155.5"
+              // to="360 155.5 155.5"
+              from={`${offsetDegree} 155.5 155.5`}
+              to={`${offsetDegree - 0 + 360} 155.5 155.5`}
               dur="10s"
               repeatCount="indefinite"
             />
@@ -111,8 +113,8 @@ const ComingUpSoonItem = ({
                 attributeName="transform"
                 attributeType="XML"
                 type="rotate"
-                from="0 155.5 155.5"
-                to="360 155.5 155.5"
+                from={`${offsetDegree} 155.5 155.5`}
+                to={`${offsetDegree - 0 + 360} 155.5 155.5`}
                 dur="10s"
                 repeatCount="indefinite"
               />
