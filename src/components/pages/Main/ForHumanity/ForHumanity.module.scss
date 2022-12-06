@@ -13,7 +13,6 @@
     background-size: cover;
     position: relative;
     z-index: 1;
-    // background-attachment: fixed;
     @include iftablet {
       padding: em(80px) em(40px) em(105px);
       background-position: 28% 42%;
